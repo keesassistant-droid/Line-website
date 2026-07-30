@@ -1,0 +1,7 @@
+.DS_Store
+backend/
+business-case/
+idee.md
+.claude/
+images/.claude/
+images/README.md

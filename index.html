@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Line — het cadeau voor een groot moment</title>
+<meta name="description" content="Het cadeau voor een groot moment — een met de hand getekende lijntekening van iemands verhaal.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+<header class="site">
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="wordmark">Line<span class="dot">.</span></span>
+    </a>
+    <nav class="site-nav">
+      <span class="nav-links">
+        <a href="#examples" data-i18n="nav.examples">Voorbeelden</a>
+        <a href="#how-it-works" data-i18n="nav.how">Hoe het werkt</a>
+        <a href="#about" data-i18n="nav.about">Over</a>
+      </span>
+      <div class="lang-switch" role="group" aria-label="Taal / Language">
+        <button type="button" class="lang-btn" data-lang="nl" aria-pressed="true">NL</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="btn small js-open-config" data-i18n="cta.start">Geef een Line</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ---------- Hero ---------- -->
+  <section class="hero">
+    <div class="hero-banner">
+      <img src="images/header/IMG_9153%202%20copy.jpg" alt="" loading="lazy">
+    </div>
+    <div class="wrap">
+      <h1 id="heroHeadline">Het cadeau voor een <em>groot moment</em></h1>
+      <p class="hero-subtitle" data-i18n="hero.eyebrow">Persoonlijke lijntekening, met de hand getekend</p>
+      <p class="lede" data-i18n="hero.lede">Line is het cadeau voor iemands grote moment — een verhuizing, een afstuderen, een nieuwe baan, een kindje. Hun reis wordt één met de hand getekende tekening, klaar om te geven.</p>
+      <div class="hero-actions">
+        <button type="button" class="btn js-open-config" data-i18n="cta.start">Geef een Line</button>
+        <a class="btn ghost" href="#examples" data-i18n="hero.seeExamples">Bekijk voorbeelden</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="line-divider" aria-hidden="true">
+      <span class="dot" style="left:20%;"></span>
+      <span class="dot" style="left:52%;background:var(--gold);"></span>
+      <span class="dot" style="left:81%;background:var(--cobalt);"></span>
+    </div>
+  </div>
+
+  <!-- ---------- Examples ---------- -->
+  <section id="examples">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="examples.eyebrow">Cadeaus die al gegeven zijn</p>
+        <h2 data-i18n="examples.heading">Elke Line vertelt een verhaal</h2>
+        <p data-i18n="examples.lede">Een kleine selectie van Lines die eerder gegeven zijn — elk gemaakt voor iemands grote moment.</p>
+      </div>
+
+      <!--
+        Photos are not uniform (mix of 4:3 and 16:9 landscape), so this is a masonry
+        grid (CSS columns) — each tile keeps its image's own proportions instead of
+        being cropped into a fixed box. Sourced from images/examples/ — add
+        more photos there and a matching <button class="example-thumb"> line here
+        (URL-encode spaces as %20). Click any tile to open it in the lightbox.
+      -->
+      <div class="examples-grid" id="examplesGrid">
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/AEA62852-4E99-4754-B5C8-C98D20F91FE0.JPG" alt="Line, met de hand getekend" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_0387%20copy.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_9817%20copy.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_0528%20copy%202.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_9327%20copy%202.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_8391%202%20copy.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_8394%202%20copy.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_1027%202%20copy.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_9152%20copy.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="line-divider" aria-hidden="true"><span class="dot" style="left:50%;"></span></div></div>
+
+  <!-- ---------- How it works ---------- -->
+  <section id="how-it-works">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="how.eyebrow">Hoe het werkt</p>
+        <h2 data-i18n="how.heading">Van hun verhaal naar jouw cadeau</h2>
+        <p data-i18n="how.lede">Geen live preview, geen algoritme — elke Line wordt van begin tot eind met de hand getekend.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="hiw-step">
+          <div class="num">1</div>
+          <h3>Bouw de Line</h3>
+          <p>Voeg de plekken en persoonlijke details toe die hun verhaal vertellen.</p>
+        </div>
+        <div class="hiw-step">
+          <div class="num">2</div>
+          <h3>Wij tekenen 'm</h3>
+          <p>De tekenaar gaat aan de slag — je krijgt één reviewmoment om de schets te bekijken voordat we doorgaan naar de afwerking.</p>
+        </div>
+        <div class="hiw-step">
+          <div class="num">3</div>
+          <h3>Hij landt in je mailbox</h3>
+          <p>Binnen 3 werkdagen ontvang je de afgeronde Line per e-mail, klaar om te geven.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Dimensions ---------- -->
+  <section id="dimensions">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="dims.eyebrow">Afmetingen</p>
+        <h2 data-i18n="dims.heading">Standaard 20 × 60 cm</h2>
+        <p data-i18n="dims.body">Elke Line wordt standaard getekend op 20 bij 60 centimeter — ongeveer zo breed als een A4'tje, en twee keer zo lang.</p>
+      </div>
+      <div class="dims-diagram" aria-hidden="true">
+        <svg viewBox="0 0 320 200" role="img">
+          <path class="dims-line" d="M75 95 C 108 72, 138 118, 172 95 S 235 72, 258 95" />
+          <rect class="dims-rect" x="55" y="55" width="240" height="80" />
+          <line class="dims-dim dims-dim-w" x1="55" y1="150" x2="295" y2="150" />
+          <line class="dims-dim dims-dim-w" x1="55" y1="142" x2="55" y2="158" />
+          <line class="dims-dim dims-dim-w" x1="295" y1="142" x2="295" y2="158" />
+          <text class="dims-label dims-label-w" x="175" y="175" text-anchor="middle">60 cm</text>
+          <line class="dims-dim dims-dim-h" x1="30" y1="55" x2="30" y2="135" />
+          <line class="dims-dim dims-dim-h" x1="22" y1="55" x2="38" y2="55" />
+          <line class="dims-dim dims-dim-h" x1="22" y1="135" x2="38" y2="135" />
+          <text class="dims-label dims-label-h" x="18" y="95" text-anchor="middle" transform="rotate(-90 18 95)">20 cm</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="line-divider" aria-hidden="true"><span class="dot" style="left:50%;background:var(--moss);"></span></div></div>
+
+  <!-- ---------- Testimonials ---------- -->
+  <!-- Placeholder quotes for this prototype — swap for real reactions once there's a batch of them. -->
+  <section id="testimonials">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="testimonials.eyebrow">In hun eigen woorden</p>
+        <h2 data-i18n="testimonials.heading">Reacties na het uitpakken</h2>
+        <p data-i18n="testimonials.lede">Een paar berichten van mensen die een Line cadeau kregen.</p>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+          <p class="quote" data-i18n="testimonials.items.0.quote">Ik dacht dat het een grap was — tot ik ons oude studentenhuis zag staan, gat in de muur incluis.</p>
+          <p class="name">— Sanne</p>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+          <p class="quote" data-i18n="testimonials.items.1.quote">Ik moest huilen toen ik het huis van mijn oma zag. Precies zoals ik het me herinner.</p>
+          <p class="name">— Daan</p>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+          <p class="quote" data-i18n="testimonials.items.2.quote">Ze hebben zelfs onze hond erin verwerkt — inclusief zijn eeuwige ruzie met de postbode.</p>
+          <p class="name">— Fenna</p>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+          <p class="quote" data-i18n="testimonials.items.3.quote">Drie huizen, twee landen, één leven. Hing binnen tien minuten aan de muur.</p>
+          <p class="name">— Milan</p>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+          <p class="quote" data-i18n="testimonials.items.4.quote">Mijn man snapte niet waarom ik moest lachen — tot hij het bordje "geen idee waar we heen gaan" bij ons eerste huis zag.</p>
+          <p class="name">— Roos</p>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+          <p class="quote" data-i18n="testimonials.items.5.quote">Het mooiste cadeau dat we ooit hebben gekregen bij de geboorte van onze zoon.</p>
+          <p class="name">— Thijs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="line-divider" aria-hidden="true"><span class="dot" style="left:50%;background:var(--cobalt);"></span></div></div>
+
+  <!-- ---------- About ---------- -->
+  <section id="about">
+    <div class="wrap about">
+      <div class="avatar">
+        <img src="images/selfie%20artist/selfie-kissa-color.png" alt="Kees, de tekenaar achter Line" loading="lazy">
+      </div>
+      <div>
+        <p class="eyebrow" data-i18n="about.eyebrow">Over</p>
+        <h2 data-i18n="about.heading">Met de hand getekend, door één persoon</h2>
+        <p data-i18n="about.body">Line is een eenmansstudio. Elk werk begint als een opdracht van jou — vaak voor iemand anders — en eindigt als een originele lijntekening, op dezelfde manier gemaakt als de allereerste voorbeelden: met de hand, met een pen. Geen twee Lines zijn ooit helemaal hetzelfde.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="line-divider" aria-hidden="true"><span class="dot" style="left:50%;background:var(--gold);"></span></div></div>
+
+  <!-- ---------- FAQ ---------- -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="faq.eyebrow">Vragen</p>
+        <h2 data-i18n="faq.heading">Veelgestelde vragen</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary><span class="q" data-i18n="faq.items.0.q">Hoe lang duurt het voordat ik mijn Line ontvang?</span><span class="chevron" aria-hidden="true"></span></summary>
+          <p class="a" data-i18n="faq.items.0.a">Binnen 3 werkdagen na je bestelling ontvang je de tekening per e-mail.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span class="q" data-i18n="faq.items.1.q">Kan ik een Line voor iemand anders bestellen?</span><span class="chevron" aria-hidden="true"></span></summary>
+          <p class="a" data-i18n="faq.items.1.a">Zeker — de meeste Lines worden besteld als cadeau. Jij bouwt de tijdlijn, wij tekenen 'm, en jij geeft 'm door.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span class="q" data-i18n="faq.items.2.q">Moet ik referentiefoto's toevoegen?</span><span class="chevron" aria-hidden="true"></span></summary>
+          <p class="a" data-i18n="faq.items.2.a">Per plek vragen we een Google Maps-link of een foto van het gebouw — zo weten we zeker dat we het juiste pand tekenen.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span class="q" data-i18n="faq.items.3.q">Kan ik later nog iets wijzigen aan mijn bestelling?</span><span class="chevron" aria-hidden="true"></span></summary>
+          <p class="a" data-i18n="faq.items.3.a">Neem contact op via e-mail zodra je je bestelling hebt verstuurd — we passen het waar mogelijk nog aan.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span class="q" data-i18n="faq.items.4.q">Welke formaten zijn er?</span><span class="chevron" aria-hidden="true"></span></summary>
+          <p class="a" data-i18n="faq.items.4.a">Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. €299 incl. BTW, + €7,95 verzendkosten (excl.), verzonden met PostNL.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span class="q" data-i18n="faq.items.5.q">Wat kost een Line?</span><span class="chevron" aria-hidden="true"></span></summary>
+          <p class="a" data-i18n="faq.items.5.a">Prijzen volgen binnenkort. Neem voor nu even contact op voor de actuele tarieven.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap bar">
+    <span data-i18n="footer.copyright">© 2026 Line. Alle werken op maat met de hand getekend.</span>
+    <a href="mailto:kees.assistant@gmail.com">kees.assistant@gmail.com</a>
+  </div>
+  <div class="wrap footer-identity">
+    <p>
+      Line is een handelsnaam van <strong>Kees Design &amp; Consultancy</strong> ·
+      KVK 76246930 · Amsterdam ·
+      <a href="tel:+31614457456">+31 6 14 45 74 56</a>
+    </p>
+    <p>
+      <a href="voorwaarden.html" data-i18n="footer.terms">Algemene voorwaarden</a> ·
+      <a href="privacybeleid.html" data-i18n="footer.privacy">Privacybeleid</a> ·
+      <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener" data-i18n="footer.odr">Geschillencommissie (ODR)</a> ·
+      <button type="button" class="link-btn" id="cookieSettingsBtn" data-i18n="footer.cookieSettings">Cookie-instellingen</button>
+    </p>
+  </div>
+</footer>
+
+<!-- ================= Cookie consent ================= -->
+<div class="cookie-banner" id="cookieBanner" hidden role="dialog" aria-label="Cookiemelding">
+  <div class="cookie-banner-inner">
+    <p data-i18n="cookies.body">We gebruiken alleen analytics-cookies om te zien hoe bezoekers de site gebruiken. Deze worden pas geplaatst als je akkoord gaat.</p>
+    <div class="cookie-banner-actions">
+      <button type="button" class="btn ghost small" id="cookieDecline" data-i18n="cookies.decline">Weigeren</button>
+      <button type="button" class="btn small" id="cookieAccept" data-i18n="cookies.accept">Accepteren</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= Lightbox ================= -->
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Foto vergroot">
+  <button type="button" class="lightbox-close" id="lightboxClose" data-i18n-aria="lightbox.close">
+    <svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" /></svg>
+  </button>
+  <button type="button" class="lightbox-nav prev" id="lightboxPrev" data-i18n-aria="lightbox.prev">
+    <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" /></svg>
+  </button>
+  <figure class="lightbox-figure">
+    <img id="lightboxImg" src="" alt="">
+  </figure>
+  <button type="button" class="lightbox-nav next" id="lightboxNext" data-i18n-aria="lightbox.next">
+    <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
+  </button>
+  <div class="lightbox-count" id="lightboxCount" aria-hidden="true"></div>
+</div>
+
+<!-- ================= Configurator ================= -->
+<div class="configurator" id="configurator" hidden role="dialog" aria-modal="true" aria-label="Order configurator">
+
+  <div class="config-stage" id="configStage" aria-hidden="true">
+    <img src="images/examples/AEA62852-4E99-4754-B5C8-C98D20F91FE0.JPG" alt="" class="active">
+    <img src="images/examples/IMG_8391%202%20copy.jpg" alt="">
+    <img src="images/examples/IMG_9152%20copy.jpg" alt="">
+    <img src="images/examples/IMG_0528%20copy%202.jpg" alt="">
+  </div>
+
+  <div class="config-main">
+    <div class="config-head">
+      <span class="wordmark">Line<span class="dot">.</span></span>
+      <button type="button" class="config-close" id="configClose" aria-label="Configurator sluiten">
+        <svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" /></svg>
+      </button>
+    </div>
+
+    <div class="config-scroll">
+      <div class="config-panel" id="configForm">
+
+        <!-- Timeline -->
+        <section class="config-section">
+          <p class="config-eyebrow" data-i18n="config.steps.0">Tijdlijn</p>
+          <h2 data-i18n="config.step0.h2">Bouw je Line</h2>
+          <p class="hint" data-i18n="config.step0.hint">Voeg tussen de 6 en 10 plekken toe die hun reis markeren, in de volgorde waarin het gebeurde. Sleep een tegel aan de handgreep om de volgorde aan te passen.</p>
+          <div class="tl-list" id="tlList"></div>
+          <button type="button" class="add-row-btn" id="addTlBtn" data-i18n="config.step0.addBtn">+ Plek toevoegen</button>
+          <p class="hint" id="tlNextHint" style="color:var(--coral);margin-top:14px;" hidden></p>
+        </section>
+
+        <!-- Format -->
+        <section class="config-section">
+          <p class="config-eyebrow" data-i18n="config.steps.1">Formaat</p>
+          <h2 data-i18n="config.step1.h2">Jouw formaat</h2>
+          <p class="hint" data-i18n="config.step1.hint">Elke Line wordt op dit moment op één manier geleverd.</p>
+          <div class="format-grid" id="formatGrid">
+            <button type="button" class="format-card" data-format="shipped" aria-pressed="true" disabled>
+              <strong>Ingelijste print</strong>
+              <span>20 × 60 cm, met de hand getekend en thuisbezorgd. €299 incl. BTW.</span>
+            </button>
+          </div>
+          <p class="shipping-line">
+            <span data-i18n="config.step1.shippingNote">+ &euro;7,95 verzendkosten (excl.), verzonden met</span>
+            <img class="carrier-logo" src="images/postnl-logo.png" alt="PostNL" onerror="this.style.display='none'">
+          </p>
+        </section>
+
+        <!-- Details -->
+        <section class="config-section">
+          <p class="config-eyebrow" data-i18n="config.steps.2">Jouw gegevens</p>
+          <h2 data-i18n="config.step2.h2">Jouw gegevens</h2>
+          <p class="hint" data-i18n="config.step2.hint">Waar mogen we je Line naartoe sturen?</p>
+          <div class="two-col">
+            <div class="field">
+              <label for="contactName" data-i18n="config.step2.nameLabel">Naam</label>
+              <input type="text" id="contactName" placeholder="Je volledige naam" data-i18n-ph="config.step2.namePh">
+            </div>
+            <div class="field">
+              <label for="contactEmail" data-i18n="config.step2.emailLabel">E-mail</label>
+              <input type="email" id="contactEmail" placeholder="jij@voorbeeld.nl" data-i18n-ph="config.step2.emailPh">
+            </div>
+          </div>
+          <div class="field">
+            <label for="contactPhone" data-i18n="config.step2.phoneLabel">Telefoonnummer</label>
+            <input type="tel" id="contactPhone" placeholder="06 12345678" data-i18n-ph="config.step2.phonePh">
+          </div>
+          <div class="field">
+            <label for="contactAddress" data-i18n="config.step2.addressLabel">Bezorgadres</label>
+            <textarea id="contactAddress" rows="2" placeholder="Straat, stad, postcode, land" data-i18n-ph="config.step2.addressPh"></textarea>
+          </div>
+          <div class="field">
+            <label for="contactNotes" data-i18n="config.step2.notesLabel">Nog iets? (optioneel)</label>
+            <textarea id="contactNotes" rows="3" placeholder="Extra context die helpt bij het tekenen van je Line" data-i18n-ph="config.step2.notesPh"></textarea>
+          </div>
+        </section>
+
+        <!-- Live review -->
+        <section class="config-section" id="reviewSection">
+          <p class="config-eyebrow" data-i18n="config.steps.3">Overzicht</p>
+          <h2 data-i18n="config.step3.h2">Bekijk je bestelling</h2>
+          <ul class="summary-list" id="summaryList"></ul>
+        </section>
+
+      </div>
+
+      <!-- Confirmation (shown after submit) -->
+      <div class="config-panel" id="configSuccess" hidden>
+        <div class="success">
+          <div class="check">
+            <svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6" /></svg>
+          </div>
+          <h2 data-i18n="config.step4.h2">Je Line is onderweg</h2>
+          <p data-i18n="config.step4.body">Bedankt — je bestelling is ontvangen. Je met de hand getekende Line landt binnen 3 werkdagen in je inbox, klaar om te geven.</p>
+          <div class="proto-note" data-i18n="config.step4.protoNote">Dit is een prototype: er is niets echt verstuurd en er is geen bestelling opgeslagen. In de echte versie mailt deze stap jouw opdracht en bevestigt de ontvangst.</div>
+          <button type="button" class="btn" id="restartBtn">Nieuwe Line starten</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="config-submit-bar" id="configSubmitBar">
+      <label class="terms-check">
+        <input type="checkbox" id="agreeTerms">
+        <span data-i18n="config.footer.agreeTermsPre">Ik ga akkoord met de</span>
+        <a href="voorwaarden.html" target="_blank" rel="noopener" data-i18n="config.footer.agreeTermsLink">algemene voorwaarden</a>
+      </label>
+      <div class="submit-bar-row">
+        <div class="submit-price">
+          <span class="amount" id="submitPriceAmount">&euro;299</span>
+          <span class="label" data-i18n="config.footer.priceLabel">incl. BTW</span>
+        </div>
+        <div class="submit-btn-group">
+          <button type="button" class="btn" id="submitBtn">Bevestigen &amp; verzenden</button>
+          <img class="pay-badge-logo" src="images/tikkie-logo.png" alt="Tikkie" data-i18n-aria="config.footer.payBadgeAria" aria-label="Betalen via Tikkie" onerror="this.style.display='none'">
+        </div>
+      </div>
+      <p class="hint" id="submitHint" style="color:var(--coral);" hidden></p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
