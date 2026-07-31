@@ -47,6 +47,17 @@
         heading: "Standaard 20 × 60 cm",
         body: "Elke Line wordt standaard getekend op 20 bij 60 centimeter — ongeveer zo breed als een A4'tje, en twee keer zo lang."
       },
+      pricing: {
+        eyebrow: "Prijs",
+        heading: "€299 all-in",
+        lede: "Één vaste prijs voor een ingelijste Line van 20 × 60 cm — inclusief lijst, verpakking en verzending. Geen verrassingen bij het afrekenen.",
+        legend: {
+          vat: "BTW (21%) — €51,89",
+          costs: "Lijst, verpakking & verzending — €42 (lijst €30 · verzending €8 · doos €3 · bubbeltjesplastic €1)",
+          margin: "Ontwerp, printen & marge — €205,11 (nog niet losgesplitst per onderdeel)"
+        },
+        caption: "Printkosten en het uurtarief voor het tekenwerk zijn nog niet apart uitgesplitst — dat volgt zodra dat bekend is."
+      },
       about: {
         eyebrow: "Over",
         heading: "Met de hand getekend, door één persoon",
@@ -73,7 +84,7 @@
           { q: "Kan ik een Line voor iemand anders bestellen?", a: "Zeker — de meeste Lines worden besteld als cadeau. Jij bouwt de tijdlijn, wij tekenen 'm, en jij geeft 'm door." },
           { q: "Moet ik referentiefoto's toevoegen?", a: "Per plek vragen we een Google Maps-link of een foto van het gebouw — zo weten we zeker dat we het juiste pand tekenen." },
           { q: "Kan ik later nog iets wijzigen aan mijn bestelling?", a: "Neem contact op via e-mail zodra je je bestelling hebt verstuurd — we passen het waar mogelijk nog aan." },
-          { q: "Welke formaten zijn er?", a: "Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. €299 incl. BTW, + €7,95 verzendkosten (excl.), verzonden met PostNL." },
+          { q: "Welke formaten zijn er?", a: "Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. €299, alles inbegrepen (incl. BTW en verzending via PostNL)." },
           { q: "Wat kost een Line?", a: "Prijzen volgen binnenkort. Neem voor nu even contact op voor de actuele tarieven." }
         ]
       },
@@ -115,8 +126,7 @@
           h2: "Jouw formaat",
           hint: "Elke Line wordt op dit moment op één manier geleverd.",
           shippedTitle: "Ingelijste print",
-          shippedDesc: "20 × 60 cm, met de hand getekend en thuisbezorgd. €299 incl. BTW.",
-          shippingNote: "+ €7,95 verzendkosten (excl.), verzonden met"
+          shippedDesc: "20 × 60 cm, met de hand getekend en thuisbezorgd. €299, alles inbegrepen."
         },
         step2: {
           h2: "Jouw gegevens",
@@ -136,23 +146,22 @@
         step3: {
           h2: "Bekijk je bestelling",
           hint: "Nog even checken — je kunt terug naar elke stap om iets aan te passen.",
-          labels: { timeline: "Jouw tijdlijn", format: "Formaat", contact: "Contact", address: "Bezorgadres", notes: "Notities", shipping: "Verzending" },
+          labels: { timeline: "Jouw tijdlijn", format: "Formaat", contact: "Contact", address: "Bezorgadres", notes: "Notities", shipping: "Verzending", payment: "Betaalwijze" },
           noPlaces: "Nog geen plekken toegevoegd",
-          shippedPrint: "Ingelijste print, 20 × 60 cm"
+          shippedPrint: "Ingelijste print, 20 × 60 cm",
+          shippingIncluded: "inbegrepen in de prijs"
         },
         step4: {
           h2: "Je Line is onderweg",
-          body: "Bedankt — je bestelling is ontvangen. Je met de hand getekende Line landt binnen 3 werkdagen in je inbox, klaar om te geven.",
-          protoNote: "Dit is een prototype: er is niets echt verstuurd en er is geen bestelling opgeslagen. In de echte versie mailt deze stap jouw opdracht en bevestigt de ontvangst."
+          body: "Bedankt — je bestelling is ontvangen. Je met de hand getekende Line landt binnen 3 werkdagen in je inbox, klaar om te geven."
         },
         footer: {
-          confirm: "Bevestigen & verzenden",
+          confirm: "Bestel nu",
           restart: "Nieuwe Line starten",
           priceLabel: "incl. BTW",
           agreeTermsPre: "Ik ga akkoord met de",
           agreeTermsLink: "algemene voorwaarden",
-          termsRequired: "Vink de algemene voorwaarden aan om te bestellen.",
-          payBadgeAria: "Betalen kan via Tikkie"
+          termsRequired: "Vink de algemene voorwaarden aan om te bestellen."
         }
       }
     },
@@ -191,6 +200,17 @@
         heading: "20 × 60 cm as standard",
         body: "Every Line is drawn at 20 by 60 centimeters by default — about as wide as a sheet of A4 paper, and twice as long."
       },
+      pricing: {
+        eyebrow: "Pricing",
+        heading: "€299 all-in",
+        lede: "One flat price for a framed 20 × 60 cm Line — including the frame, packaging, and shipping. No surprises at checkout.",
+        legend: {
+          vat: "VAT (21%) — €51.89",
+          costs: "Frame, packaging & shipping — €42 (frame €30 · shipping €8 · box €3 · bubble wrap €1)",
+          margin: "Design, printing & margin — €205.11 (not yet split out further)"
+        },
+        caption: "Printing cost and the hourly design rate aren't broken out separately yet — that'll follow once they're known."
+      },
       about: {
         eyebrow: "About",
         heading: "Drawn by hand, by one person",
@@ -217,7 +237,7 @@
           { q: "Can I order a Line for someone else?", a: "Absolutely — most Lines are ordered as a gift. You build the timeline, we draw it, you give it." },
           { q: "Do I need to add reference photos?", a: "For each place we ask for a Google Maps link or a photo of the building — that way we're sure we draw the right one." },
           { q: "Can I still change something after ordering?", a: "Get in touch by email as soon as you've submitted your order — we'll adjust where we still can." },
-          { q: "What formats are available?", a: "Currently just a framed 20 × 60 cm print, shipped to your door. €299 incl. VAT, + €7.95 shipping (excl.), sent with PostNL." },
+          { q: "What formats are available?", a: "Currently just a framed 20 × 60 cm print, shipped to your door. €299, all-in (incl. VAT and shipping via PostNL)." },
           { q: "What does a Line cost?", a: "Pricing is coming soon. Get in touch for current rates in the meantime." }
         ]
       },
@@ -259,8 +279,7 @@
           h2: "Your format",
           hint: "Every Line currently ships one way.",
           shippedTitle: "Framed print",
-          shippedDesc: "20 × 60 cm, hand-drawn and shipped to your door. €299 incl. VAT.",
-          shippingNote: "+ €7.95 shipping (excl.), sent with"
+          shippedDesc: "20 × 60 cm, hand-drawn and shipped to your door. €299, all-in."
         },
         step2: {
           h2: "Your details",
@@ -280,23 +299,22 @@
         step3: {
           h2: "Review your order",
           hint: "Take a last look — you can jump back to any step to make changes.",
-          labels: { timeline: "Your timeline", format: "Format", contact: "Contact", address: "Delivery address", notes: "Notes", shipping: "Shipping" },
+          labels: { timeline: "Your timeline", format: "Format", contact: "Contact", address: "Delivery address", notes: "Notes", shipping: "Shipping", payment: "Payment method" },
           noPlaces: "No places added yet",
-          shippedPrint: "Framed print, 20 × 60 cm"
+          shippedPrint: "Framed print, 20 × 60 cm",
+          shippingIncluded: "included in the price"
         },
         step4: {
           h2: "Your Line is on its way",
-          body: "Thank you — your order has been received. Your hand-drawn Line will arrive in your inbox within 3 working days, ready to give.",
-          protoNote: "This is a prototype: nothing was actually sent, and no order was saved. In the real version this step emails your brief and confirms receipt."
+          body: "Thank you — your order has been received. Your hand-drawn Line will arrive in your inbox within 3 working days, ready to give."
         },
         footer: {
-          confirm: "Confirm & send order",
+          confirm: "Order now",
           restart: "Start a new Line",
           priceLabel: "incl. VAT",
           agreeTermsPre: "I agree to the",
           agreeTermsLink: "terms & conditions",
-          termsRequired: "Check the terms & conditions to place your order.",
-          payBadgeAria: "Payment available via Tikkie"
+          termsRequired: "Check the terms & conditions to place your order."
         }
       }
     }
@@ -383,7 +401,6 @@
   var configSuccess = document.getElementById("configSuccess");
   var configSubmitBar = document.getElementById("configSubmitBar");
   var submitBtn = document.getElementById("submitBtn");
-  var submitHint = document.getElementById("submitHint");
   var restartBtn = document.getElementById("restartBtn");
   var agreeTermsBox = document.getElementById("agreeTerms");
   var submitPriceAmount = document.getElementById("submitPriceAmount");
@@ -697,17 +714,6 @@
     return filledPlacesCount() >= MIN_PLACES && hasNameEmail && hasPhone && hasAddress && state.agreeTerms;
   }
 
-  function missingHintText() {
-    var d = t().config;
-    if (filledPlacesCount() < MIN_PLACES) return timelineHintText();
-    var hasNameEmail = state.contact.name.trim() && /\S+@\S+\.\S+/.test(state.contact.email);
-    var hasPhone = state.contact.phone.trim().length > 0;
-    var hasAddress = state.contact.address.trim().length > 0;
-    if (!hasNameEmail || !hasPhone || !hasAddress) return d.step2.detailsHint;
-    if (!state.agreeTerms) return d.footer.termsRequired;
-    return "";
-  }
-
   /* ---------- timeline step ---------- */
   function addTimelineEntry() {
     if (state.timeline.length >= MAX_PLACES) return;
@@ -819,7 +825,8 @@
     remove.type = "button";
     remove.className = "remove-btn";
     remove.setAttribute("aria-label", d.removePlace);
-    remove.textContent = "×";
+    remove.innerHTML =
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2m-9 0 1 13a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1l1-13"/></svg>';
     remove.addEventListener("click", function () {
       removeTimelineEntry(item.id);
     });
@@ -840,11 +847,27 @@
     }
     refreshWarn();
 
+    var reveal = document.createElement("div");
+    reveal.className = "tl-reveal";
+    function refreshReveal() {
+      reveal.hidden = !item.place.trim();
+    }
+    refreshReveal();
+
+    var mapsEditedByUser = !!item.mapsLink;
+
     placeInput.addEventListener("input", function () {
       item.place = placeInput.value;
+      if (!mapsEditedByUser) {
+        item.mapsLink = item.place.trim()
+          ? "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(item.place.trim())
+          : "";
+        mapsInput.value = item.mapsLink;
+      }
       save();
       updateSubmitState();
       refreshWarn();
+      refreshReveal();
     });
 
     var mapsInput = document.createElement("input");
@@ -854,11 +877,18 @@
     mapsInput.value = item.mapsLink;
     mapsInput.setAttribute("aria-label", d.mapsLinkAria);
     mapsInput.addEventListener("input", function () {
+      mapsEditedByUser = true;
       item.mapsLink = mapsInput.value;
       save();
       updateSubmitState();
       refreshWarn();
     });
+
+    var photoIcon =
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"/></svg>';
+    function setPhotoBtnLabel(label) {
+      photoBtn.innerHTML = photoIcon + "<span>" + label + "</span>";
+    }
 
     var thumb = document.createElement("div");
     thumb.className = "photo-thumb";
@@ -866,7 +896,7 @@
     var photoBtn = document.createElement("button");
     photoBtn.type = "button";
     photoBtn.className = "photo-btn";
-    photoBtn.textContent = item.photo ? d.photoChange : d.photoAdd;
+    setPhotoBtnLabel(item.photo ? d.photoChange : d.photoAdd);
     photoBtn.addEventListener("click", function () {
       var input = document.createElement("input");
       input.type = "file";
@@ -882,7 +912,7 @@
           reader.onload = function (e) {
             item.photo = e.target.result;
             thumb.style.backgroundImage = "url(" + item.photo + ")";
-            photoBtn.textContent = t().config.step0.photoChange;
+            setPhotoBtnLabel(t().config.step0.photoChange);
             save();
             updateSubmitState();
             refreshWarn();
@@ -915,10 +945,12 @@
       save();
     });
 
+    reveal.appendChild(verifyRow);
+    reveal.appendChild(warn);
+    reveal.appendChild(noteInput);
+
     el.appendChild(head);
-    el.appendChild(verifyRow);
-    el.appendChild(warn);
-    el.appendChild(noteInput);
+    el.appendChild(reveal);
     return el;
   }
 
@@ -995,7 +1027,18 @@
     rows.push([d.labels.timeline, placesHtml || "<em>" + d.noPlaces + "</em>"]);
 
     rows.push([d.labels.format, d.shippedPrint]);
-    rows.push([d.labels.shipping, "€" + SHIPPING_COST.toFixed(2) + " (" + SHIPPING_CARRIER + ")"]);
+    rows.push([
+      d.labels.shipping,
+      '<span class="v-inline"><img class="carrier-logo" src="logos/postnl-logo.png" alt="' +
+        SHIPPING_CARRIER +
+        '" onerror="this.style.display=\'none\'">' +
+        SHIPPING_CARRIER +
+        " — " + d.shippingIncluded + "</span>"
+    ]);
+    rows.push([
+      d.labels.payment,
+      '<span class="v-inline"><img class="carrier-logo" src="logos/tikkie-logo.png" alt="Tikkie" onerror="this.style.display=\'none\'">Tikkie</span>'
+    ]);
     rows.push([
       d.labels.contact,
       escapeHtml(state.contact.name || "—") + " · " + escapeHtml(state.contact.email || "—") + " · " + escapeHtml(state.contact.phone || "—")
@@ -1026,9 +1069,6 @@
   function updateSubmitState() {
     var ok = canSubmit();
     submitBtn.disabled = !ok;
-    var hintText = missingHintText();
-    submitHint.textContent = hintText;
-    submitHint.hidden = !hintText;
 
     var tlHint = timelineHintText();
     tlNextHint.textContent = tlHint;

@@ -139,6 +139,34 @@
     </div>
   </section>
 
+  <!-- ---------- Pricing ---------- -->
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="pricing.eyebrow">Prijs</p>
+        <h2 data-i18n="pricing.heading">€299 all-in</h2>
+        <p data-i18n="pricing.lede">Één vaste prijs voor een ingelijste Line van 20 × 60 cm — inclusief lijst, verpakking en verzending. Geen verrassingen bij het afrekenen.</p>
+      </div>
+      <div class="price-diagram" aria-hidden="true">
+        <svg viewBox="0 0 320 200" role="img">
+          <rect class="price-band price-band-vat" x="55" y="55" width="42" height="80" />
+          <rect class="price-band price-band-cost" x="97" y="55" width="34" height="80" />
+          <rect class="price-band price-band-margin" x="131" y="55" width="164" height="80" />
+          <line class="price-sep" x1="97" y1="55" x2="97" y2="135" />
+          <line class="price-sep" x1="131" y1="55" x2="131" y2="135" />
+          <rect class="price-outline" x="55" y="55" width="240" height="80" />
+          <text class="dims-label" x="175" y="35" text-anchor="middle">€299</text>
+        </svg>
+      </div>
+      <ul class="price-legend">
+        <li><span class="swatch swatch-vat"></span><span data-i18n="pricing.legend.vat">BTW (21%) — €51,89</span></li>
+        <li><span class="swatch swatch-cost"></span><span data-i18n="pricing.legend.costs">Lijst, verpakking &amp; verzending — €42 (lijst €30 · verzending €8 · doos €3 · bubbeltjesplastic €1)</span></li>
+        <li><span class="swatch swatch-margin"></span><span data-i18n="pricing.legend.margin">Ontwerp, printen &amp; marge — €205,11 (nog niet losgesplitst per onderdeel)</span></li>
+      </ul>
+      <p class="price-caption" data-i18n="pricing.caption">Printkosten en het uurtarief voor het tekenwerk zijn nog niet apart uitgesplitst — dat volgt zodra dat bekend is.</p>
+    </div>
+  </section>
+
   <div class="wrap"><div class="line-divider" aria-hidden="true"><span class="dot" style="left:50%;background:var(--moss);"></span></div></div>
 
   <!-- ---------- Testimonials ---------- -->
@@ -229,7 +257,7 @@
         </details>
         <details class="faq-item">
           <summary><span class="q" data-i18n="faq.items.4.q">Welke formaten zijn er?</span><span class="chevron" aria-hidden="true"></span></summary>
-          <p class="a" data-i18n="faq.items.4.a">Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. €299 incl. BTW, + €7,95 verzendkosten (excl.), verzonden met PostNL.</p>
+          <p class="a" data-i18n="faq.items.4.a">Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. €299, alles inbegrepen (incl. BTW en verzending via PostNL).</p>
         </details>
         <details class="faq-item">
           <summary><span class="q" data-i18n="faq.items.5.q">Wat kost een Line?</span><span class="chevron" aria-hidden="true"></span></summary>
@@ -327,13 +355,9 @@
           <div class="format-grid" id="formatGrid">
             <button type="button" class="format-card" data-format="shipped" aria-pressed="true" disabled>
               <strong>Ingelijste print</strong>
-              <span>20 × 60 cm, met de hand getekend en thuisbezorgd. €299 incl. BTW.</span>
+              <span>20 × 60 cm</span>
             </button>
           </div>
-          <p class="shipping-line">
-            <span data-i18n="config.step1.shippingNote">+ &euro;7,95 verzendkosten (excl.), verzonden met</span>
-            <img class="carrier-logo" src="images/postnl-logo.png" alt="PostNL" onerror="this.style.display='none'">
-          </p>
         </section>
 
         <!-- Details -->
@@ -370,7 +394,22 @@
           <p class="config-eyebrow" data-i18n="config.steps.3">Overzicht</p>
           <h2 data-i18n="config.step3.h2">Bekijk je bestelling</h2>
           <ul class="summary-list" id="summaryList"></ul>
+          <label class="terms-check">
+            <input type="checkbox" id="agreeTerms">
+            <span data-i18n="config.footer.agreeTermsPre">Ik ga akkoord met de</span>
+            <a href="voorwaarden.html" target="_blank" rel="noopener" data-i18n="config.footer.agreeTermsLink">algemene voorwaarden</a>
+          </label>
         </section>
+
+        <div class="config-submit-bar" id="configSubmitBar">
+          <div class="submit-bar-row">
+            <div class="submit-price">
+              <span class="amount" id="submitPriceAmount">&euro;299</span>
+              <span class="label" data-i18n="config.footer.priceLabel">incl. BTW</span>
+            </div>
+            <button type="button" class="btn btn-compact coral" id="submitBtn">Bestel nu</button>
+          </div>
+        </div>
 
       </div>
 
@@ -382,29 +421,9 @@
           </div>
           <h2 data-i18n="config.step4.h2">Je Line is onderweg</h2>
           <p data-i18n="config.step4.body">Bedankt — je bestelling is ontvangen. Je met de hand getekende Line landt binnen 3 werkdagen in je inbox, klaar om te geven.</p>
-          <div class="proto-note" data-i18n="config.step4.protoNote">Dit is een prototype: er is niets echt verstuurd en er is geen bestelling opgeslagen. In de echte versie mailt deze stap jouw opdracht en bevestigt de ontvangst.</div>
           <button type="button" class="btn" id="restartBtn">Nieuwe Line starten</button>
         </div>
       </div>
-    </div>
-
-    <div class="config-submit-bar" id="configSubmitBar">
-      <label class="terms-check">
-        <input type="checkbox" id="agreeTerms">
-        <span data-i18n="config.footer.agreeTermsPre">Ik ga akkoord met de</span>
-        <a href="voorwaarden.html" target="_blank" rel="noopener" data-i18n="config.footer.agreeTermsLink">algemene voorwaarden</a>
-      </label>
-      <div class="submit-bar-row">
-        <div class="submit-price">
-          <span class="amount" id="submitPriceAmount">&euro;299</span>
-          <span class="label" data-i18n="config.footer.priceLabel">incl. BTW</span>
-        </div>
-        <div class="submit-btn-group">
-          <button type="button" class="btn" id="submitBtn">Bevestigen &amp; verzenden</button>
-          <img class="pay-badge-logo" src="images/tikkie-logo.png" alt="Tikkie" data-i18n-aria="config.footer.payBadgeAria" aria-label="Betalen via Tikkie" onerror="this.style.display='none'">
-        </div>
-      </div>
-      <p class="hint" id="submitHint" style="color:var(--coral);" hidden></p>
     </div>
   </div>
 </div>
