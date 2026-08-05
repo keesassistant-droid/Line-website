@@ -35,6 +35,7 @@
         <a href="#examples" data-i18n="nav.examples">Voorbeelden</a>
         <a href="#how-it-works" data-i18n="nav.how">Hoe het werkt</a>
         <a href="#about" data-i18n="nav.about">Over</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
       </span>
       <div class="lang-switch" role="group" aria-label="Taal / Language">
         <button type="button" class="lang-btn" data-lang="nl" aria-pressed="true">NL</button>
@@ -50,6 +51,7 @@
     <a href="#examples" data-i18n="nav.examples">Voorbeelden</a>
     <a href="#how-it-works" data-i18n="nav.how">Hoe het werkt</a>
     <a href="#about" data-i18n="nav.about">Over</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
     <button type="button" class="btn coral small js-open-config" data-i18n="cta.start">Geef een Line</button>
   </div>
 </header>
@@ -174,62 +176,39 @@
         <h2 data-i18n="pricing.heading">€299 all-in</h2>
         <p data-i18n="pricing.lede">Één vaste prijs voor een ingelijste Line van 20 × 60 cm — inclusief lijst, verpakking en verzending. Geen verrassingen bij het afrekenen.</p>
       </div>
-      <div class="price-diagram" aria-hidden="true">
-        <svg viewBox="0 0 660 740" role="img">
+      <div class="price-diagram">
+        <svg viewBox="0 0 588 204" role="img" aria-hidden="true">
           <defs>
             <clipPath id="priceFieldClip"><rect x="6" y="6" width="576" height="192" rx="8" /></clipPath>
           </defs>
-          <g transform="translate(42,0)">
-            <g clip-path="url(#priceFieldClip)">
-              <rect class="price-block-vat" x="6" y="6" width="99.9" height="192" />
-              <rect class="price-block-frame" x="105.9" y="6" width="57.8" height="192" />
-              <rect class="price-block-print" x="163.7" y="6" width="67.4" height="192" />
-              <rect class="price-block-shipping" x="231.1" y="6" width="15.4" height="192" />
-              <rect class="price-block-packaging" x="246.5" y="6" width="5.8" height="192" />
-              <rect class="price-block-labor" x="252.3" y="6" width="288.9" height="192" />
-              <rect class="price-block-margin" x="541.2" y="6" width="40.8" height="192" />
-              <g class="price-sep">
-                <line x1="105.9" y1="6" x2="105.9" y2="198" /><line x1="163.7" y1="6" x2="163.7" y2="198" />
-                <line x1="231.1" y1="6" x2="231.1" y2="198" /><line x1="246.5" y1="6" x2="246.5" y2="198" />
-                <line x1="252.3" y1="6" x2="252.3" y2="198" /><line x1="541.2" y1="6" x2="541.2" y2="198" />
-              </g>
+          <g clip-path="url(#priceFieldClip)">
+            <rect class="price-block-vat" x="6" y="6" width="99.9" height="192" />
+            <rect class="price-block-frame" x="105.9" y="6" width="57.8" height="192" />
+            <rect class="price-block-print" x="163.7" y="6" width="67.4" height="192" />
+            <rect class="price-block-shipping" x="231.1" y="6" width="15.4" height="192" />
+            <rect class="price-block-packaging" x="246.5" y="6" width="5.8" height="192" />
+            <rect class="price-block-labor" x="252.3" y="6" width="288.9" height="192" />
+            <rect class="price-block-margin" x="541.2" y="6" width="40.8" height="192" />
+            <g class="price-sep">
+              <line x1="105.9" y1="6" x2="105.9" y2="198" /><line x1="163.7" y1="6" x2="163.7" y2="198" />
+              <line x1="231.1" y1="6" x2="231.1" y2="198" /><line x1="246.5" y1="6" x2="246.5" y2="198" />
+              <line x1="252.3" y1="6" x2="252.3" y2="198" /><line x1="541.2" y1="6" x2="541.2" y2="198" />
             </g>
-            <rect class="price-outline" x="6" y="6" width="576" height="192" rx="8" />
-
-            <g text-anchor="middle">
-              <line class="price-leader" x1="55.95" y1="198" x2="55.95" y2="252" />
-              <text class="price-name" x="55.95" y="282" data-i18n="pricing.diagram.vat.name">BTW (21%)</text>
-              <text class="price-amount" x="55.95" y="332" data-i18n="pricing.diagram.vat.amount">€51,89</text>
-
-              <line class="price-leader" x1="134.8" y1="198" x2="134.8" y2="388" />
-              <text class="price-name" x="134.8" y="418" data-i18n="pricing.diagram.frame.name">Lijst</text>
-              <text class="price-amount" x="134.8" y="468" data-i18n="pricing.diagram.frame.amount">€30</text>
-
-              <line class="price-leader" x1="197.4" y1="198" x2="197.4" y2="252" />
-              <text class="price-name" x="197.4" y="282" data-i18n="pricing.diagram.print.name">Print</text>
-              <text class="price-amount" x="197.4" y="332" data-i18n="pricing.diagram.print.amount">€35</text>
-
-              <line class="price-leader" x1="238.8" y1="198" x2="238.8" y2="388" />
-              <text class="price-name" x="238.8" y="418" data-i18n="pricing.diagram.shipping.name">Verzending</text>
-              <text class="price-amount" x="238.8" y="468" data-i18n="pricing.diagram.shipping.amount">€8</text>
-
-              <line class="price-leader" x1="249.4" y1="198" x2="249.4" y2="524" />
-              <text class="price-name" x="249.4" y="554" data-i18n="pricing.diagram.packaging.name">Verpakking</text>
-              <text class="price-amount" x="249.4" y="604" data-i18n="pricing.diagram.packaging.amount">€3</text>
-
-              <line class="price-leader" x1="396.75" y1="198" x2="396.75" y2="252" />
-              <text class="price-name" x="396.75" y="282" data-i18n="pricing.diagram.labor.name">Teken-uren</text>
-              <text class="price-amount" x="396.75" y="332" data-i18n="pricing.diagram.labor.amount">€150</text>
-
-              <line class="price-leader" x1="561.6" y1="198" x2="561.6" y2="388" />
-              <text class="price-name" x="561.6" y="418" data-i18n="pricing.diagram.margin.name">Marge</text>
-              <text class="price-amount" x="561.6" y="468" data-i18n="pricing.diagram.margin.amount">€21,11</text>
-            </g>
-
-            <line class="price-total-rule" x1="120" y1="660" x2="468" y2="660" />
-            <text class="price-total-text" x="294" y="700" text-anchor="middle" data-i18n="pricing.diagram.total">€299 · alles inbegrepen</text>
           </g>
+          <rect class="price-outline" x="6" y="6" width="576" height="192" rx="8" />
         </svg>
+        <ul class="price-legend">
+          <li><span class="price-swatch price-block-vat"></span><span class="price-legend-text"><span class="price-legend-name" data-i18n="pricing.diagram.vat.name">BTW (21%)</span><span class="price-legend-amount" data-i18n="pricing.diagram.vat.amount">€51,89</span></span></li>
+          <li><span class="price-swatch price-block-frame"></span><span class="price-legend-text"><span class="price-legend-name" data-i18n="pricing.diagram.frame.name">Lijst</span><span class="price-legend-amount" data-i18n="pricing.diagram.frame.amount">€30</span></span></li>
+          <li><span class="price-swatch price-block-print"></span><span class="price-legend-text"><span class="price-legend-name" data-i18n="pricing.diagram.print.name">Print</span><span class="price-legend-amount" data-i18n="pricing.diagram.print.amount">€35</span></span></li>
+          <li><span class="price-swatch price-block-shipping"></span><span class="price-legend-text"><span class="price-legend-name" data-i18n="pricing.diagram.shipping.name">Verzending</span><span class="price-legend-amount" data-i18n="pricing.diagram.shipping.amount">€8</span></span></li>
+          <li><span class="price-swatch price-block-packaging"></span><span class="price-legend-text"><span class="price-legend-name" data-i18n="pricing.diagram.packaging.name">Verpakking</span><span class="price-legend-amount" data-i18n="pricing.diagram.packaging.amount">€3</span></span></li>
+          <li><span class="price-swatch price-block-labor"></span><span class="price-legend-text"><span class="price-legend-name" data-i18n="pricing.diagram.labor.name">Teken-uren</span><span class="price-legend-amount" data-i18n="pricing.diagram.labor.amount">€150</span></span></li>
+          <li><span class="price-swatch price-block-margin"></span><span class="price-legend-text"><span class="price-legend-name" data-i18n="pricing.diagram.margin.name">Marge</span><span class="price-legend-amount" data-i18n="pricing.diagram.margin.amount">€21,11</span></span></li>
+        </ul>
+        <div class="price-total-row">
+          <span data-i18n="pricing.diagram.total">€299 · alles inbegrepen</span>
+        </div>
       </div>
       <p class="price-caption" data-i18n="pricing.caption">Alle kosten inbegrepen, inclusief de tijd die in het tekenen gaat zitten. Wat overblijft is de marge voor het bedrijf.</p>
     </div>
@@ -346,6 +325,7 @@
       <a href="tel:+31614457456">+31 6 14 45 74 56</a>
     </p>
     <p>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a> ·
       <a href="voorwaarden.html" data-i18n="footer.terms">Algemene voorwaarden</a> ·
       <a href="privacybeleid.html" data-i18n="footer.privacy">Privacybeleid</a> ·
       <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener" data-i18n="footer.odr">Geschillencommissie (ODR)</a>
@@ -393,7 +373,6 @@
 
         <!-- Timeline -->
         <section class="config-section">
-          <p class="config-eyebrow" data-i18n="config.steps.0">Tijdlijn</p>
           <h2 data-i18n="config.step0.h2">Stel je Line samen</h2>
           <p class="tl-progress" id="tlProgress"></p>
           <div class="tl-list" id="tlList"></div>
@@ -403,7 +382,6 @@
 
         <!-- Format -->
         <section class="config-section">
-          <p class="config-eyebrow" data-i18n="config.steps.1">Formaat</p>
           <h2 data-i18n="config.step1.h2">Jouw formaat</h2>
           <p class="hint" data-i18n="config.step1.hint">Elke Line wordt op dit moment op één manier geleverd.</p>
           <div class="format-grid" id="formatGrid">
@@ -415,22 +393,27 @@
 
         <!-- Frame -->
         <section class="config-section">
-          <p class="config-eyebrow" data-i18n="config.steps.2">Lijst</p>
           <h2 data-i18n="config.stepFrame.h2">Kies je lijst</h2>
           <p class="hint" data-i18n="config.stepFrame.hint">Kies het materiaal van de lijst rondom je Line.</p>
           <div class="format-grid frame-grid" id="frameGrid">
-            <button type="button" class="format-card" data-frame="grafiet" aria-pressed="true">
-              <span data-i18n="config.stepFrame.grafietLabel">Grafiet</span>
-            </button>
-            <button type="button" class="format-card" data-frame="eikenhout" aria-pressed="false">
-              <span data-i18n="config.stepFrame.eikenhoutLabel">Eikenhout (+&euro;20)</span>
-            </button>
+            <div class="format-card frame-card" data-frame="grafiet" role="button" tabindex="0" aria-pressed="true">
+              <span class="frame-swatch"><img src="images/Frames%20/grafiet.png" alt="" loading="lazy"></span>
+              <span class="frame-label" data-i18n="config.stepFrame.grafietLabel">Grafiet</span>
+              <button type="button" class="frame-info-btn" data-frame-info="grafiet" data-i18n-aria="config.stepFrame.infoAria" aria-label="Meer info">i</button>
+            </div>
+            <div class="format-card frame-card" data-frame="eikenhout" role="button" tabindex="0" aria-pressed="false">
+              <span class="frame-swatch"><img src="images/Frames%20/eiken.png" alt="" loading="lazy"></span>
+              <span class="frame-label" data-i18n="config.stepFrame.eikenhoutLabel">Eikenhout</span>
+              <button type="button" class="frame-info-btn" data-frame-info="eikenhout" data-i18n-aria="config.stepFrame.infoAria" aria-label="Meer info">i</button>
+            </div>
+          </div>
+          <div class="frame-specs" id="frameSpecs" hidden>
+            <dl class="frame-specs-list" id="frameSpecsList"></dl>
           </div>
         </section>
 
         <!-- General notes -->
         <section class="config-section">
-          <p class="config-eyebrow" data-i18n="config.steps.3">Opmerkingen</p>
           <h2 data-i18n="config.stepNotes.h2">Nog iets kwijt?</h2>
           <p class="hint" data-i18n="config.stepNotes.hint">Algemene opmerkingen of specifieke wensen voor je Line — los van de losse plekken hierboven.</p>
           <div class="field">
@@ -440,7 +423,6 @@
 
         <!-- Details -->
         <section class="config-section">
-          <p class="config-eyebrow" data-i18n="config.steps.4">Jouw gegevens</p>
           <h2 data-i18n="config.step2.h2">Jouw gegevens</h2>
           <p class="hint" data-i18n="config.step2.hint">Waar mogen we je Line naartoe sturen?</p>
           <div class="two-col">
@@ -465,12 +447,12 @@
             <label for="contactDate" data-i18n="config.step2.dateLabel">Gewenste ontvangstdatum</label>
             <input type="date" id="contactDate" data-i18n-aria="config.step2.dateAria">
             <p class="field-note" data-i18n="config.step2.dateHint">Optioneel. We doen ons best, standaard doorlooptijd is 2 tot 3 weken.</p>
+            <p class="field-note field-note-warning" id="dateEarlyWarning" data-i18n="config.step2.dateEarlyWarning" hidden>Deze datum is minder dan 2 weken vanaf nu. Door de tijd die tekenen, printen en verzenden kosten, kunnen we deze datum waarschijnlijk niet halen.</p>
           </div>
         </section>
 
         <!-- Live review -->
         <section class="config-section" id="reviewSection">
-          <p class="config-eyebrow" data-i18n="config.steps.5">Overzicht</p>
           <h2 data-i18n="config.step3.h2">Bekijk je bestelling</h2>
           <ul class="summary-list" id="summaryList"></ul>
           <label class="terms-check">
@@ -500,9 +482,10 @@
           <div class="check">
             <svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6" /></svg>
           </div>
-          <h2 data-i18n="config.step4.h2">Je Line is onderweg</h2>
-          <p data-i18n="config.step4.body">Bedankt — je bestelling is ontvangen. Je met de hand getekende Line landt over ongeveer 2 tot 3 weken in je inbox, klaar om te geven.</p>
-          <button type="button" class="btn" id="restartBtn">Nieuwe Line starten</button>
+          <h2 data-i18n="config.step4.h2">Bedankt voor je bestelling!</h2>
+          <p data-i18n="config.step4.body">Check je inbox voor de bevestigingsmail.</p>
+          <p class="success-order-number" id="successOrderNumber" hidden></p>
+          <button type="button" class="btn" id="successHomeBtn">Terug naar home</button>
         </div>
       </div>
     </div>

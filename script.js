@@ -6,7 +6,7 @@
   var MIN_PLACES = 6;
   var MAX_PLACES = 10;
   var PRICE = 299;
-  var FRAME_UPGRADE_COST = 20;
+  var EXTRA_PLACE_COST = 25;
   var SHIPPING_COST = 7.95;
   var SHIPPING_CARRIER = "PostNL";
   var WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxDMQ3Wachosogg1YbnwtQm663nN-qsmiC_QYolDcv_z5HoMRsJsC3RtBXdxcH6TLaV/exec";
@@ -16,7 +16,7 @@
   var I18N = {
     nl: {
       title: "Line",
-      nav: { examples: "Voorbeelden", how: "Hoe het werkt", about: "Over", menuToggle: "Menu" },
+      nav: { examples: "Voorbeelden", how: "Hoe het werkt", about: "Over", contact: "Contact", menuToggle: "Menu" },
       cta: { start: "Geef een Line" },
       hero: {
         headlinePre: "Het cadeau voor een ",
@@ -97,7 +97,6 @@
       },
       config: {
         closeAria: "Configurator sluiten",
-        steps: ["Tijdlijn", "Formaat", "Lijst", "Opmerkingen", "Jouw gegevens", "Overzicht", "Bevestiging"],
         step0: {
           h2: "Stel je Line samen",
           addBtn: "+ Plek toevoegen",
@@ -116,7 +115,8 @@
           progressLabel: "{done} van de {min} compleet",
           toggleAria: "Details tonen of verbergen",
           moveUpAria: "Naar boven verplaatsen",
-          moveDownAria: "Naar beneden verplaatsen"
+          moveDownAria: "Naar beneden verplaatsen",
+          extraPlaceHint: "De eerste 6 plekken zijn inbegrepen. Elke plek daarna kost €25 extra."
         },
         step1: {
           h2: "Jouw formaat",
@@ -127,7 +127,55 @@
           h2: "Kies je lijst",
           hint: "Kies het materiaal van de lijst rondom je Line.",
           grafietLabel: "Grafiet",
-          eikenhoutLabel: "Eikenhout (+€20)"
+          eikenhoutLabel: "Eikenhout",
+          infoAria: "Meer info over dit lijstmateriaal",
+          grafietSpecs: [
+            ["Afbeeldingsgrootte", "20x60 cm"],
+            ["Kleur", "Grijs / Zilver"],
+            ["Inclusief passe-partout", "Nee"],
+            ["Materiaal", "Hout"],
+            ["Plek voor", "1 foto"],
+            ["Glans van de lijst", "Mat"],
+            ["Buitenmaat van de lijst", "21,8x61,8 cm"],
+            ["Inclusief steun", "Nee"],
+            ["Gemaakt in", "Zweden"],
+            ["Houtsoort", "Ayoushout (Gefolied)"],
+            ["Soort glas", "Acrylglas"],
+            ["Ophanging", "Staand & Liggend"],
+            ["Muurbevestiging", "Ja"],
+            ["Sponningdiepte (binnendiepte)", "8 mm"],
+            ["Breedte van de lijst", "13 mm"],
+            ["Diepte van de lijst", "11,5 mm"],
+            ["Materiaal achterkant", "MDF"],
+            ["Profiel type", "Vierkant"],
+            ["Montage methode", "Flexibele stiften"],
+            ["Gewicht", "464 g"],
+            ["Oppervlakte behandeling", "Beschilderd"]
+          ],
+          eikenhoutSpecs: [
+            ["Afbeeldingsgrootte", "20x60 cm"],
+            ["Kleur", "Eiken / Hout"],
+            ["Kleurtint", "Eiken"],
+            ["Inclusief passe-partout", "Nee"],
+            ["Materiaal", "Hout"],
+            ["Plek voor", "1 foto"],
+            ["Glans van de lijst", "Mat"],
+            ["Buitenmaat van de lijst", "22x62 cm"],
+            ["Inclusief steun", "Nee"],
+            ["Gemaakt in", "Zweden"],
+            ["Houtsoort", "Grenen (echt onbehandeld eikenfineer)"],
+            ["Soort glas", "Acrylglas"],
+            ["Ophanging", "Staand & Liggend"],
+            ["Muurbevestiging", "Ja"],
+            ["Sponningdiepte (binnendiepte)", "8 mm"],
+            ["Breedte van de lijst", "13 mm"],
+            ["Diepte van de lijst", "11,5 mm"],
+            ["Materiaal achterkant", "MDF"],
+            ["Profiel type", "Vierkant"],
+            ["Montage methode", "Flexibele stiften"],
+            ["Gewicht", "492 g"],
+            ["Oppervlakte behandeling", "Eikenfineer"]
+          ]
         },
         stepNotes: {
           h2: "Nog iets kwijt?",
@@ -149,6 +197,7 @@
           dateLabel: "Gewenste ontvangstdatum",
           dateAria: "Gewenste ontvangstdatum",
           dateHint: "Optioneel. We doen ons best, standaard doorlooptijd is 2 tot 3 weken.",
+          dateEarlyWarning: "Deze datum is minder dan 2 weken vanaf nu. Door de tijd die tekenen, printen en verzenden kosten, kunnen we deze datum waarschijnlijk niet halen.",
           detailsHint: "Vul je naam, telefoonnummer, een geldig e-mailadres en je bezorgadres in om verder te gaan."
         },
         step3: {
@@ -160,15 +209,16 @@
           shippingIncluded: "inbegrepen in de prijs"
         },
         step4: {
-          h2: "Je Line is onderweg",
-          body: "Bedankt — je bestelling is ontvangen. Je met de hand getekende Line landt over ongeveer 2 tot 3 weken in je inbox, klaar om te geven."
+          h2: "Bedankt voor je bestelling!",
+          body: "Check je inbox voor de bevestigingsmail.",
+          orderNumberLabel: "Je ordernummer: {nummer}"
         },
         footer: {
           confirm: "Bestel nu",
-          sending: "Bezig met versturen…",
+          sending: "Bezig met versturen, dit kan een halve minuut duren…",
           submitError: "Versturen is niet gelukt. Controleer je internetverbinding en probeer het nog eens. Je gegevens zijn niet verloren.",
           mailFallback: "Open e-mail met je bestelling",
-          restart: "Nieuwe Line starten",
+          backHome: "Terug naar home",
           priceLabel: "incl. BTW",
           agreeTermsPre: "Ik ga akkoord met de",
           agreeTermsLink: "algemene voorwaarden",
@@ -178,7 +228,7 @@
     },
     en: {
       title: "Line",
-      nav: { examples: "Examples", how: "How it works", about: "About", menuToggle: "Menu" },
+      nav: { examples: "Examples", how: "How it works", about: "About", contact: "Contact", menuToggle: "Menu" },
       cta: { start: "Give a Line" },
       hero: {
         headlinePre: "The gift for a ",
@@ -259,7 +309,6 @@
       },
       config: {
         closeAria: "Close configurator",
-        steps: ["Timeline", "Format", "Frame", "Comments", "Your details", "Review", "Confirmation"],
         step0: {
           h2: "Put your Line together",
           addBtn: "+ Add a place",
@@ -278,7 +327,8 @@
           progressLabel: "{done} of {min} complete",
           toggleAria: "Show or hide details",
           moveUpAria: "Move up",
-          moveDownAria: "Move down"
+          moveDownAria: "Move down",
+          extraPlaceHint: "The first 6 places are included. Every place after that is an extra €25."
         },
         step1: {
           h2: "Your format",
@@ -289,7 +339,55 @@
           h2: "Choose your frame",
           hint: "Pick the material for the frame around your Line.",
           grafietLabel: "Graphite",
-          eikenhoutLabel: "Oak (+€20)"
+          eikenhoutLabel: "Oak",
+          infoAria: "More info about this frame material",
+          grafietSpecs: [
+            ["Image size", "20x60 cm"],
+            ["Color", "Gray / Silver"],
+            ["Includes mount", "No"],
+            ["Material", "Wood"],
+            ["Space for", "1 photo"],
+            ["Frame finish", "Matte"],
+            ["Outer frame size", "21.8x61.8 cm"],
+            ["Includes stand", "No"],
+            ["Made in", "Sweden"],
+            ["Wood type", "Ayous wood (foil-wrapped)"],
+            ["Glass type", "Acrylic glass"],
+            ["Hanging orientation", "Portrait & landscape"],
+            ["Wall mounting", "Yes"],
+            ["Rebate depth (inner depth)", "8 mm"],
+            ["Frame width", "13 mm"],
+            ["Frame depth", "11.5 mm"],
+            ["Backing material", "MDF"],
+            ["Profile type", "Square"],
+            ["Mounting method", "Flexible pins"],
+            ["Weight", "464 g"],
+            ["Surface treatment", "Painted"]
+          ],
+          eikenhoutSpecs: [
+            ["Image size", "20x60 cm"],
+            ["Color", "Oak / Wood"],
+            ["Color shade", "Oak"],
+            ["Includes mount", "No"],
+            ["Material", "Wood"],
+            ["Space for", "1 photo"],
+            ["Frame finish", "Matte"],
+            ["Outer frame size", "22x62 cm"],
+            ["Includes stand", "No"],
+            ["Made in", "Sweden"],
+            ["Wood type", "Pine (real untreated oak veneer)"],
+            ["Glass type", "Acrylic glass"],
+            ["Hanging orientation", "Portrait & landscape"],
+            ["Wall mounting", "Yes"],
+            ["Rebate depth (inner depth)", "8 mm"],
+            ["Frame width", "13 mm"],
+            ["Frame depth", "11.5 mm"],
+            ["Backing material", "MDF"],
+            ["Profile type", "Square"],
+            ["Mounting method", "Flexible pins"],
+            ["Weight", "492 g"],
+            ["Surface treatment", "Oak veneer"]
+          ]
         },
         stepNotes: {
           h2: "Anything else?",
@@ -322,15 +420,16 @@
           shippingIncluded: "included in the price"
         },
         step4: {
-          h2: "Your Line is on its way",
-          body: "Thank you — your order has been received. Your hand-drawn Line will land in your inbox in about 2 to 3 weeks, ready to give."
+          h2: "Thank you for your order!",
+          body: "Check your inbox for the confirmation email.",
+          orderNumberLabel: "Your order number: {nummer}"
         },
         footer: {
           confirm: "Order now",
-          sending: "Sending…",
+          sending: "Sending, this can take up to half a minute…",
           submitError: "Sending failed. Check your internet connection and try again. Your details haven't been lost.",
           mailFallback: "Open email with your order",
-          restart: "Start a new Line",
+          backHome: "Back to home",
           priceLabel: "incl. VAT",
           agreeTermsPre: "I agree to the",
           agreeTermsLink: "terms & conditions",
@@ -448,9 +547,10 @@
   var configClose = document.getElementById("configClose");
   var configForm = document.getElementById("configForm");
   var configSuccess = document.getElementById("configSuccess");
+  var successOrderNumber = document.getElementById("successOrderNumber");
   var configSubmitBar = document.getElementById("configSubmitBar");
   var submitBtn = document.getElementById("submitBtn");
-  var restartBtn = document.getElementById("restartBtn");
+  var successHomeBtn = document.getElementById("successHomeBtn");
   var submitError = document.getElementById("submitError");
   var mailFallbackBtn = document.getElementById("mailFallbackBtn");
   var agreeTermsBox = document.getElementById("agreeTerms");
@@ -461,15 +561,20 @@
   var tlNextHint = document.getElementById("tlNextHint");
   var tlProgress = document.getElementById("tlProgress");
   var tlExpanded = {}; // ephemeral UI state keyed by item.id — never persisted to localStorage
+  var tlApplyExpandedFns = {}; // per-tile applyExpandedState closures, rebuilt on every renderTimeline()
 
   var formatGrid = document.getElementById("formatGrid");
   var frameGrid = document.getElementById("frameGrid");
+  var frameSpecs = document.getElementById("frameSpecs");
+  var frameSpecsList = document.getElementById("frameSpecsList");
+  var openFrameSpecsFor = null; // ephemeral UI state: which material's info panel is open, or null
 
   var contactName = document.getElementById("contactName");
   var contactEmail = document.getElementById("contactEmail");
   var contactPhone = document.getElementById("contactPhone");
   var contactAddress = document.getElementById("contactAddress");
   var contactDate = document.getElementById("contactDate");
+  var dateEarlyWarning = document.getElementById("dateEarlyWarning");
   var contactNotes = document.getElementById("contactNotes");
 
   var summaryList = document.getElementById("summaryList");
@@ -611,7 +716,7 @@
 
     configClose.setAttribute("aria-label", d.config.closeAria);
     submitBtn.textContent = d.config.footer.confirm;
-    restartBtn.textContent = d.config.footer.restart;
+    successHomeBtn.textContent = d.config.footer.backHome;
 
     renderAll();
   }
@@ -767,10 +872,10 @@
     submitOrder();
   });
 
-  restartBtn.addEventListener("click", function () {
+  successHomeBtn.addEventListener("click", function () {
     state = defaultState();
     save();
-    renderAll();
+    closeConfigurator();
   });
 
   // Plain-text order summary used as a last-resort fallback (mailto) if the webhook
@@ -802,7 +907,7 @@
       lines.push("");
     }
     lines.push("Formaat: Ingelijste print, 20 x 60 cm");
-    lines.push("Lijst: " + (payload.frame === "eikenhout" ? "Eikenhout (+EUR 20)" : "Grafiet"));
+    lines.push("Lijst: " + (payload.frame === "eikenhout" ? "Eikenhout" : "Grafiet"));
     lines.push("Prijs: EUR " + payload.price);
     lines.push("Akkoord voorwaarden: " + (payload.agreeTerms ? "Ja" : "Nee"));
     return lines.join("\n");
@@ -816,6 +921,16 @@
   }
 
   var lastFailedPayload = null;
+  var lastOrderNumber = "";
+
+  function renderSuccessOrderNumber() {
+    if (!lastOrderNumber) {
+      successOrderNumber.hidden = true;
+      return;
+    }
+    successOrderNumber.textContent = t().config.step4.orderNumberLabel.replace("{nummer}", lastOrderNumber);
+    successOrderNumber.hidden = false;
+  }
 
   function showSubmitError(payload) {
     lastFailedPayload = payload;
@@ -844,13 +959,15 @@
       agreeTerms: state.agreeTerms
     };
 
-    function handleSuccess() {
+    function handleSuccess(orderNumber) {
+      lastOrderNumber = orderNumber || "";
       submitError.hidden = true;
       mailFallbackBtn.hidden = true;
       state.submitted = true;
       save();
       localStorage.removeItem(STORAGE_KEY);
       renderAll();
+      renderSuccessOrderNumber();
     }
 
     if (!WEBHOOK_URL) {
@@ -876,7 +993,7 @@
           })
           .then(function (json) {
             if (res.ok && json && json.ok) {
-              handleSuccess();
+              handleSuccess(json.orderNumber);
             } else {
               showSubmitError(payload);
             }
@@ -893,6 +1010,9 @@
   }
   function filledPlacesCount() {
     return state.timeline.filter(isPlaceComplete).length;
+  }
+  function extraPlacesCount() {
+    return Math.max(0, filledPlacesCount() - MIN_PLACES);
   }
 
   function isValidPhone(value) {
@@ -1023,6 +1143,12 @@
     badge.className = "badge-index";
     badge.textContent = String(idx + 1);
 
+    var extraBadge = document.createElement("div");
+    extraBadge.className = "tl-extra-badge";
+    extraBadge.textContent = "+€" + EXTRA_PLACE_COST;
+    extraBadge.hidden = idx < MIN_PLACES;
+    extraBadge.title = d.extraPlaceHint;
+
     var check = document.createElement("div");
     check.className = "tl-check";
     check.hidden = true;
@@ -1053,6 +1179,7 @@
     head.className = "tl-head";
     head.appendChild(handle);
     head.appendChild(badge);
+    head.appendChild(extraBadge);
     head.appendChild(placeInput);
     head.appendChild(dot);
     head.appendChild(check);
@@ -1084,7 +1211,16 @@
       applyExpandedState();
     }
     applyExpandedState();
+    tlApplyExpandedFns[item.id] = applyExpandedState;
 
+    placeInput.addEventListener("focus", function () {
+      Object.keys(tlExpanded).forEach(function (id) {
+        tlExpanded[id] = id === String(item.id);
+      });
+      Object.keys(tlApplyExpandedFns).forEach(function (id) {
+        tlApplyExpandedFns[id]();
+      });
+    });
     placeInput.addEventListener("input", function () {
       item.place = placeInput.value;
       save();
@@ -1217,6 +1353,7 @@
 
   function renderTimeline() {
     tlList.innerHTML = "";
+    tlApplyExpandedFns = {};
     state.timeline.forEach(function (item, idx) {
       tlList.appendChild(buildTlItem(item, idx));
     });
@@ -1227,25 +1364,67 @@
 
   /* ---------- format step ---------- */
   function currentPrice() {
-    return PRICE + (state.frame === "eikenhout" ? FRAME_UPGRADE_COST : 0);
+    return PRICE + extraPlacesCount() * EXTRA_PLACE_COST;
   }
   function renderFormat() {
     submitPriceAmount.textContent = "€" + currentPrice();
   }
 
   /* ---------- frame step ---------- */
-  frameGrid.addEventListener("click", function (e) {
-    var card = e.target.closest(".format-card");
-    if (!card) return;
-    state.frame = card.dataset.frame;
+  function selectFrame(material) {
+    state.frame = material;
     save();
     renderFrame();
     renderFormat();
+  }
+  function renderFrameSpecs() {
+    if (!openFrameSpecsFor) {
+      frameSpecs.hidden = true;
+      return;
+    }
+    var d = t().config.stepFrame;
+    var rows = openFrameSpecsFor === "eikenhout" ? d.eikenhoutSpecs : d.grafietSpecs;
+    frameSpecsList.innerHTML = "";
+    rows.forEach(function (row) {
+      var dt = document.createElement("dt");
+      dt.textContent = row[0];
+      var dd = document.createElement("dd");
+      dd.textContent = row[1];
+      frameSpecsList.appendChild(dt);
+      frameSpecsList.appendChild(dd);
+    });
+    frameSpecs.hidden = false;
+  }
+  frameGrid.querySelectorAll(".frame-swatch img").forEach(function (img) {
+    img.addEventListener("error", function () {
+      img.style.display = "none";
+    });
+  });
+  frameGrid.addEventListener("click", function (e) {
+    var infoBtn = e.target.closest(".frame-info-btn");
+    if (infoBtn) {
+      var material = infoBtn.dataset.frameInfo;
+      openFrameSpecsFor = openFrameSpecsFor === material ? null : material;
+      renderFrameSpecs();
+      return;
+    }
+    var card = e.target.closest(".format-card");
+    if (!card) return;
+    selectFrame(card.dataset.frame);
+  });
+  frameGrid.addEventListener("keydown", function (e) {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    if (e.target.closest(".frame-info-btn")) return;
+    var card = e.target.closest(".format-card");
+    if (!card) return;
+    e.preventDefault();
+    selectFrame(card.dataset.frame);
   });
   function renderFrame() {
     frameGrid.querySelectorAll(".format-card").forEach(function (card) {
       card.setAttribute("aria-pressed", String(card.dataset.frame === state.frame));
     });
+    renderFrameSpecs();
   }
 
   /* ---------- details step ---------- */
@@ -1269,9 +1448,32 @@
     save();
     updateSubmitState();
   });
+  function refreshDateWarning() {
+    if (!contactDate.value) {
+      dateEarlyWarning.hidden = true;
+      return;
+    }
+    var earliest = new Date();
+    earliest.setDate(earliest.getDate() + 14);
+    var chosen = new Date(contactDate.value + "T00:00:00");
+    dateEarlyWarning.hidden = chosen >= earliest;
+  }
+  contactDate.addEventListener("focus", function () {
+    if (contactDate.showPicker) {
+      try {
+        contactDate.showPicker();
+      } catch (err) {
+        /* unsupported in this browser context, field still works normally */
+      }
+    }
+  });
+  contactDate.addEventListener("keydown", function (e) {
+    if (e.key !== "Tab" && e.key !== "Escape") e.preventDefault();
+  });
   contactDate.addEventListener("change", function () {
     state.contact.desiredDate = contactDate.value;
     save();
+    refreshDateWarning();
   });
   contactNotes.addEventListener("input", function () {
     state.contact.notes = contactNotes.value;
@@ -1287,10 +1489,8 @@
     contactEmail.value = state.contact.email;
     contactPhone.value = state.contact.phone;
     contactAddress.value = state.contact.address;
-    var earliest = new Date();
-    earliest.setDate(earliest.getDate() + 14);
-    contactDate.min = earliest.toISOString().slice(0, 10);
     contactDate.value = state.contact.desiredDate;
+    refreshDateWarning();
     contactNotes.value = state.contact.notes;
   }
 
@@ -1371,6 +1571,7 @@
     var ok = canSubmit();
     submitBtn.disabled = !ok;
     renderTimelineProgress();
+    renderFormat();
 
     var tlHint = timelineHintText();
     tlNextHint.textContent = tlHint;
@@ -1388,6 +1589,7 @@
     renderDetails();
     renderReview();
     updateSubmitState();
+    renderSuccessOrderNumber();
   }
 
   applyLang();
