@@ -3,8 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Line — het cadeau voor een groot moment</title>
-<meta name="description" content="Het cadeau voor een groot moment — een met de hand getekende lijntekening van iemands verhaal.">
+<title>Line: persoonlijke lijntekening als cadeau, met de hand getekend</title>
+<meta name="description" content="Line tekent elke plek die iemands leven vormde tot een handgetekende lijntekening. Persoonlijk cadeau voor een verhuizing, afstuderen, huwelijk of afscheid.">
+<link rel="canonical" href="https://line-design.eu/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Line">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:url" content="https://line-design.eu/">
+<meta property="og:title" content="Line: persoonlijke lijntekening als cadeau, met de hand getekend">
+<meta property="og:description" content="Line tekent elke plek die iemands leven vormde tot een handgetekende lijntekening. Persoonlijk cadeau voor een verhuizing, afstuderen, huwelijk of afscheid.">
+<meta property="og:image" content="https://line-design.eu/images/header/IMG_9153%202%20copy.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Line: persoonlijke lijntekening als cadeau, met de hand getekend">
+<meta name="twitter:description" content="Line tekent elke plek die iemands leven vormde tot een handgetekende lijntekening. Persoonlijk cadeau voor een verhuizing, afstuderen, huwelijk of afscheid.">
+<meta name="twitter:image" content="https://line-design.eu/images/header/IMG_9153%202%20copy.jpg">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
@@ -24,8 +40,17 @@
         <button type="button" class="lang-btn" data-lang="nl" aria-pressed="true">NL</button>
         <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <button type="button" class="btn small js-open-config" data-i18n="cta.start">Geef een Line</button>
+      <button type="button" class="btn coral small js-open-config" data-i18n="cta.start">Geef een Line</button>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" data-i18n-aria="nav.menuToggle" aria-label="Menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#examples" data-i18n="nav.examples">Voorbeelden</a>
+    <a href="#how-it-works" data-i18n="nav.how">Hoe het werkt</a>
+    <a href="#about" data-i18n="nav.about">Over</a>
+    <button type="button" class="btn coral small js-open-config" data-i18n="cta.start">Geef een Line</button>
   </div>
 </header>
 
@@ -33,14 +58,20 @@
   <!-- ---------- Hero ---------- -->
   <section class="hero">
     <div class="hero-banner">
-      <img src="images/header/IMG_9153%202%20copy.jpg" alt="" loading="lazy">
+      <img src="images/header/IMG_9153%202%20copy.jpg" alt="" width="4032" height="3024" fetchpriority="high">
+      <div class="hero-card">
+        <h1 class="hero-headline">Het cadeau voor een <em>groot moment</em></h1>
+        <div class="hero-actions">
+          <button type="button" class="btn coral js-open-config" data-i18n="cta.start">Geef een Line</button>
+          <a class="btn ghost" href="#examples" data-i18n="hero.seeExamples">Bekijk voorbeelden</a>
+        </div>
+      </div>
     </div>
     <div class="wrap">
-      <h1 id="heroHeadline">Het cadeau voor een <em>groot moment</em></h1>
-      <p class="hero-subtitle" data-i18n="hero.eyebrow">Persoonlijke lijntekening, met de hand getekend</p>
-      <p class="lede" data-i18n="hero.lede">Line is het cadeau voor iemands grote moment — een verhuizing, een afstuderen, een nieuwe baan, een kindje. Hun reis wordt één met de hand getekende tekening, klaar om te geven.</p>
-      <div class="hero-actions">
-        <button type="button" class="btn js-open-config" data-i18n="cta.start">Geef een Line</button>
+      <h1 class="hero-headline hero-headline-mobile">Het cadeau voor een <em>groot moment</em></h1>
+      <p class="lede" data-i18n="hero.lede">Line tekent elke plek die iemands leven vormde: van eerste woonhuis tot laatste adres. Een persoonlijk kunstwerk voor een verhuizing, afstuderen, huwelijk of afscheid.</p>
+      <div class="hero-actions hero-actions-mobile">
+        <button type="button" class="btn coral js-open-config" data-i18n="cta.start">Geef een Line</button>
         <a class="btn ghost" href="#examples" data-i18n="hero.seeExamples">Bekijk voorbeelden</a>
       </div>
     </div>
@@ -59,8 +90,7 @@
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow" data-i18n="examples.eyebrow">Cadeaus die al gegeven zijn</p>
-        <h2 data-i18n="examples.heading">Elke Line vertelt een verhaal</h2>
-        <p data-i18n="examples.lede">Een kleine selectie van Lines die eerder gegeven zijn — elk gemaakt voor iemands grote moment.</p>
+        <h2 data-i18n="examples.heading">Elke Line vertelt een eigen verhaal</h2>
       </div>
 
       <!--
@@ -71,16 +101,15 @@
         (URL-encode spaces as %20). Click any tile to open it in the lightbox.
       -->
       <div class="examples-grid" id="examplesGrid">
-        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/AEA62852-4E99-4754-B5C8-C98D20F91FE0.JPG" alt="Line, met de hand getekend" loading="lazy"></button></div>
-        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_0387%20copy.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
-        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_9817%20copy.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
-        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_0528%20copy%202.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
-        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_9327%20copy%202.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
-        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_8391%202%20copy.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
-        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_8394%202%20copy.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
-        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_1027%202%20copy.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
-        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_9152%20copy.jpg" alt="Line, met de hand getekend" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/AEA62852-4E99-4754-B5C8-C98D20F91FE0.JPG" alt="Ingelijste Line met een Rotterdamse skyline: rijtjeshuis, kantoorpand, Euromast en Erasmusbrug" width="1440" height="1080" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_0387%20copy.jpg" alt="Ingelijste Line met een bedrijfspand en kerktoren, jubileumeditie 120 jaar" width="4032" height="3024" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_9817%20copy.jpg" alt="Ingelijste Line met een havengezicht: vuurtoren, schip, booreiland en windturbines" width="4032" height="2268" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_0528%20copy%202.jpg" alt="Ingelijste Line met een straatbeeld, camper en de Erasmusbrug" width="4032" height="3024" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_1027%202%20copy.jpg" alt="Ingelijste Line met bedrijfsloodsen, een molen en bedrijfsbusjes" width="4032" height="3024" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_9323%202%20copy.jpg" alt="Ingelijste Line met de Groningse skyline: Martinitoren, ziekenhuis en historische panden" width="4032" height="2268" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/PHOTO-2021-10-13-15-58-35.jpg" alt="Ingelijste Line met een dorpsgezicht, kerktoren en een vliegtuigje met banier" width="1024" height="768" loading="lazy"></button></div>
       </div>
+      <div class="examples-dots" id="examplesDots" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -91,26 +120,25 @@
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow" data-i18n="how.eyebrow">Hoe het werkt</p>
-        <h2 data-i18n="how.heading">Van hun verhaal naar jouw cadeau</h2>
-        <p data-i18n="how.lede">Geen live preview, geen algoritme — elke Line wordt van begin tot eind met de hand getekend.</p>
       </div>
       <div class="steps-grid">
         <div class="hiw-step">
           <div class="num">1</div>
-          <h3>Bouw de Line</h3>
-          <p>Voeg de plekken en persoonlijke details toe die hun verhaal vertellen.</p>
+          <h3>Stel de Line samen</h3>
+          <p>Voeg alle plekken toe en upload foto's.</p>
         </div>
         <div class="hiw-step">
           <div class="num">2</div>
-          <h3>Wij tekenen 'm</h3>
-          <p>De tekenaar gaat aan de slag — je krijgt één reviewmoment om de schets te bekijken voordat we doorgaan naar de afwerking.</p>
+          <h3>Wij tekenen hem</h3>
+          <p>De tekenaar gaat aan de slag. Voordat we afdrukken ontvang je het design in je mailbox.</p>
         </div>
         <div class="hiw-step">
           <div class="num">3</div>
-          <h3>Hij landt in je mailbox</h3>
-          <p>Binnen 3 werkdagen ontvang je de afgeronde Line per e-mail, klaar om te geven.</p>
+          <h3>Line wordt bezorgd</h3>
+          <p>PostNL bezorgt de Line.</p>
         </div>
       </div>
+      <p class="section-note" data-i18n="how.turnaroundNote">Doorlooptijd is gemiddeld zo'n 2 tot 3 weken. Deze start vanaf het moment van betalen.</p>
     </div>
   </section>
 
@@ -120,7 +148,6 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="dims.eyebrow">Afmetingen</p>
         <h2 data-i18n="dims.heading">Standaard 20 × 60 cm</h2>
-        <p data-i18n="dims.body">Elke Line wordt standaard getekend op 20 bij 60 centimeter — ongeveer zo breed als een A4'tje, en twee keer zo lang.</p>
       </div>
       <div class="dims-diagram" aria-hidden="true">
         <svg viewBox="0 0 320 200" role="img">
@@ -148,22 +175,63 @@
         <p data-i18n="pricing.lede">Één vaste prijs voor een ingelijste Line van 20 × 60 cm — inclusief lijst, verpakking en verzending. Geen verrassingen bij het afrekenen.</p>
       </div>
       <div class="price-diagram" aria-hidden="true">
-        <svg viewBox="0 0 320 200" role="img">
-          <rect class="price-band price-band-vat" x="55" y="55" width="42" height="80" />
-          <rect class="price-band price-band-cost" x="97" y="55" width="34" height="80" />
-          <rect class="price-band price-band-margin" x="131" y="55" width="164" height="80" />
-          <line class="price-sep" x1="97" y1="55" x2="97" y2="135" />
-          <line class="price-sep" x1="131" y1="55" x2="131" y2="135" />
-          <rect class="price-outline" x="55" y="55" width="240" height="80" />
-          <text class="dims-label" x="175" y="35" text-anchor="middle">€299</text>
+        <svg viewBox="0 0 660 740" role="img">
+          <defs>
+            <clipPath id="priceFieldClip"><rect x="6" y="6" width="576" height="192" rx="8" /></clipPath>
+          </defs>
+          <g transform="translate(42,0)">
+            <g clip-path="url(#priceFieldClip)">
+              <rect class="price-block-vat" x="6" y="6" width="99.9" height="192" />
+              <rect class="price-block-frame" x="105.9" y="6" width="57.8" height="192" />
+              <rect class="price-block-print" x="163.7" y="6" width="67.4" height="192" />
+              <rect class="price-block-shipping" x="231.1" y="6" width="15.4" height="192" />
+              <rect class="price-block-packaging" x="246.5" y="6" width="5.8" height="192" />
+              <rect class="price-block-labor" x="252.3" y="6" width="288.9" height="192" />
+              <rect class="price-block-margin" x="541.2" y="6" width="40.8" height="192" />
+              <g class="price-sep">
+                <line x1="105.9" y1="6" x2="105.9" y2="198" /><line x1="163.7" y1="6" x2="163.7" y2="198" />
+                <line x1="231.1" y1="6" x2="231.1" y2="198" /><line x1="246.5" y1="6" x2="246.5" y2="198" />
+                <line x1="252.3" y1="6" x2="252.3" y2="198" /><line x1="541.2" y1="6" x2="541.2" y2="198" />
+              </g>
+            </g>
+            <rect class="price-outline" x="6" y="6" width="576" height="192" rx="8" />
+
+            <g text-anchor="middle">
+              <line class="price-leader" x1="55.95" y1="198" x2="55.95" y2="252" />
+              <text class="price-name" x="55.95" y="282" data-i18n="pricing.diagram.vat.name">BTW (21%)</text>
+              <text class="price-amount" x="55.95" y="332" data-i18n="pricing.diagram.vat.amount">€51,89</text>
+
+              <line class="price-leader" x1="134.8" y1="198" x2="134.8" y2="388" />
+              <text class="price-name" x="134.8" y="418" data-i18n="pricing.diagram.frame.name">Lijst</text>
+              <text class="price-amount" x="134.8" y="468" data-i18n="pricing.diagram.frame.amount">€30</text>
+
+              <line class="price-leader" x1="197.4" y1="198" x2="197.4" y2="252" />
+              <text class="price-name" x="197.4" y="282" data-i18n="pricing.diagram.print.name">Print</text>
+              <text class="price-amount" x="197.4" y="332" data-i18n="pricing.diagram.print.amount">€35</text>
+
+              <line class="price-leader" x1="238.8" y1="198" x2="238.8" y2="388" />
+              <text class="price-name" x="238.8" y="418" data-i18n="pricing.diagram.shipping.name">Verzending</text>
+              <text class="price-amount" x="238.8" y="468" data-i18n="pricing.diagram.shipping.amount">€8</text>
+
+              <line class="price-leader" x1="249.4" y1="198" x2="249.4" y2="524" />
+              <text class="price-name" x="249.4" y="554" data-i18n="pricing.diagram.packaging.name">Verpakking</text>
+              <text class="price-amount" x="249.4" y="604" data-i18n="pricing.diagram.packaging.amount">€3</text>
+
+              <line class="price-leader" x1="396.75" y1="198" x2="396.75" y2="252" />
+              <text class="price-name" x="396.75" y="282" data-i18n="pricing.diagram.labor.name">Teken-uren</text>
+              <text class="price-amount" x="396.75" y="332" data-i18n="pricing.diagram.labor.amount">€150</text>
+
+              <line class="price-leader" x1="561.6" y1="198" x2="561.6" y2="388" />
+              <text class="price-name" x="561.6" y="418" data-i18n="pricing.diagram.margin.name">Marge</text>
+              <text class="price-amount" x="561.6" y="468" data-i18n="pricing.diagram.margin.amount">€21,11</text>
+            </g>
+
+            <line class="price-total-rule" x1="120" y1="660" x2="468" y2="660" />
+            <text class="price-total-text" x="294" y="700" text-anchor="middle" data-i18n="pricing.diagram.total">€299 · alles inbegrepen</text>
+          </g>
         </svg>
       </div>
-      <ul class="price-legend">
-        <li><span class="swatch swatch-vat"></span><span data-i18n="pricing.legend.vat">BTW (21%) — €51,89</span></li>
-        <li><span class="swatch swatch-cost"></span><span data-i18n="pricing.legend.costs">Lijst, verpakking &amp; verzending — €42 (lijst €30 · verzending €8 · doos €3 · bubbeltjesplastic €1)</span></li>
-        <li><span class="swatch swatch-margin"></span><span data-i18n="pricing.legend.margin">Ontwerp, printen &amp; marge — €205,11 (nog niet losgesplitst per onderdeel)</span></li>
-      </ul>
-      <p class="price-caption" data-i18n="pricing.caption">Printkosten en het uurtarief voor het tekenwerk zijn nog niet apart uitgesplitst — dat volgt zodra dat bekend is.</p>
+      <p class="price-caption" data-i18n="pricing.caption">Alle kosten inbegrepen, inclusief de tijd die in het tekenen gaat zitten. Wat overblijft is de marge voor het bedrijf.</p>
     </div>
   </section>
 
@@ -174,14 +242,12 @@
   <section id="testimonials">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow" data-i18n="testimonials.eyebrow">In hun eigen woorden</p>
-        <h2 data-i18n="testimonials.heading">Reacties na het uitpakken</h2>
-        <p data-i18n="testimonials.lede">Een paar berichten van mensen die een Line cadeau kregen.</p>
+        <p class="eyebrow" data-i18n="testimonials.eyebrow">Reacties na het uitpakken</p>
       </div>
       <div class="testimonial-grid">
         <div class="testimonial-card">
           <span class="quote-mark" aria-hidden="true">&ldquo;</span>
-          <p class="quote" data-i18n="testimonials.items.0.quote">Ik dacht dat het een grap was — tot ik ons oude studentenhuis zag staan, gat in de muur incluis.</p>
+          <p class="quote" data-i18n="testimonials.items.0.quote">Ik zag eerst niet goed wat het was — tot ik ons oude studentenhuis zag staan, met zelfs de hangende fietsen aan het balkon.</p>
           <p class="name">— Sanne</p>
         </div>
         <div class="testimonial-card">
@@ -219,7 +285,7 @@
   <section id="about">
     <div class="wrap about">
       <div class="avatar">
-        <img src="images/selfie%20artist/selfie-kissa-color.png" alt="Kees, de tekenaar achter Line" loading="lazy">
+        <img src="images/selfie%20artist/selfie-kissa-color.png" alt="Kees, de tekenaar achter Line" width="1085" height="1449" loading="lazy">
       </div>
       <div>
         <p class="eyebrow" data-i18n="about.eyebrow">Over</p>
@@ -241,7 +307,7 @@
       <div class="faq-list">
         <details class="faq-item">
           <summary><span class="q" data-i18n="faq.items.0.q">Hoe lang duurt het voordat ik mijn Line ontvang?</span><span class="chevron" aria-hidden="true"></span></summary>
-          <p class="a" data-i18n="faq.items.0.a">Binnen 3 werkdagen na je bestelling ontvang je de tekening per e-mail.</p>
+          <p class="a" data-i18n="faq.items.0.a">De doorlooptijd is zo'n 2 tot 3 weken. Die start vanaf het moment dat de betaling is voldaan. Wil je op tijd je Line binnen hebben, wacht dan niet te lang met het plaatsen van je bestelling.</p>
         </details>
         <details class="faq-item">
           <summary><span class="q" data-i18n="faq.items.1.q">Kan ik een Line voor iemand anders bestellen?</span><span class="chevron" aria-hidden="true"></span></summary>
@@ -249,7 +315,7 @@
         </details>
         <details class="faq-item">
           <summary><span class="q" data-i18n="faq.items.2.q">Moet ik referentiefoto's toevoegen?</span><span class="chevron" aria-hidden="true"></span></summary>
-          <p class="a" data-i18n="faq.items.2.a">Per plek vragen we een Google Maps-link of een foto van het gebouw — zo weten we zeker dat we het juiste pand tekenen.</p>
+          <p class="a" data-i18n="faq.items.2.a">Ja — voeg per plek een foto van het gebouw toe, zo weten we zeker dat we het juiste pand tekenen.</p>
         </details>
         <details class="faq-item">
           <summary><span class="q" data-i18n="faq.items.3.q">Kan ik later nog iets wijzigen aan mijn bestelling?</span><span class="chevron" aria-hidden="true"></span></summary>
@@ -261,7 +327,7 @@
         </details>
         <details class="faq-item">
           <summary><span class="q" data-i18n="faq.items.5.q">Wat kost een Line?</span><span class="chevron" aria-hidden="true"></span></summary>
-          <p class="a" data-i18n="faq.items.5.a">Prijzen volgen binnenkort. Neem voor nu even contact op voor de actuele tarieven.</p>
+          <p class="a" data-i18n="faq.items.5.a">We hanteren een vaste prijs van €299. Dat is inclusief BTW en verzendkosten.</p>
         </details>
       </div>
     </div>
@@ -282,22 +348,10 @@
     <p>
       <a href="voorwaarden.html" data-i18n="footer.terms">Algemene voorwaarden</a> ·
       <a href="privacybeleid.html" data-i18n="footer.privacy">Privacybeleid</a> ·
-      <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener" data-i18n="footer.odr">Geschillencommissie (ODR)</a> ·
-      <button type="button" class="link-btn" id="cookieSettingsBtn" data-i18n="footer.cookieSettings">Cookie-instellingen</button>
+      <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener" data-i18n="footer.odr">Geschillencommissie (ODR)</a>
     </p>
   </div>
 </footer>
-
-<!-- ================= Cookie consent ================= -->
-<div class="cookie-banner" id="cookieBanner" hidden role="dialog" aria-label="Cookiemelding">
-  <div class="cookie-banner-inner">
-    <p data-i18n="cookies.body">We gebruiken alleen analytics-cookies om te zien hoe bezoekers de site gebruiken. Deze worden pas geplaatst als je akkoord gaat.</p>
-    <div class="cookie-banner-actions">
-      <button type="button" class="btn ghost small" id="cookieDecline" data-i18n="cookies.decline">Weigeren</button>
-      <button type="button" class="btn small" id="cookieAccept" data-i18n="cookies.accept">Accepteren</button>
-    </div>
-  </div>
-</div>
 
 <!-- ================= Lightbox ================= -->
 <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Foto vergroot">
@@ -321,8 +375,8 @@
 
   <div class="config-stage" id="configStage" aria-hidden="true">
     <img src="images/examples/AEA62852-4E99-4754-B5C8-C98D20F91FE0.JPG" alt="" class="active">
-    <img src="images/examples/IMG_8391%202%20copy.jpg" alt="">
-    <img src="images/examples/IMG_9152%20copy.jpg" alt="">
+    <img src="images/examples/IMG_0387%20copy.jpg" alt="">
+    <img src="images/examples/IMG_9817%20copy.jpg" alt="">
     <img src="images/examples/IMG_0528%20copy%202.jpg" alt="">
   </div>
 
@@ -340,8 +394,8 @@
         <!-- Timeline -->
         <section class="config-section">
           <p class="config-eyebrow" data-i18n="config.steps.0">Tijdlijn</p>
-          <h2 data-i18n="config.step0.h2">Bouw je Line</h2>
-          <p class="hint" data-i18n="config.step0.hint">Voeg tussen de 6 en 10 plekken toe die hun reis markeren, in de volgorde waarin het gebeurde. Sleep een tegel aan de handgreep om de volgorde aan te passen.</p>
+          <h2 data-i18n="config.step0.h2">Stel je Line samen</h2>
+          <p class="tl-progress" id="tlProgress"></p>
           <div class="tl-list" id="tlList"></div>
           <button type="button" class="add-row-btn" id="addTlBtn" data-i18n="config.step0.addBtn">+ Plek toevoegen</button>
           <p class="hint" id="tlNextHint" style="color:var(--coral);margin-top:14px;" hidden></p>
@@ -354,15 +408,39 @@
           <p class="hint" data-i18n="config.step1.hint">Elke Line wordt op dit moment op één manier geleverd.</p>
           <div class="format-grid" id="formatGrid">
             <button type="button" class="format-card" data-format="shipped" aria-pressed="true" disabled>
-              <strong>Ingelijste print</strong>
-              <span>20 × 60 cm</span>
+              <span data-i18n="config.step1.sizeLabel">20 × 60 cm</span>
             </button>
+          </div>
+        </section>
+
+        <!-- Frame -->
+        <section class="config-section">
+          <p class="config-eyebrow" data-i18n="config.steps.2">Lijst</p>
+          <h2 data-i18n="config.stepFrame.h2">Kies je lijst</h2>
+          <p class="hint" data-i18n="config.stepFrame.hint">Kies het materiaal van de lijst rondom je Line.</p>
+          <div class="format-grid frame-grid" id="frameGrid">
+            <button type="button" class="format-card" data-frame="grafiet" aria-pressed="true">
+              <span data-i18n="config.stepFrame.grafietLabel">Grafiet</span>
+            </button>
+            <button type="button" class="format-card" data-frame="eikenhout" aria-pressed="false">
+              <span data-i18n="config.stepFrame.eikenhoutLabel">Eikenhout (+&euro;20)</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- General notes -->
+        <section class="config-section">
+          <p class="config-eyebrow" data-i18n="config.steps.3">Opmerkingen</p>
+          <h2 data-i18n="config.stepNotes.h2">Nog iets kwijt?</h2>
+          <p class="hint" data-i18n="config.stepNotes.hint">Algemene opmerkingen of specifieke wensen voor je Line — los van de losse plekken hierboven.</p>
+          <div class="field">
+            <textarea id="contactNotes" rows="3" placeholder="Extra context die helpt bij het tekenen van je Line" data-i18n-ph="config.stepNotes.notesPh" data-i18n-aria="config.stepNotes.notesAria"></textarea>
           </div>
         </section>
 
         <!-- Details -->
         <section class="config-section">
-          <p class="config-eyebrow" data-i18n="config.steps.2">Jouw gegevens</p>
+          <p class="config-eyebrow" data-i18n="config.steps.4">Jouw gegevens</p>
           <h2 data-i18n="config.step2.h2">Jouw gegevens</h2>
           <p class="hint" data-i18n="config.step2.hint">Waar mogen we je Line naartoe sturen?</p>
           <div class="two-col">
@@ -384,14 +462,15 @@
             <textarea id="contactAddress" rows="2" placeholder="Straat, stad, postcode, land" data-i18n-ph="config.step2.addressPh"></textarea>
           </div>
           <div class="field">
-            <label for="contactNotes" data-i18n="config.step2.notesLabel">Nog iets? (optioneel)</label>
-            <textarea id="contactNotes" rows="3" placeholder="Extra context die helpt bij het tekenen van je Line" data-i18n-ph="config.step2.notesPh"></textarea>
+            <label for="contactDate" data-i18n="config.step2.dateLabel">Gewenste ontvangstdatum</label>
+            <input type="date" id="contactDate" data-i18n-aria="config.step2.dateAria">
+            <p class="field-note" data-i18n="config.step2.dateHint">Optioneel. We doen ons best, standaard doorlooptijd is 2 tot 3 weken.</p>
           </div>
         </section>
 
         <!-- Live review -->
         <section class="config-section" id="reviewSection">
-          <p class="config-eyebrow" data-i18n="config.steps.3">Overzicht</p>
+          <p class="config-eyebrow" data-i18n="config.steps.5">Overzicht</p>
           <h2 data-i18n="config.step3.h2">Bekijk je bestelling</h2>
           <ul class="summary-list" id="summaryList"></ul>
           <label class="terms-check">
@@ -409,6 +488,8 @@
             </div>
             <button type="button" class="btn btn-compact coral" id="submitBtn">Bestel nu</button>
           </div>
+          <p class="submit-error" id="submitError" data-i18n="config.footer.submitError" hidden>Versturen is niet gelukt. Controleer je internetverbinding en probeer het nog eens. Je gegevens zijn niet verloren.</p>
+          <button type="button" class="btn ghost small" id="mailFallbackBtn" data-i18n="config.footer.mailFallback" hidden>Open e-mail met je bestelling</button>
         </div>
 
       </div>
@@ -420,7 +501,7 @@
             <svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6" /></svg>
           </div>
           <h2 data-i18n="config.step4.h2">Je Line is onderweg</h2>
-          <p data-i18n="config.step4.body">Bedankt — je bestelling is ontvangen. Je met de hand getekende Line landt binnen 3 werkdagen in je inbox, klaar om te geven.</p>
+          <p data-i18n="config.step4.body">Bedankt — je bestelling is ontvangen. Je met de hand getekende Line landt over ongeveer 2 tot 3 weken in je inbox, klaar om te geven.</p>
           <button type="button" class="btn" id="restartBtn">Nieuwe Line starten</button>
         </div>
       </div>
@@ -428,6 +509,102 @@
   </div>
 </div>
 
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kees Design & Consultancy",
+    "alternateName": "Line",
+    "url": "https://line-design.eu/",
+    "logo": "https://line-design.eu/images/header/IMG_9153%202%20copy.jpg",
+    "email": "kees.assistant@gmail.com",
+    "telephone": "+31614457456",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Amsterdam",
+      "addressCountry": "NL"
+    },
+    "identifier": {
+      "@type": "PropertyValue",
+      "name": "KVK",
+      "value": "76246930"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Line",
+    "description": "Line tekent elke plek die iemands leven vormde tot een handgetekende lijntekening. Persoonlijk cadeau voor een verhuizing, afstuderen, huwelijk of afscheid.",
+    "image": "https://line-design.eu/images/header/IMG_9153%202%20copy.jpg",
+    "brand": {
+      "@type": "Brand",
+      "name": "Line"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "299",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "url": "https://line-design.eu/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hoe lang duurt het voordat ik mijn Line ontvang?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "De doorlooptijd is zo'n 2 tot 3 weken. Die start vanaf het moment dat de betaling is voldaan. Wil je op tijd je Line binnen hebben, wacht dan niet te lang met het plaatsen van je bestelling."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan ik een Line voor iemand anders bestellen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zeker — de meeste Lines worden besteld als cadeau. Jij bouwt de tijdlijn, wij tekenen 'm, en jij geeft 'm door."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Moet ik referentiefoto's toevoegen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja — voeg per plek een foto van het gebouw toe, zo weten we zeker dat we het juiste pand tekenen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan ik later nog iets wijzigen aan mijn bestelling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Neem contact op via e-mail zodra je je bestelling hebt verstuurd — we passen het waar mogelijk nog aan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welke formaten zijn er?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. €299, alles inbegrepen (incl. BTW en verzending via PostNL)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat kost een Line?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We hanteren een vaste prijs van €299. Dat is inclusief BTW en verzendkosten."
+        }
+      }
+    ]
+  }
+]
+</script>
 <script src="script.js"></script>
 </body>
 </html>
