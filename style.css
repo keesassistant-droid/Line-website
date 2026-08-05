@@ -221,7 +221,7 @@ section{padding:24px 0;}
 .examples-dots{display:none;}
 @media (max-width:700px){
   .examples-grid{
-    display:flex;column-count:unset;column-gap:0;gap:14px;
+    display:flex;align-items:flex-start;column-count:unset;column-gap:0;gap:14px;
     overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
     margin:0 -24px;padding:0 24px 4px;scrollbar-width:none;
   }
