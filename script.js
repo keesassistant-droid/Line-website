@@ -19,7 +19,7 @@
       nav: { examples: "Voorbeelden", how: "Hoe het werkt", about: "Over", contact: "Contact", menuToggle: "Menu" },
       cta: { start: "Geef een Line" },
       hero: {
-        headlinePre: "Het cadeau voor een ",
+        headlinePre: "Een cadeau voor een ",
         headlineEm: "groot moment",
         headlinePost: "",
         lede: "Line tekent elke plek die iemands leven vormde: van eerste woonhuis tot laatste adres. Een persoonlijk kunstwerk voor een verhuizing, afstuderen, huwelijk of afscheid.",
@@ -47,8 +47,8 @@
       },
       pricing: {
         eyebrow: "Prijs",
-        heading: "€299 all-in",
-        lede: "Één vaste prijs voor een ingelijste Line van 20 × 60 cm — inclusief lijst, verpakking en verzending. Geen verrassingen bij het afrekenen.",
+        heading: "Vanaf €299",
+        lede: "Vanaf €299 voor een ingelijste Line van 20 × 60 cm met 6 plekken — inclusief lijst, verpakking en verzending. Elke plek daarna kost €25 extra.",
         diagram: {
           vat: { name: "BTW (21%)", amount: "€51,89" },
           frame: { name: "Lijst", amount: "€30" },
@@ -57,9 +57,9 @@
           packaging: { name: "Verpakking", amount: "€3" },
           labor: { name: "Teken-uren", amount: "€150" },
           margin: { name: "Marge", amount: "€21,11" },
-          total: "€299 · alles inbegrepen"
+          total: "Vanaf €299 · alles inbegrepen"
         },
-        caption: "Alle kosten inbegrepen, inclusief de tijd die in het tekenen gaat zitten. Wat overblijft is de marge voor het bedrijf."
+        caption: "Deze uitsplitsing geldt voor de eerste 6 plekken. Alle kosten inbegrepen, inclusief de tijd die in het tekenen gaat zitten — wat overblijft is de marge voor het bedrijf. Elke plek boven de 6 kost €25 extra."
       },
       about: {
         eyebrow: "Over",
@@ -85,8 +85,8 @@
           { q: "Kan ik een Line voor iemand anders bestellen?", a: "Zeker — de meeste Lines worden besteld als cadeau. Jij bouwt de tijdlijn, wij tekenen 'm, en jij geeft 'm door." },
           { q: "Moet ik referentiefoto's toevoegen?", a: "Ja — voeg per plek een foto van het gebouw toe, zo weten we zeker dat we het juiste pand tekenen." },
           { q: "Kan ik later nog iets wijzigen aan mijn bestelling?", a: "Neem contact op via e-mail zodra je je bestelling hebt verstuurd — we passen het waar mogelijk nog aan." },
-          { q: "Welke formaten zijn er?", a: "Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. €299, alles inbegrepen (incl. BTW en verzending via PostNL)." },
-          { q: "Wat kost een Line?", a: "We hanteren een vaste prijs van €299. Dat is inclusief BTW en verzendkosten." }
+          { q: "Welke formaten zijn er?", a: "Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. Vanaf €299 voor 6 plekken, alles inbegrepen (incl. BTW en verzending via PostNL)." },
+          { q: "Wat kost een Line?", a: "We hanteren een vanaf-prijs van €299 voor de eerste 6 plekken, inclusief BTW en verzendkosten. Elke plek daarna kost €25 extra." }
         ]
       },
       footer: {
@@ -110,6 +110,7 @@
           photoAdd: "Foto toevoegen",
           photoChange: "Foto wijzigen",
           needPhoto: "Voeg een foto toe, zodat we het juiste gebouw tekenen.",
+          photoMissingLabel: "Foto ontbreekt — tik om toe te voegen",
           dragHandleAria: "Sleep om te herordenen",
           removePlace: "Deze plek verwijderen",
           progressLabel: "{done} van de {min} compleet",
@@ -191,14 +192,21 @@
           emailLabel: "E-mail",
           emailPh: "jij@voorbeeld.nl",
           phoneLabel: "Telefoonnummer",
-          phonePh: "06 12345678",
-          addressLabel: "Bezorgadres",
-          addressPh: "Straat, stad, postcode, land",
+          phonePh: "+31 6 12345678",
+          phoneInvalid: "Dit lijkt geen geldig telefoonnummer. Vul je echte nummer in.",
+          streetLabel: "Straat en huisnummer",
+          streetPh: "Straatnaam + huisnummer",
+          cityLabel: "Stad",
+          cityPh: "Amsterdam",
+          postalLabel: "Postcode",
+          postalPh: "1234 AB",
+          countryLabel: "Land",
+          countryPh: "Nederland",
           dateLabel: "Gewenste ontvangstdatum",
           dateAria: "Gewenste ontvangstdatum",
-          dateHint: "Optioneel. We doen ons best, standaard doorlooptijd is 2 tot 3 weken.",
+          dateHint: "We doen ons best, standaard doorlooptijd is 2 tot 3 weken.",
           dateEarlyWarning: "Deze datum is minder dan 2 weken vanaf nu. Door de tijd die tekenen, printen en verzenden kosten, kunnen we deze datum waarschijnlijk niet halen.",
-          detailsHint: "Vul je naam, telefoonnummer, een geldig e-mailadres en je bezorgadres in om verder te gaan."
+          detailsHint: "Vul je naam, telefoonnummer, een geldig e-mailadres, je bezorgadres en gewenste ontvangstdatum in om verder te gaan."
         },
         step3: {
           h2: "Bekijk je bestelling",
@@ -220,9 +228,8 @@
           mailFallback: "Open e-mail met je bestelling",
           backHome: "Terug naar home",
           priceLabel: "incl. BTW",
-          agreeTermsPre: "Ik ga akkoord met de",
-          agreeTermsLink: "algemene voorwaarden",
-          termsRequired: "Vink de algemene voorwaarden aan om te bestellen."
+          agreeTermsPre: "Door te bestellen ga je akkoord met de",
+          agreeTermsLink: "algemene voorwaarden"
         }
       }
     },
@@ -231,7 +238,7 @@
       nav: { examples: "Examples", how: "How it works", about: "About", contact: "Contact", menuToggle: "Menu" },
       cta: { start: "Give a Line" },
       hero: {
-        headlinePre: "The gift for a ",
+        headlinePre: "A gift for a ",
         headlineEm: "big moment",
         headlinePost: "",
         lede: "Line draws every place that shaped someone's life: from their first home to their most recent address. A personal work of art for a move, a graduation, a wedding, or a loss.",
@@ -259,8 +266,8 @@
       },
       pricing: {
         eyebrow: "Pricing",
-        heading: "€299 all-in",
-        lede: "One flat price for a framed 20 × 60 cm Line — including the frame, packaging, and shipping. No surprises at checkout.",
+        heading: "From €299",
+        lede: "From €299 for a framed 20 × 60 cm Line with 6 places — including the frame, packaging, and shipping. Every place after that is an extra €25.",
         diagram: {
           vat: { name: "VAT (21%)", amount: "€51.89" },
           frame: { name: "Frame", amount: "€30" },
@@ -269,9 +276,9 @@
           packaging: { name: "Packaging", amount: "€3" },
           labor: { name: "Drawing hours", amount: "€150" },
           margin: { name: "Margin", amount: "€21.11" },
-          total: "€299 · all-in"
+          total: "From €299 · all-in"
         },
-        caption: "Every cost is included, including the time that goes into the drawing itself. What's left over is the business's margin."
+        caption: "This breakdown is for the first 6 places. Every cost is included, including the time that goes into the drawing itself — what's left over is the business's margin. Every place beyond 6 is an extra €25."
       },
       about: {
         eyebrow: "About",
@@ -297,8 +304,8 @@
           { q: "Can I order a Line for someone else?", a: "Absolutely — most Lines are ordered as a gift. You build the timeline, we draw it, you give it." },
           { q: "Do I need to add reference photos?", a: "Yes — add a photo of the building for each place, that way we're sure we draw the right one." },
           { q: "Can I still change something after ordering?", a: "Get in touch by email as soon as you've submitted your order — we'll adjust where we still can." },
-          { q: "What formats are available?", a: "Currently just a framed 20 × 60 cm print, shipped to your door. €299, all-in (incl. VAT and shipping via PostNL)." },
-          { q: "What does a Line cost?", a: "We charge a flat price of €299. That includes VAT and shipping." }
+          { q: "What formats are available?", a: "Currently just a framed 20 × 60 cm print, shipped to your door. From €299 for 6 places, all-in (incl. VAT and shipping via PostNL)." },
+          { q: "What does a Line cost?", a: "We charge from €299 for the first 6 places, including VAT and shipping. Every place after that is an extra €25." }
         ]
       },
       footer: {
@@ -322,6 +329,7 @@
           photoAdd: "Add photo",
           photoChange: "Change photo",
           needPhoto: "Add a photo so we draw the right building.",
+          photoMissingLabel: "Photo missing — tap to add",
           dragHandleAria: "Drag to reorder",
           removePlace: "Remove this place",
           progressLabel: "{done} of {min} complete",
@@ -404,12 +412,20 @@
           emailPh: "you@example.com",
           phoneLabel: "Phone number",
           phonePh: "+1 555 0123",
-          addressLabel: "Delivery address",
-          addressPh: "Street, city, postcode, country",
+          phoneInvalid: "That doesn't look like a valid phone number. Please enter your real number.",
+          streetLabel: "Street and house number",
+          streetPh: "Street name + house number",
+          cityLabel: "City",
+          cityPh: "Amsterdam",
+          postalLabel: "Postcode",
+          postalPh: "1234 AB",
+          countryLabel: "Country",
+          countryPh: "Netherlands",
           dateLabel: "Preferred delivery date",
           dateAria: "Preferred delivery date",
-          dateHint: "Optional. We'll do our best, standard turnaround is 2 to 3 weeks.",
-          detailsHint: "Add your name, phone number, a valid email, and your delivery address to continue."
+          dateHint: "We'll do our best, standard turnaround is 2 to 3 weeks.",
+          dateEarlyWarning: "This date is less than 2 weeks from now. Given the time drawing, printing, and shipping take, we likely can't meet it.",
+          detailsHint: "Add your name, phone number, a valid email, your delivery address, and preferred delivery date to continue."
         },
         step3: {
           h2: "Review your order",
@@ -431,9 +447,8 @@
           mailFallback: "Open email with your order",
           backHome: "Back to home",
           priceLabel: "incl. VAT",
-          agreeTermsPre: "I agree to the",
-          agreeTermsLink: "terms & conditions",
-          termsRequired: "Check the terms & conditions to place your order."
+          agreeTermsPre: "By ordering, you agree to our",
+          agreeTermsLink: "terms & conditions"
         }
       }
     }
@@ -459,8 +474,7 @@
       timeline: timeline,
       format: "shipped",
       frame: "grafiet",
-      agreeTerms: false,
-      contact: { name: "", email: "", phone: "", address: "", notes: "", desiredDate: "" }
+      contact: { name: "", email: "", phone: "", street: "", city: "", postalCode: "", country: lang === "nl" ? "Nederland" : "Netherlands", notes: "", desiredDate: "" }
     };
   }
 
@@ -483,12 +497,16 @@
       parsed.contact.name = parsed.contact.name || "";
       parsed.contact.email = parsed.contact.email || "";
       parsed.contact.phone = parsed.contact.phone || "";
-      parsed.contact.address = parsed.contact.address || "";
+      parsed.contact.street = parsed.contact.street || "";
+      parsed.contact.city = parsed.contact.city || "";
+      parsed.contact.postalCode = parsed.contact.postalCode || "";
+      parsed.contact.country = parsed.contact.country || (lang === "nl" ? "Nederland" : "Netherlands");
       parsed.contact.notes = parsed.contact.notes || "";
       parsed.contact.desiredDate = parsed.contact.desiredDate || "";
       parsed.format = "shipped"; // only format currently offered — collapses any old draft (digital/framed/pickup)
       parsed.frame = parsed.frame === "eikenhout" ? "eikenhout" : "grafiet";
-      parsed.agreeTerms = !!parsed.agreeTerms;
+      delete parsed.contact.address;
+      delete parsed.agreeTerms;
       delete parsed.touches;
       delete parsed.size;
       return parsed;
@@ -553,7 +571,6 @@
   var successHomeBtn = document.getElementById("successHomeBtn");
   var submitError = document.getElementById("submitError");
   var mailFallbackBtn = document.getElementById("mailFallbackBtn");
-  var agreeTermsBox = document.getElementById("agreeTerms");
   var submitPriceAmount = document.getElementById("submitPriceAmount");
 
   var tlList = document.getElementById("tlList");
@@ -572,7 +589,11 @@
   var contactName = document.getElementById("contactName");
   var contactEmail = document.getElementById("contactEmail");
   var contactPhone = document.getElementById("contactPhone");
-  var contactAddress = document.getElementById("contactAddress");
+  var phoneError = document.getElementById("phoneError");
+  var contactStreet = document.getElementById("contactStreet");
+  var contactCity = document.getElementById("contactCity");
+  var contactPostal = document.getElementById("contactPostal");
+  var contactCountry = document.getElementById("contactCountry");
   var contactDate = document.getElementById("contactDate");
   var dateEarlyWarning = document.getElementById("dateEarlyWarning");
   var contactNotes = document.getElementById("contactNotes");
@@ -878,6 +899,15 @@
     closeConfigurator();
   });
 
+  function composeAddress(c) {
+    var parts = [];
+    if (c.street && c.street.trim()) parts.push(c.street.trim());
+    var cityPostal = [c.postalCode && c.postalCode.trim(), c.city && c.city.trim()].filter(Boolean).join(" ");
+    if (cityPostal) parts.push(cityPostal);
+    if (c.country && c.country.trim()) parts.push(c.country.trim());
+    return parts.join(", ");
+  }
+
   // Plain-text order summary used as a last-resort fallback (mailto) if the webhook
   // can't be reached or reports failure — so an order is never silently lost, even if
   // the Apps Script backend is down, misconfigured, or not deployed yet.
@@ -948,15 +978,27 @@
   });
 
   function submitOrder() {
+    var contactPayload = {
+      name: state.contact.name,
+      email: state.contact.email,
+      phone: state.contact.phone,
+      address: composeAddress(state.contact),
+      street: state.contact.street,
+      city: state.contact.city,
+      postalCode: state.contact.postalCode,
+      country: state.contact.country,
+      notes: state.contact.notes,
+      desiredDate: state.contact.desiredDate
+    };
     var payload = {
       timeline: state.timeline,
-      contact: state.contact,
+      contact: contactPayload,
       format: state.format,
       frame: state.frame,
       price: currentPrice(),
       shippingCost: SHIPPING_COST,
       shippingCarrier: SHIPPING_CARRIER,
-      agreeTerms: state.agreeTerms
+      agreeTerms: true
     };
 
     function handleSuccess(orderNumber) {
@@ -1012,19 +1054,26 @@
     return state.timeline.filter(isPlaceComplete).length;
   }
   function extraPlacesCount() {
-    return Math.max(0, filledPlacesCount() - MIN_PLACES);
+    return Math.max(0, state.timeline.length - MIN_PLACES);
   }
 
+  function isLikelyFakePhone(digits) {
+    if (/^(\d)\1+$/.test(digits)) return true;
+    if (digits.indexOf("123456789") !== -1 || digits.indexOf("12345678") !== -1) return true;
+    if (digits.indexOf("987654321") !== -1 || digits.indexOf("87654321") !== -1) return true;
+    return false;
+  }
   function isValidPhone(value) {
     var digits = value.replace(/[^\d]/g, "");
-    return digits.length >= 9 && digits.length <= 15;
+    return digits.length >= 9 && digits.length <= 15 && !isLikelyFakePhone(digits);
   }
 
   function canSubmit() {
     var hasNameEmail = state.contact.name.trim() && /\S+@\S+\.\S+/.test(state.contact.email);
     var hasPhone = isValidPhone(state.contact.phone);
-    var hasAddress = state.contact.address.trim().length > 0;
-    return filledPlacesCount() >= MIN_PLACES && hasNameEmail && hasPhone && hasAddress && state.agreeTerms;
+    var hasAddress = !!(state.contact.street.trim() && state.contact.city.trim() && state.contact.postalCode.trim() && state.contact.country.trim());
+    var hasDate = !!state.contact.desiredDate;
+    return filledPlacesCount() >= MIN_PLACES && hasNameEmail && hasPhone && hasAddress && hasDate;
   }
 
   /* ---------- timeline step ---------- */
@@ -1143,12 +1192,6 @@
     badge.className = "badge-index";
     badge.textContent = String(idx + 1);
 
-    var extraBadge = document.createElement("div");
-    extraBadge.className = "tl-extra-badge";
-    extraBadge.textContent = "+€" + EXTRA_PLACE_COST;
-    extraBadge.hidden = idx < MIN_PLACES;
-    extraBadge.title = d.extraPlaceHint;
-
     var check = document.createElement("div");
     check.className = "tl-check";
     check.hidden = true;
@@ -1157,6 +1200,8 @@
     var dot = document.createElement("div");
     dot.className = "tl-dot";
     dot.hidden = true;
+    dot.title = d.photoMissingLabel;
+    dot.setAttribute("aria-label", d.photoMissingLabel);
 
     var placeInput = document.createElement("input");
     placeInput.type = "text";
@@ -1179,7 +1224,6 @@
     head.className = "tl-head";
     head.appendChild(handle);
     head.appendChild(badge);
-    head.appendChild(extraBadge);
     head.appendChild(placeInput);
     head.appendChild(dot);
     head.appendChild(check);
@@ -1226,21 +1270,16 @@
       save();
       updateSubmitState();
       refreshStatus();
+      refreshWarn();
     });
-    placeInput.addEventListener("blur", function () {
-      if (isPlaceComplete(item) && tlExpanded[item.id]) {
-        tlExpanded[item.id] = false;
-        applyExpandedState();
-      }
-    });
-
     var warn = document.createElement("p");
     warn.className = "tl-warn";
     warn.textContent = d.needPhoto;
     function refreshWarn() {
-      warn.hidden = !(item.place.trim() && !item.photo);
+      var needsPhoto = !!(item.place.trim() && !item.photo);
+      warn.hidden = !needsPhoto;
+      photoBtn.classList.toggle("needs-photo", needsPhoto);
     }
-    refreshWarn();
 
     var photoIcon =
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"/></svg>';
@@ -1250,11 +1289,13 @@
 
     var thumb = document.createElement("div");
     thumb.className = "photo-thumb";
+    thumb.hidden = !item.photo;
     if (item.photo) thumb.style.backgroundImage = "url(" + item.photo + ")";
     var photoBtn = document.createElement("button");
     photoBtn.type = "button";
     photoBtn.className = "photo-btn";
     setPhotoBtnLabel(item.photo ? d.photoChange : d.photoAdd);
+    refreshWarn();
     photoBtn.addEventListener("click", function () {
       var input = document.createElement("input");
       input.type = "file";
@@ -1269,6 +1310,7 @@
           compressImage(file, 1600, 0.8, function (dataUrl) {
             item.photo = dataUrl;
             thumb.style.backgroundImage = "url(" + item.photo + ")";
+            thumb.hidden = false;
             setPhotoBtnLabel(t().config.step0.photoChange);
             save();
             updateSubmitState();
@@ -1289,6 +1331,7 @@
     photoWrap.className = "photo-row";
     photoWrap.appendChild(photoBtn);
     photoWrap.appendChild(thumb);
+    photoWrap.appendChild(warn);
 
     var noteInput = document.createElement("textarea");
     noteInput.className = "tl-note";
@@ -1343,7 +1386,6 @@
     actions.appendChild(remove);
 
     body.appendChild(detailRow);
-    body.appendChild(warn);
     body.appendChild(actions);
 
     el.appendChild(head);
@@ -1358,6 +1400,10 @@
       tlList.appendChild(buildTlItem(item, idx));
     });
     addTlBtn.disabled = state.timeline.length >= MAX_PLACES;
+    var d = t().config.step0;
+    var nextIsExtra = state.timeline.length >= MIN_PLACES;
+    addTlBtn.textContent = nextIsExtra ? d.addBtn + " (+€" + EXTRA_PLACE_COST + ")" : d.addBtn;
+    addTlBtn.title = nextIsExtra ? d.extraPlaceHint : "";
   }
 
   addTlBtn.addEventListener("click", addTimelineEntry);
@@ -1442,9 +1488,29 @@
     state.contact.phone = contactPhone.value;
     save();
     updateSubmitState();
+    refreshPhoneError();
   });
-  contactAddress.addEventListener("input", function () {
-    state.contact.address = contactAddress.value;
+  function refreshPhoneError() {
+    var value = state.contact.phone.trim();
+    phoneError.hidden = !value || isValidPhone(value);
+  }
+  contactStreet.addEventListener("input", function () {
+    state.contact.street = contactStreet.value;
+    save();
+    updateSubmitState();
+  });
+  contactCity.addEventListener("input", function () {
+    state.contact.city = contactCity.value;
+    save();
+    updateSubmitState();
+  });
+  contactPostal.addEventListener("input", function () {
+    state.contact.postalCode = contactPostal.value;
+    save();
+    updateSubmitState();
+  });
+  contactCountry.addEventListener("input", function () {
+    state.contact.country = contactCountry.value;
     save();
     updateSubmitState();
   });
@@ -1479,16 +1545,15 @@
     state.contact.notes = contactNotes.value;
     save();
   });
-  agreeTermsBox.addEventListener("change", function () {
-    state.agreeTerms = agreeTermsBox.checked;
-    save();
-    updateSubmitState();
-  });
   function renderDetails() {
     contactName.value = state.contact.name;
     contactEmail.value = state.contact.email;
     contactPhone.value = state.contact.phone;
-    contactAddress.value = state.contact.address;
+    refreshPhoneError();
+    contactStreet.value = state.contact.street;
+    contactCity.value = state.contact.city;
+    contactPostal.value = state.contact.postalCode;
+    contactCountry.value = state.contact.country;
     contactDate.value = state.contact.desiredDate;
     refreshDateWarning();
     contactNotes.value = state.contact.notes;
@@ -1534,7 +1599,7 @@
       d.labels.contact,
       escapeHtml(state.contact.name || "—") + " · " + escapeHtml(state.contact.email || "—") + " · " + escapeHtml(state.contact.phone || "—")
     ]);
-    rows.push([d.labels.address, escapeHtml(state.contact.address || "—")]);
+    rows.push([d.labels.address, escapeHtml(composeAddress(state.contact) || "—")]);
     if (state.contact.desiredDate) {
       var dateObj = new Date(state.contact.desiredDate + "T00:00:00");
       var dateLocale = lang === "nl" ? "nl-NL" : "en-GB";
@@ -1582,7 +1647,6 @@
     configForm.hidden = state.submitted;
     configSuccess.hidden = !state.submitted;
     configSubmitBar.hidden = state.submitted;
-    agreeTermsBox.checked = state.agreeTerms;
     renderTimeline();
     renderFormat();
     renderFrame();
