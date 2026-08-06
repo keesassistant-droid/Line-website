@@ -117,7 +117,8 @@
           toggleAria: "Details tonen of verbergen",
           moveUpAria: "Naar boven verplaatsen",
           moveDownAria: "Naar beneden verplaatsen",
-          extraPlaceHint: "De eerste 6 plekken zijn inbegrepen. Elke plek daarna kost €25 extra."
+          extraPlaceHint: "De eerste 6 plekken zijn inbegrepen. Elke plek daarna kost €25 extra.",
+          storageWarning: "Je browser kan je voortgang niet meer opslaan (waarschijnlijk te veel foto's). Rond je bestelling in één keer af, of maak wat plekken leger."
         },
         step1: {
           h2: "Jouw formaat",
@@ -336,7 +337,8 @@
           toggleAria: "Show or hide details",
           moveUpAria: "Move up",
           moveDownAria: "Move down",
-          extraPlaceHint: "The first 6 places are included. Every place after that is an extra €25."
+          extraPlaceHint: "The first 6 places are included. Every place after that is an extra €25.",
+          storageWarning: "Your browser can no longer save your progress (probably too many photos). Finish your order in one go, or clear a few places."
         },
         step1: {
           h2: "Your format",
@@ -520,8 +522,11 @@
   function save() {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      if (storageWarning) storageWarning.hidden = true;
     } catch (e) {
-      /* storage unavailable — degrade silently, still works within the session */
+      // Quota exceeded (usually too many/large photos) — the draft still works for this
+      // session, but won't survive a reload, so surface it instead of failing silently.
+      if (storageWarning) storageWarning.hidden = false;
     }
     renderReview();
   }
@@ -576,6 +581,7 @@
   var tlList = document.getElementById("tlList");
   var addTlBtn = document.getElementById("addTlBtn");
   var tlNextHint = document.getElementById("tlNextHint");
+  var storageWarning = document.getElementById("storageWarning");
   var tlProgress = document.getElementById("tlProgress");
   var tlExpanded = {}; // ephemeral UI state keyed by item.id — never persisted to localStorage
   var tlApplyExpandedFns = {}; // per-tile applyExpandedState closures, rebuilt on every renderTimeline()
@@ -1207,6 +1213,7 @@
     placeInput.type = "text";
     placeInput.className = "tl-place";
     placeInput.placeholder = d.placePh;
+    placeInput.maxLength = 150;
     placeInput.value = item.place;
     placeInput.setAttribute("aria-label", d.placeAria);
 
@@ -1337,6 +1344,7 @@
     noteInput.className = "tl-note";
     noteInput.rows = 2;
     noteInput.placeholder = d.notePh;
+    noteInput.maxLength = 500;
     noteInput.value = item.note;
     noteInput.setAttribute("aria-label", d.noteAria);
     noteInput.addEventListener("input", function () {

@@ -41,7 +41,7 @@
         <button type="button" class="lang-btn" data-lang="nl" aria-pressed="true">NL</button>
         <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <button type="button" class="btn coral small js-open-config" data-i18n="cta.start">Geef een Line</button>
+      <button type="button" class="btn small js-open-config" data-i18n="cta.start">Geef een Line</button>
       <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" data-i18n-aria="nav.menuToggle" aria-label="Menu">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -52,7 +52,6 @@
     <a href="#how-it-works" data-i18n="nav.how">Hoe het werkt</a>
     <a href="#about" data-i18n="nav.about">Over</a>
     <a href="contact.html" data-i18n="nav.contact">Contact</a>
-    <button type="button" class="btn coral small js-open-config" data-i18n="cta.start">Geef een Line</button>
   </div>
 </header>
 
@@ -64,7 +63,7 @@
       <div class="hero-card">
         <h1 class="hero-headline">Een cadeau voor een <em>groot moment</em></h1>
         <div class="hero-actions">
-          <button type="button" class="btn coral js-open-config" data-i18n="cta.start">Geef een Line</button>
+          <button type="button" class="btn js-open-config" data-i18n="cta.start">Geef een Line</button>
           <a class="btn ghost" href="#examples" data-i18n="hero.seeExamples">Bekijk voorbeelden</a>
         </div>
       </div>
@@ -73,7 +72,7 @@
       <h1 class="hero-headline hero-headline-mobile">Een cadeau voor een <em>groot moment</em></h1>
       <p class="lede" data-i18n="hero.lede">Line tekent elke plek die iemands leven vormde: van eerste woonhuis tot laatste adres. Een persoonlijk kunstwerk voor een verhuizing, afstuderen, huwelijk of afscheid.</p>
       <div class="hero-actions hero-actions-mobile">
-        <button type="button" class="btn coral js-open-config" data-i18n="cta.start">Geef een Line</button>
+        <button type="button" class="btn js-open-config" data-i18n="cta.start">Geef een Line</button>
         <a class="btn ghost" href="#examples" data-i18n="hero.seeExamples">Bekijk voorbeelden</a>
       </div>
     </div>
@@ -378,6 +377,7 @@
           <div class="tl-list" id="tlList"></div>
           <button type="button" class="add-row-btn" id="addTlBtn" data-i18n="config.step0.addBtn">+ Plek toevoegen</button>
           <p class="hint" id="tlNextHint" style="color:var(--coral);margin-top:14px;" hidden></p>
+          <p class="field-note field-note-warning" id="storageWarning" data-i18n="config.step0.storageWarning" hidden>Je browser kan je voortgang niet meer opslaan (waarschijnlijk te veel foto's). Rond je bestelling in één keer af, of maak wat plekken leger.</p>
         </section>
 
         <!-- Format -->
@@ -417,7 +417,7 @@
           <h2 data-i18n="config.stepNotes.h2">Nog iets kwijt?</h2>
           <p class="hint" data-i18n="config.stepNotes.hint">Algemene opmerkingen of specifieke wensen voor je Line — los van de losse plekken hierboven.</p>
           <div class="field">
-            <textarea id="contactNotes" rows="3" placeholder="Extra context die helpt bij het tekenen van je Line" data-i18n-ph="config.stepNotes.notesPh" data-i18n-aria="config.stepNotes.notesAria"></textarea>
+            <textarea id="contactNotes" rows="3" placeholder="Extra context die helpt bij het tekenen van je Line" data-i18n-ph="config.stepNotes.notesPh" data-i18n-aria="config.stepNotes.notesAria" maxlength="1000"></textarea>
           </div>
         </section>
 
@@ -428,35 +428,35 @@
           <div class="two-col">
             <div class="field">
               <label for="contactName"><span data-i18n="config.step2.nameLabel">Naam</span><span class="req-mark" aria-hidden="true">*</span></label>
-              <input type="text" id="contactName" placeholder="Je volledige naam" data-i18n-ph="config.step2.namePh">
+              <input type="text" id="contactName" placeholder="Je volledige naam" data-i18n-ph="config.step2.namePh" maxlength="100">
             </div>
             <div class="field">
               <label for="contactEmail"><span data-i18n="config.step2.emailLabel">E-mail</span><span class="req-mark" aria-hidden="true">*</span></label>
-              <input type="email" id="contactEmail" placeholder="jij@voorbeeld.nl" data-i18n-ph="config.step2.emailPh">
+              <input type="email" id="contactEmail" placeholder="jij@voorbeeld.nl" data-i18n-ph="config.step2.emailPh" maxlength="254">
             </div>
           </div>
           <div class="field">
             <label for="contactPhone"><span data-i18n="config.step2.phoneLabel">Telefoonnummer</span><span class="req-mark" aria-hidden="true">*</span></label>
-            <input type="tel" id="contactPhone" placeholder="+31 6 12345678" data-i18n-ph="config.step2.phonePh">
+            <input type="tel" id="contactPhone" placeholder="+31 6 12345678" data-i18n-ph="config.step2.phonePh" maxlength="30">
             <p class="field-note field-note-error" id="phoneError" data-i18n="config.step2.phoneInvalid" hidden>Dit lijkt geen geldig telefoonnummer. Vul je echte nummer in.</p>
           </div>
           <div class="field">
             <label for="contactStreet"><span data-i18n="config.step2.streetLabel">Straat en huisnummer</span><span class="req-mark" aria-hidden="true">*</span></label>
-            <input type="text" id="contactStreet" placeholder="Straatnaam + huisnummer" data-i18n-ph="config.step2.streetPh">
+            <input type="text" id="contactStreet" placeholder="Straatnaam + huisnummer" data-i18n-ph="config.step2.streetPh" maxlength="120">
           </div>
           <div class="two-col">
             <div class="field">
               <label for="contactCity"><span data-i18n="config.step2.cityLabel">Stad</span><span class="req-mark" aria-hidden="true">*</span></label>
-              <input type="text" id="contactCity" placeholder="Amsterdam" data-i18n-ph="config.step2.cityPh">
+              <input type="text" id="contactCity" placeholder="Amsterdam" data-i18n-ph="config.step2.cityPh" maxlength="80">
             </div>
             <div class="field">
               <label for="contactPostal"><span data-i18n="config.step2.postalLabel">Postcode</span><span class="req-mark" aria-hidden="true">*</span></label>
-              <input type="text" id="contactPostal" placeholder="1234 AB" data-i18n-ph="config.step2.postalPh">
+              <input type="text" id="contactPostal" placeholder="1234 AB" data-i18n-ph="config.step2.postalPh" maxlength="20">
             </div>
           </div>
           <div class="field">
             <label for="contactCountry"><span data-i18n="config.step2.countryLabel">Land</span><span class="req-mark" aria-hidden="true">*</span></label>
-            <input type="text" id="contactCountry" placeholder="Nederland" data-i18n-ph="config.step2.countryPh">
+            <input type="text" id="contactCountry" placeholder="Nederland" data-i18n-ph="config.step2.countryPh" maxlength="60">
           </div>
           <div class="field">
             <label for="contactDate"><span data-i18n="config.step2.dateLabel">Gewenste ontvangstdatum</span><span class="req-mark" aria-hidden="true">*</span></label>
