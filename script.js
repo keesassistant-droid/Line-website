@@ -36,7 +36,7 @@
         eyebrow: "Hoe het werkt",
         steps: [
           { title: "Stel de Line samen", body: "Voeg alle plekken toe en upload foto's." },
-          { title: "Wij tekenen hem", body: "De tekenaar gaat aan de slag. Voordat we afdrukken ontvang je het design in je mailbox." },
+          { title: "Wij tekenen hem", body: "De tekenaar gaat aan de slag. Voordat we afdrukken ontvang je het design ter beoordeling via WhatsApp." },
           { title: "Line wordt bezorgd", body: "PostNL bezorgt de Line." }
         ],
         turnaroundNote: "Doorlooptijd is gemiddeld zo'n 2 tot 3 weken. Deze start vanaf het moment van betalen."
@@ -86,7 +86,14 @@
           { q: "Moet ik referentiefoto's toevoegen?", a: "Ja — voeg per plek een foto van het gebouw toe, zo weten we zeker dat we het juiste pand tekenen." },
           { q: "Kan ik later nog iets wijzigen aan mijn bestelling?", a: "Neem contact op via e-mail zodra je je bestelling hebt verstuurd — we passen het waar mogelijk nog aan." },
           { q: "Welke formaten zijn er?", a: "Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. Vanaf €299 voor 6 plekken, alles inbegrepen (incl. BTW en verzending via PostNL)." },
-          { q: "Wat kost een Line?", a: "We hanteren een vanaf-prijs van €299 voor de eerste 6 plekken, inclusief BTW en verzendkosten. Elke plek daarna kost €25 extra." }
+          { q: "Wat kost een Line?", a: "We hanteren een vanaf-prijs van €299 voor de eerste 6 plekken, inclusief BTW en verzendkosten. Elke plek daarna kost €25 extra." },
+          { q: "Kan ik meer dan 6 plekken toevoegen aan mijn tijdlijn?", a: "Ja, tot een maximum van 10. De prijs van €299 is inclusief de eerste 6 plekken; elke plek daarna kost €25 extra. Je ziet de prijs live meebewegen in de configurator." },
+          { q: "Kan ik zelf het lijstmateriaal kiezen?", a: "Ja, je kiest tussen grafiet en eikenhout — beide kosten hetzelfde. Bij elke optie in de configurator vind je een infoknopje met de volledige productspecificaties." },
+          { q: "Kan ik mijn bestelling annuleren of retourneren als ik van gedachten verander?", a: "Elke Line wordt speciaal voor jou op maat getekend. Voor op maat gemaakte producten geldt geen wettelijk herroepingsrecht, dus een geplaatste en bevestigde bestelling kun je niet kosteloos annuleren of retourneren. Zit er een fout in je Line die aan ons ligt, dan lossen we dat uiteraard wel kosteloos op." },
+          { q: "Er zit een fout in mijn Line, wat nu?", a: "Bevat je Line een fout die aan ons te wijten is, bijvoorbeeld een verkeerd getekend gebouw of een productiefout in de print, dan herstellen of vervangen we deze kosteloos. Mail ons via de contactpagina." },
+          { q: "Is mijn Line uniek?", a: "Ja. Elke Line wordt met de hand getekend op basis van de plekken die jij aanlevert, en de compositie wordt door de kunstenaar bepaald. Geen twee Lines zijn ooit helemaal hetzelfde." },
+          { q: "Wat gebeurt er met de foto's en gegevens die ik upload?", a: "Je gegevens en foto's worden alleen gebruikt om jouw Line te tekenen en te bezorgen, niet gedeeld met derden buiten wat nodig is voor de levering. Het volledige privacybeleid staat op de privacybeleid-pagina." },
+          { q: "Wanneer en hoe betaal ik precies?", a: "Na het plaatsen van je bestelling ontvang je een Tikkie-betaalverzoek. Zodra de betaling binnen is, start de doorlooptijd van je Line." }
         ]
       },
       footer: {
@@ -220,11 +227,16 @@
         step4: {
           h2: "Bedankt voor je bestelling!",
           body: "Check je inbox voor de bevestigingsmail.",
-          orderNumberLabel: "Je ordernummer: {nummer}"
+          orderNumberLabel: "Je ordernummer: {nummer}",
+          steps: [
+            { title: "Betaling via Tikkie", body: "Je ontvangt een WhatsApp-bericht van Kees met het Tikkie-verzoek. Zodra je betaalt, gaat de doorlooptijd in." },
+            { title: "Review van het ontwerp", body: "Zodra je Line getekend is, stuurt Kees 'm via WhatsApp door ter beoordeling — voordat 'm naar de drukker gaat." },
+            { title: "Drukken & bezorging", body: "Na jouw goedkeuring gaat het design naar de drukker. Zodra 'm klaar is, sturen we 'm op via PostNL." }
+          ]
         },
         footer: {
           confirm: "Bestel nu",
-          sending: "Bezig met versturen, dit kan een halve minuut duren…",
+          sending: "Bezig met versturen…",
           submitError: "Versturen is niet gelukt. Controleer je internetverbinding en probeer het nog eens. Je gegevens zijn niet verloren.",
           mailFallback: "Open e-mail met je bestelling",
           backHome: "Terug naar home",
@@ -256,7 +268,7 @@
         eyebrow: "How it works",
         steps: [
           { title: "Put the Line together", body: "Add every place and upload photos." },
-          { title: "We draw it", body: "The artist gets to work. Before we print, you'll receive the design in your inbox." },
+          { title: "We draw it", body: "The artist gets to work. Before we print, you'll receive the design for review via WhatsApp." },
           { title: "The Line gets delivered", body: "PostNL delivers the Line." }
         ],
         turnaroundNote: "Turnaround is usually about 2 to 3 weeks. It starts from the moment of payment."
@@ -306,7 +318,14 @@
           { q: "Do I need to add reference photos?", a: "Yes — add a photo of the building for each place, that way we're sure we draw the right one." },
           { q: "Can I still change something after ordering?", a: "Get in touch by email as soon as you've submitted your order — we'll adjust where we still can." },
           { q: "What formats are available?", a: "Currently just a framed 20 × 60 cm print, shipped to your door. From €299 for 6 places, all-in (incl. VAT and shipping via PostNL)." },
-          { q: "What does a Line cost?", a: "We charge from €299 for the first 6 places, including VAT and shipping. Every place after that is an extra €25." }
+          { q: "What does a Line cost?", a: "We charge from €299 for the first 6 places, including VAT and shipping. Every place after that is an extra €25." },
+          { q: "Can I add more than 6 places to my timeline?", a: "Yes, up to a maximum of 10. The €299 price includes the first 6 places; every place after that is an extra €25. You'll see the price update live in the configurator." },
+          { q: "Can I choose the frame material myself?", a: "Yes, choose between graphite and oak — both cost the same. Each option in the configurator has an info button with the full product specifications." },
+          { q: "Can I cancel or return my order if I change my mind?", a: "Every Line is drawn specifically for you. Custom-made products aren't covered by the legal right of withdrawal, so a placed and confirmed order can't be cancelled or returned free of charge. If there's a mistake on our end, we'll fix it at no cost." },
+          { q: "There's a mistake in my Line, what now?", a: "If your Line has a mistake on our end — a wrongly drawn building or a print production issue — we'll fix or replace it free of charge. Email us via the contact page." },
+          { q: "Is my Line unique?", a: "Yes. Every Line is hand-drawn based on the places you provide, and the composition is determined by the artist. No two Lines are ever quite the same." },
+          { q: "What happens to the photos and details I upload?", a: "Your details and photos are only used to draw and deliver your Line, and aren't shared with third parties beyond what's needed for delivery. See the privacy policy page for the full details." },
+          { q: "When and how do I pay exactly?", a: "After placing your order you'll receive a Tikkie payment request. Once payment is received, the turnaround time for your Line begins." }
         ]
       },
       footer: {
@@ -440,11 +459,16 @@
         step4: {
           h2: "Thank you for your order!",
           body: "Check your inbox for the confirmation email.",
-          orderNumberLabel: "Your order number: {nummer}"
+          orderNumberLabel: "Your order number: {nummer}",
+          steps: [
+            { title: "Payment via Tikkie", body: "You'll get a WhatsApp message from Kees with the Tikkie request. Once you pay, the turnaround time starts." },
+            { title: "Design review", body: "Once your Line is drawn, Kees sends it over via WhatsApp for review — before it goes to the printer." },
+            { title: "Printing & delivery", body: "After your approval, the design goes to the printer. Once it's ready, we ship it via PostNL." }
+          ]
         },
         footer: {
           confirm: "Order now",
-          sending: "Sending, this can take up to half a minute…",
+          sending: "Sending…",
           submitError: "Sending failed. Check your internet connection and try again. Your details haven't been lost.",
           mailFallback: "Open email with your order",
           backHome: "Back to home",
@@ -734,6 +758,15 @@
 
     document.querySelectorAll(".hiw-step").forEach(function (stepEl, i) {
       var step = d.how.steps[i];
+      if (!step) return;
+      var h3 = stepEl.querySelector("h3");
+      var p = stepEl.querySelector("p");
+      if (h3) h3.textContent = step.title;
+      if (p) p.textContent = step.body;
+    });
+
+    document.querySelectorAll(".success-step").forEach(function (stepEl, i) {
+      var step = d.config.step4.steps[i];
       if (!step) return;
       var h3 = stepEl.querySelector("h3");
       var p = stepEl.querySelector("p");
@@ -1547,6 +1580,7 @@
   contactDate.addEventListener("change", function () {
     state.contact.desiredDate = contactDate.value;
     save();
+    updateSubmitState();
     refreshDateWarning();
   });
   contactNotes.addEventListener("input", function () {
