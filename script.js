@@ -694,15 +694,6 @@
     });
   });
 
-  var heroCtaButton = document.querySelector(".hero-actions-mobile .js-open-config");
-  var floatingCta = document.getElementById("floatingCta");
-  if (heroCtaButton && floatingCta && "IntersectionObserver" in window) {
-    var heroObserver = new IntersectionObserver(function (entries) {
-      floatingCta.classList.toggle("visible", !entries[0].isIntersecting);
-    });
-    heroObserver.observe(heroCtaButton);
-  }
-
   /* ---------- pricing diagram: hover/tap a color to highlight its price ---------- */
   (function () {
     var segments = document.querySelectorAll(".price-diagram [data-segment]");

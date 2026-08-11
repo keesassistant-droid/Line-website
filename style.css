@@ -91,6 +91,7 @@ header.site{
   border-bottom:1px solid var(--line);
 }
 header.site .bar{
+  position:relative;
   display:flex;align-items:center;justify-content:space-between;
   padding:16px 24px;
   max-width:var(--container);margin:0 auto;
@@ -118,39 +119,33 @@ nav.site-nav a{
 }
 nav.site-nav a:hover{color:var(--ink);}
 .menu-toggle{
-  display:none;width:36px;height:36px;border:none;background:transparent;
+  display:flex;width:36px;height:36px;border:none;background:transparent;
   color:var(--ink);align-items:center;justify-content:center;cursor:pointer;flex:none;
 }
 .menu-toggle svg{width:22px;height:22px;stroke:currentColor;stroke-width:2;fill:none;}
-.mobile-menu{display:none;}
+/* Dropdown for the nav links + language switch — reachable from the hamburger icon
+   at every screen size, not just mobile, so the header itself stays uncluttered. */
+.mobile-menu[hidden]{display:none;}
+.mobile-menu{
+  display:flex;flex-direction:column;
+  position:absolute;top:calc(100% + 8px);right:0;min-width:200px;
+  background:var(--bg);border:1px solid var(--line);border-radius:12px;
+  box-shadow:0 12px 28px -10px rgba(0,0,0,.25);
+  overflow:hidden;
+}
+.mobile-menu a{
+  padding:14px 20px;font-size:15px;font-weight:600;color:var(--ink);text-decoration:none;
+  border-bottom:1px solid var(--line);
+}
+.mobile-menu .lang-switch{margin:14px 20px;align-self:flex-start;}
 @media (max-width:640px){
   nav.site-nav{gap:10px;}
   nav.site-nav .nav-links{display:none;}
-  .menu-toggle{display:flex;}
   .mobile-menu{
-    display:flex;flex-direction:column;
-    border-top:1px solid var(--line);background:var(--bg);
-  }
-  .mobile-menu[hidden]{display:none;}
-  .mobile-menu a{
-    padding:14px 24px;font-size:15px;font-weight:600;color:var(--ink);text-decoration:none;
-    border-bottom:1px solid var(--line);
+    left:-24px;right:-24px;min-width:0;
+    border-radius:0;border:none;border-top:1px solid var(--line);box-shadow:none;
   }
 }
-
-/* Floating "Geef een Line" button — appears once the real hero button scrolls out of view.
-   Full width of the page's content column (same .wrap max-width as the static button),
-   sitting just below the sticky header rather than overlapping it. */
-.floating-cta{
-  position:fixed;top:84px;left:0;right:0;z-index:19;
-  max-width:var(--container);margin:0 auto;padding:0 24px;
-  transform:translateY(-260%);
-  opacity:0;
-  transition:transform .55s cubic-bezier(.34,1.56,.64,1),opacity .3s ease;
-  pointer-events:none;
-}
-.floating-cta.visible{transform:translateY(0);opacity:1;pointer-events:auto;}
-.floating-cta .btn{width:100%;justify-content:center;box-shadow:0 12px 28px -10px rgba(0,0,0,.35);}
 
 .btn{
   display:inline-flex;align-items:center;gap:8px;
@@ -204,8 +199,18 @@ nav.site-nav a:hover{color:var(--ink);}
 .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
 /* The one real button block, static in flow, full width, at every breakpoint — used
    to be mobile-only and duplicated (narrower) inside .hero-card on desktop. */
-.hero-actions-mobile{display:flex;flex-direction:column;gap:14px;}
+.hero-actions-mobile{display:flex;flex-direction:column;gap:18px;}
 .hero-actions-mobile .btn{width:100%;justify-content:center;}
+
+/* Desktop only: a Figma.com-style oversized CTA pair — big type, generous padding,
+   and on hover the rounded-rect corners open all the way into a full pill. */
+@media (min-width:641px){
+  .hero-actions-mobile .btn{
+    font-size:28px;padding:26px 48px;border-radius:18px;
+    transition:transform .15s ease,background .15s ease,border-radius .3s ease;
+  }
+  .hero-actions-mobile .btn:hover{border-radius:999px;}
+}
 
 /* Mobile: no overlay card — shorter cropped photo, everything stacked below it. */
 @media (max-width:640px){
@@ -225,7 +230,6 @@ nav.site-nav a:hover{color:var(--ink);}
   color:var(--ink-muted);cursor:pointer;
 }
 .lang-btn[aria-pressed="true"]{background:var(--ink);color:var(--bg);}
-@media (max-width:640px){ .lang-switch{order:2;} }
 
 /* ---------- Section shell ---------- */
 section{padding:24px 0;}
