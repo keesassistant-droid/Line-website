@@ -12,8 +12,6 @@
   var NO_FRAME_DISCOUNT = 50;
   var SHIPPING_COST = 7.95;
   var SHIPPING_CARRIER = "PostNL";
-  var FRAME_TURNAROUND_DAYS = 10;
-  var NO_FRAME_TURNAROUND_DAYS = 5;
   var WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxDMQ3Wachosogg1YbnwtQm663nN-qsmiC_QYolDcv_z5HoMRsJsC3RtBXdxcH6TLaV/exec";
   var STUDIO_EMAIL = "kees.assistant@gmail.com";
 
@@ -1411,7 +1409,6 @@
     save();
     renderFrame();
     renderFormat();
-    refreshDateMin();
   }
   frameGrid.querySelectorAll(".frame-swatch img").forEach(function (img) {
     img.addEventListener("error", function () {
@@ -1505,34 +1502,6 @@
     });
     contactCountry.value = selected;
   }
-  // Walks forward day-by-day skipping Sat/Sun — used to compute the earliest
-  // selectable delivery date, which depends on whether a frame was chosen.
-  function addWorkingDays(date, n) {
-    var result = new Date(date);
-    var added = 0;
-    while (added < n) {
-      result.setDate(result.getDate() + 1);
-      var day = result.getDay();
-      if (day !== 0 && day !== 6) added++;
-    }
-    return result;
-  }
-  function toDateInputValue(d) {
-    var m = ("0" + (d.getMonth() + 1)).slice(-2);
-    var day = ("0" + d.getDate()).slice(-2);
-    return d.getFullYear() + "-" + m + "-" + day;
-  }
-  function refreshDateMin() {
-    var days = state.frame === "geenlijst" ? NO_FRAME_TURNAROUND_DAYS : FRAME_TURNAROUND_DAYS;
-    var min = toDateInputValue(addWorkingDays(new Date(), days));
-    contactDate.min = min;
-    if (contactDate.value && contactDate.value < min) {
-      contactDate.value = "";
-      state.contact.desiredDate = "";
-      save();
-      updateSubmitState();
-    }
-  }
   contactDate.addEventListener("focus", function () {
     if (contactDate.showPicker) {
       try {
@@ -1564,7 +1533,6 @@
     contactPostal.value = state.contact.postalCode;
     populateCountryOptions();
     contactDate.value = state.contact.desiredDate;
-    refreshDateMin();
     contactNotes.value = state.contact.notes;
   }
 

@@ -722,6 +722,7 @@ footer.site a{color:var(--ink);text-decoration:none;font-weight:600;}
 .format-card span{
   display:block;font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--ink);
 }
+.format-card span.extra-badge{display:inline-block;color:#fff;}
 .format-card[aria-pressed="true"]{border-color:var(--ink);background:#eeeae1;box-shadow:0 0 0 1px var(--ink);}
 .format-card:not(:disabled):hover{border-color:var(--line-strong);}
 .format-card:disabled{cursor:default;opacity:1;}
