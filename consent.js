@@ -1,32 +1,11 @@
 (function () {
   "use strict";
 
-  // TODO: vul in zodra je de accounts hebt aangemaakt (zie analytics.google.com / clarity.microsoft.com)
+  // Consent banner temporarily removed (Kees's call, 2026-08-11) — analytics load for
+  // everyone now, no opt-out UI. This is a deliberate, known trade-off against Dutch
+  // cookie-law/GDPR consent requirements, not an oversight. Revisit before this matters.
   var GA_MEASUREMENT_ID = "G-ZDT3T5T51M";
   var CLARITY_PROJECT_ID = "xy732gapbk";
-
-  var CONSENT_KEY = "line-cookie-consent"; // "accepted" | "declined"
-  var LANG_KEY = "line-lang";
-
-  var TEXT = {
-    nl: {
-      body: "We gebruiken alleen analytics-cookies om te zien hoe bezoekers de site gebruiken. Deze worden pas geplaatst als je akkoord gaat.",
-      decline: "Alleen noodzakelijke cookies",
-      accept: "Accepteren",
-      settings: "Cookie-instellingen"
-    },
-    en: {
-      body: "We only use analytics cookies to see how visitors use the site. These are only placed once you agree.",
-      decline: "Only necessary cookies",
-      accept: "Accept",
-      settings: "Cookie settings"
-    }
-  };
-
-  function lang() {
-    var stored = localStorage.getItem(LANG_KEY);
-    return stored === "en" ? "en" : "nl";
-  }
 
   function loadAnalytics() {
     if (GA_MEASUREMENT_ID.indexOf("XXXX") === -1) {
@@ -58,40 +37,5 @@
   }
   window.lineTrackEvent = trackEvent;
 
-  function buildBanner() {
-    var t = TEXT[lang()];
-    var banner = document.createElement("div");
-    banner.className = "cookie-banner";
-    banner.setAttribute("role", "dialog");
-    banner.setAttribute("aria-label", t.settings);
-    banner.innerHTML =
-      '<p class="cookie-banner-text"></p>' +
-      '<div class="cookie-banner-actions">' +
-      '<button type="button" class="btn ghost small js-cookie-decline"></button>' +
-      '<button type="button" class="btn small js-cookie-accept"></button>' +
-      "</div>";
-    banner.querySelector(".cookie-banner-text").textContent = t.body;
-    banner.querySelector(".js-cookie-decline").textContent = t.decline;
-    banner.querySelector(".js-cookie-accept").textContent = t.accept;
-    document.body.appendChild(banner);
-
-    banner.querySelector(".js-cookie-accept").addEventListener("click", function () {
-      localStorage.setItem(CONSENT_KEY, "accepted");
-      banner.remove();
-      loadAnalytics();
-    });
-    banner.querySelector(".js-cookie-decline").addEventListener("click", function () {
-      localStorage.setItem(CONSENT_KEY, "declined");
-      banner.remove();
-    });
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    var consent = localStorage.getItem(CONSENT_KEY);
-    if (consent === "accepted") {
-      loadAnalytics();
-    } else if (consent !== "declined") {
-      buildBanner();
-    }
-  });
+  document.addEventListener("DOMContentLoaded", loadAnalytics);
 })();
