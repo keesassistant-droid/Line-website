@@ -28,8 +28,7 @@
         headlinePre: "Een cadeau voor een ",
         headlineEm: "groot moment",
         headlinePost: "",
-        lede: "Line tekent elke plek die iemands leven vormde: van eerste woonhuis tot laatste adres. Een persoonlijk kunstwerk voor een verhuizing, afstuderen, huwelijk of afscheid.",
-        seeExamples: "Bekijk voorbeelden"
+        lede: "Line tekent elke plek die iemands leven vormde: van eerste woonhuis tot laatste adres. Een persoonlijk kunstwerk voor een verhuizing, afstuderen, huwelijk of afscheid."
       },
       examples: {
         eyebrow: "Cadeaus die al gegeven zijn",
@@ -92,7 +91,7 @@
           { q: "Welke formaten zijn er?", a: "Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. Vanaf €299 voor 6 plekken, alles inbegrepen (incl. BTW en verzending via PostNL)." },
           { q: "Wat kost een Line?", a: "We hanteren een vanaf-prijs van €299 voor de eerste 6 plekken, inclusief BTW en verzendkosten. Elke plek daarna kost €25 extra." },
           { q: "Kan ik meer dan 6 plekken toevoegen aan mijn tijdlijn?", a: "Ja, tot een maximum van 10. De prijs van €299 is inclusief de eerste 6 plekken; elke plek daarna kost €25 extra. Je ziet de prijs live meebewegen in de configurator." },
-          { q: "Kan ik zelf het lijstmateriaal kiezen?", a: "Ja, je kiest tussen grafiet en eikenhout — beide kosten hetzelfde. Je kunt er ook voor kiezen om je Line zonder lijst te ontvangen, voor €50 korting. Bij elke lijstoptie in de configurator vind je een infoknopje met de volledige productspecificaties." },
+          { q: "Kan ik zelf het lijstmateriaal kiezen?", a: "Ja, je kiest tussen grafiet en eikenhout — beide kosten hetzelfde. Je kunt er ook voor kiezen om je Line zonder lijst te ontvangen, voor €50 korting." },
           { q: "Waarom is de levertijd zo lang?", a: "Het kost 1 tot 2 werkdagen om het design af te ronden, printen duurt 2 tot 3 werkdagen, en inlijsten en verzenden nog eens 1 tot 2 werkdagen. Dit is sterk afhankelijk van de drukte, waardoor het soms iets langer kan duren." },
           { q: "Kan ik mijn bestelling annuleren of retourneren als ik van gedachten verander?", a: "Elke Line wordt speciaal voor jou op maat getekend. Voor op maat gemaakte producten geldt geen wettelijk herroepingsrecht, dus een geplaatste en bevestigde bestelling kun je niet kosteloos annuleren of retourneren. Zit er een fout in je Line die aan ons ligt, dan lossen we dat uiteraard wel kosteloos op." },
           { q: "Er zit een fout in mijn Line, wat nu?", a: "Bevat je Line een fout die aan ons te wijten is, bijvoorbeeld een verkeerd getekend gebouw of een productiefout in de print, dan herstellen of vervangen we deze kosteloos. Mail ons via de contactpagina." },
@@ -142,56 +141,8 @@
           hint: "Kies het materiaal van de lijst rondom je Line.",
           grafietLabel: "Grafiet",
           eikenhoutLabel: "Eikenhout",
-          geenlijstLabel: "Geen lijst (-€50)",
-          noFrameNote: "Bij deze keuze sturen we de print zonder lijst naar je bezorgadres. Levertijd is daardoor 5 werkdagen.",
-          infoAria: "Meer info over dit lijstmateriaal",
-          grafietSpecs: [
-            ["Afbeeldingsgrootte", "20x60 cm"],
-            ["Kleur", "Grijs / Zilver"],
-            ["Inclusief passe-partout", "Nee"],
-            ["Materiaal", "Hout"],
-            ["Plek voor", "1 foto"],
-            ["Glans van de lijst", "Mat"],
-            ["Buitenmaat van de lijst", "21,8x61,8 cm"],
-            ["Inclusief steun", "Nee"],
-            ["Gemaakt in", "Zweden"],
-            ["Houtsoort", "Ayoushout (Gefolied)"],
-            ["Soort glas", "Acrylglas"],
-            ["Ophanging", "Staand & Liggend"],
-            ["Muurbevestiging", "Ja"],
-            ["Sponningdiepte (binnendiepte)", "8 mm"],
-            ["Breedte van de lijst", "13 mm"],
-            ["Diepte van de lijst", "11,5 mm"],
-            ["Materiaal achterkant", "MDF"],
-            ["Profiel type", "Vierkant"],
-            ["Montage methode", "Flexibele stiften"],
-            ["Gewicht", "464 g"],
-            ["Oppervlakte behandeling", "Beschilderd"]
-          ],
-          eikenhoutSpecs: [
-            ["Afbeeldingsgrootte", "20x60 cm"],
-            ["Kleur", "Eiken / Hout"],
-            ["Kleurtint", "Eiken"],
-            ["Inclusief passe-partout", "Nee"],
-            ["Materiaal", "Hout"],
-            ["Plek voor", "1 foto"],
-            ["Glans van de lijst", "Mat"],
-            ["Buitenmaat van de lijst", "22x62 cm"],
-            ["Inclusief steun", "Nee"],
-            ["Gemaakt in", "Zweden"],
-            ["Houtsoort", "Grenen (echt onbehandeld eikenfineer)"],
-            ["Soort glas", "Acrylglas"],
-            ["Ophanging", "Staand & Liggend"],
-            ["Muurbevestiging", "Ja"],
-            ["Sponningdiepte (binnendiepte)", "8 mm"],
-            ["Breedte van de lijst", "13 mm"],
-            ["Diepte van de lijst", "11,5 mm"],
-            ["Materiaal achterkant", "MDF"],
-            ["Profiel type", "Vierkant"],
-            ["Montage methode", "Flexibele stiften"],
-            ["Gewicht", "492 g"],
-            ["Oppervlakte behandeling", "Eikenfineer"]
-          ]
+          geenlijstLabel: "Geen lijst",
+          noFrameNote: "Bij deze keuze sturen we de print zonder lijst naar je bezorgadres. Levertijd is daardoor 5 werkdagen."
         },
         stepNotes: {
           h2: "Nog iets kwijt?",
@@ -261,8 +212,7 @@
         headlinePre: "A gift for a ",
         headlineEm: "big moment",
         headlinePost: "",
-        lede: "Line draws every place that shaped someone's life: from their first home to their most recent address. A personal work of art for a move, a graduation, a wedding, or a loss.",
-        seeExamples: "See examples"
+        lede: "Line draws every place that shaped someone's life: from their first home to their most recent address. A personal work of art for a move, a graduation, a wedding, or a loss."
       },
       examples: {
         eyebrow: "Gifts already given",
@@ -325,7 +275,7 @@
           { q: "What formats are available?", a: "Currently just a framed 20 × 60 cm print, shipped to your door. From €299 for 6 places, all-in (incl. VAT and shipping via PostNL)." },
           { q: "What does a Line cost?", a: "We charge from €299 for the first 6 places, including VAT and shipping. Every place after that is an extra €25." },
           { q: "Can I add more than 6 places to my timeline?", a: "Yes, up to a maximum of 10. The €299 price includes the first 6 places; every place after that is an extra €25. You'll see the price update live in the configurator." },
-          { q: "Can I choose the frame material myself?", a: "Yes, choose between graphite and oak — both cost the same. You can also choose to receive your Line without a frame for a €50 discount. Each frame option in the configurator has an info button with the full product specifications." },
+          { q: "Can I choose the frame material myself?", a: "Yes, choose between graphite and oak — both cost the same. You can also choose to receive your Line without a frame for a €50 discount." },
           { q: "Why does delivery take so long?", a: "Finishing the design takes 1 to 2 working days, printing takes 2 to 3 working days, and framing plus shipping takes another 1 to 2 working days. This depends heavily on how busy we are, so it can sometimes take a bit longer." },
           { q: "Can I cancel or return my order if I change my mind?", a: "Every Line is drawn specifically for you. Custom-made products aren't covered by the legal right of withdrawal, so a placed and confirmed order can't be cancelled or returned free of charge. If there's a mistake on our end, we'll fix it at no cost." },
           { q: "There's a mistake in my Line, what now?", a: "If your Line has a mistake on our end — a wrongly drawn building or a print production issue — we'll fix or replace it free of charge. Email us via the contact page." },
@@ -375,56 +325,8 @@
           hint: "Pick the material for the frame around your Line.",
           grafietLabel: "Graphite",
           eikenhoutLabel: "Oak",
-          geenlijstLabel: "No frame (-€50)",
-          noFrameNote: "With this choice we send the print to your delivery address without a frame. Turnaround is therefore 5 working days.",
-          infoAria: "More info about this frame material",
-          grafietSpecs: [
-            ["Image size", "20x60 cm"],
-            ["Color", "Gray / Silver"],
-            ["Includes mount", "No"],
-            ["Material", "Wood"],
-            ["Space for", "1 photo"],
-            ["Frame finish", "Matte"],
-            ["Outer frame size", "21.8x61.8 cm"],
-            ["Includes stand", "No"],
-            ["Made in", "Sweden"],
-            ["Wood type", "Ayous wood (foil-wrapped)"],
-            ["Glass type", "Acrylic glass"],
-            ["Hanging orientation", "Portrait & landscape"],
-            ["Wall mounting", "Yes"],
-            ["Rebate depth (inner depth)", "8 mm"],
-            ["Frame width", "13 mm"],
-            ["Frame depth", "11.5 mm"],
-            ["Backing material", "MDF"],
-            ["Profile type", "Square"],
-            ["Mounting method", "Flexible pins"],
-            ["Weight", "464 g"],
-            ["Surface treatment", "Painted"]
-          ],
-          eikenhoutSpecs: [
-            ["Image size", "20x60 cm"],
-            ["Color", "Oak / Wood"],
-            ["Color shade", "Oak"],
-            ["Includes mount", "No"],
-            ["Material", "Wood"],
-            ["Space for", "1 photo"],
-            ["Frame finish", "Matte"],
-            ["Outer frame size", "22x62 cm"],
-            ["Includes stand", "No"],
-            ["Made in", "Sweden"],
-            ["Wood type", "Pine (real untreated oak veneer)"],
-            ["Glass type", "Acrylic glass"],
-            ["Hanging orientation", "Portrait & landscape"],
-            ["Wall mounting", "Yes"],
-            ["Rebate depth (inner depth)", "8 mm"],
-            ["Frame width", "13 mm"],
-            ["Frame depth", "11.5 mm"],
-            ["Backing material", "MDF"],
-            ["Profile type", "Square"],
-            ["Mounting method", "Flexible pins"],
-            ["Weight", "492 g"],
-            ["Surface treatment", "Oak veneer"]
-          ]
+          geenlijstLabel: "No frame",
+          noFrameNote: "With this choice we send the print to your delivery address without a frame. Turnaround is therefore 5 working days."
         },
         stepNotes: {
           h2: "Anything else?",
@@ -661,10 +563,7 @@
 
   var formatGrid = document.getElementById("formatGrid");
   var frameGrid = document.getElementById("frameGrid");
-  var frameSpecs = document.getElementById("frameSpecs");
-  var frameSpecsList = document.getElementById("frameSpecsList");
   var noFrameNote = document.getElementById("noFrameNote");
-  var openFrameSpecsFor = null; // ephemeral UI state: which material's info panel is open, or null
 
   var contactName = document.getElementById("contactName");
   var contactEmail = document.getElementById("contactEmail");
@@ -1556,44 +1455,18 @@
     renderFormat();
     refreshDateMin();
   }
-  function renderFrameSpecs() {
-    if (!openFrameSpecsFor) {
-      frameSpecs.hidden = true;
-      return;
-    }
-    var d = t().config.stepFrame;
-    var rows = openFrameSpecsFor === "eikenhout" ? d.eikenhoutSpecs : d.grafietSpecs;
-    frameSpecsList.innerHTML = "";
-    rows.forEach(function (row) {
-      var dt = document.createElement("dt");
-      dt.textContent = row[0];
-      var dd = document.createElement("dd");
-      dd.textContent = row[1];
-      frameSpecsList.appendChild(dt);
-      frameSpecsList.appendChild(dd);
-    });
-    frameSpecs.hidden = false;
-  }
   frameGrid.querySelectorAll(".frame-swatch img").forEach(function (img) {
     img.addEventListener("error", function () {
       img.style.display = "none";
     });
   });
   frameGrid.addEventListener("click", function (e) {
-    var infoBtn = e.target.closest(".frame-info-btn");
-    if (infoBtn) {
-      var material = infoBtn.dataset.frameInfo;
-      openFrameSpecsFor = openFrameSpecsFor === material ? null : material;
-      renderFrameSpecs();
-      return;
-    }
     var card = e.target.closest(".format-card");
     if (!card) return;
     selectFrame(card.dataset.frame);
   });
   frameGrid.addEventListener("keydown", function (e) {
     if (e.key !== "Enter" && e.key !== " ") return;
-    if (e.target.closest(".frame-info-btn")) return;
     var card = e.target.closest(".format-card");
     if (!card) return;
     e.preventDefault();
@@ -1603,11 +1476,25 @@
     frameGrid.querySelectorAll(".format-card").forEach(function (card) {
       card.setAttribute("aria-pressed", String(card.dataset.frame === state.frame));
     });
-    renderFrameSpecs();
     if (noFrameNote) noFrameNote.hidden = state.frame !== "geenlijst";
   }
 
   /* ---------- details step ---------- */
+  // Nudge the scroll container up on focus so the next field is already visible.
+  // Relying on the browser's own scroll-into-view-on-focus was inconsistent between
+  // fields (worked for name, weaker for email, stopped for phone) — doing it ourselves
+  // gives every field in this step the same behavior. The delay lets a mobile on-screen
+  // keyboard finish opening (which resizes the viewport) before we measure position.
+  [contactName, contactEmail, contactPhone, contactStreet, contactCity, contactPostal, contactCountry, contactDate, contactNotes].forEach(function (el) {
+    el.addEventListener("focus", function () {
+      setTimeout(function () {
+        if (!configScroll) return;
+        var margin = 24;
+        var offset = el.getBoundingClientRect().top - configScroll.getBoundingClientRect().top - margin;
+        if (offset !== 0) configScroll.scrollBy({ top: offset, behavior: "smooth" });
+      }, 300);
+    });
+  });
   contactName.addEventListener("input", function () {
     state.contact.name = contactName.value;
     save();

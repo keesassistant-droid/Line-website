@@ -11,13 +11,13 @@
   var TEXT = {
     nl: {
       body: "We gebruiken alleen analytics-cookies om te zien hoe bezoekers de site gebruiken. Deze worden pas geplaatst als je akkoord gaat.",
-      decline: "Weigeren",
+      decline: "Alleen noodzakelijke cookies",
       accept: "Accepteren",
       settings: "Cookie-instellingen"
     },
     en: {
       body: "We only use analytics cookies to see how visitors use the site. These are only placed once you agree.",
-      decline: "Decline",
+      decline: "Only necessary cookies",
       accept: "Accept",
       settings: "Cookie settings"
     }
