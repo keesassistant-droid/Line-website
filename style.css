@@ -138,15 +138,21 @@ nav.site-nav a:hover{color:var(--ink);}
   }
 }
 
-/* Floating "Geef een Line" button — appears once the hero scrolls out of view */
+/* Floating "Geef een Line" button — appears once the real hero button scrolls out of view.
+   Width mirrors that hero button: 284px (hero-card's inner content width) on desktop,
+   viewport minus the .wrap side padding (24px each) on mobile. */
 .floating-cta{
   position:fixed;top:14px;left:50%;z-index:25;
+  width:calc(100% - 48px);max-width:284px;
   transform:translate(-50%,-140%);
   transition:transform .35s cubic-bezier(.2,.8,.2,1);
   pointer-events:none;
 }
 .floating-cta.visible{transform:translate(-50%,0);pointer-events:auto;}
-.floating-cta .btn{box-shadow:0 12px 28px -10px rgba(0,0,0,.35);}
+.floating-cta .btn{width:100%;justify-content:center;box-shadow:0 12px 28px -10px rgba(0,0,0,.35);}
+@media (max-width:640px){
+  .floating-cta{max-width:none;}
+}
 
 .btn{
   display:inline-flex;align-items:center;gap:8px;
@@ -764,9 +770,12 @@ footer.site a{color:var(--ink);text-decoration:none;font-weight:600;}
   position:sticky;bottom:0;
   border-top:1px solid var(--line);
   background:var(--bg);
-  padding:20px 0 4px;
-  margin-top:8px;
+  padding:20px 40px 4px;
+  margin:8px -40px 0;
   box-shadow:0 -8px 20px -12px rgba(0,0,0,.15);
+}
+@media (max-width:860px){
+  .config-submit-bar{padding:20px 20px 4px;margin:8px -20px 0;}
 }
 .submit-terms-note{
   font-size:12.5px;color:var(--ink-muted);text-align:center;margin:0 0 14px;
@@ -774,11 +783,13 @@ footer.site a{color:var(--ink);text-decoration:none;font-weight:600;}
 .submit-terms-note a{color:var(--ink);font-weight:600;}
 .submit-bar-row{
   display:flex;align-items:center;justify-content:space-between;gap:16px;
+  max-width:640px;margin:0 auto;
 }
 .submit-price{display:flex;align-items:baseline;gap:6px;}
 .submit-price .amount{font-family:var(--font-display);font-size:22px;font-weight:600;}
 .submit-price .label{font-size:12.5px;color:var(--ink-muted);}
-.btn-compact{padding:10px 22px;font-size:14px;}
+.btn-compact{padding:14px 44px;font-size:15px;}
+#submitBtn{min-width:220px;justify-content:center;}
 .submit-error{color:var(--coral);font-size:13px;margin:14px 0 0;}
 #mailFallbackBtn{margin-top:10px;}
 

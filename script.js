@@ -4,6 +4,7 @@
   var STORAGE_KEY = "line-order-draft";
   var LANG_KEY = "line-lang";
   var MIN_PLACES = 6;
+  var MIN_REQUIRED_PLACES = 4;
   var DEFAULT_PLACES = 4;
   var MAX_PLACES = 10;
   var PRICE = 299;
@@ -113,8 +114,8 @@
         step0: {
           h2: "Stel je Line samen",
           addBtn: "+ Plek toevoegen",
-          needMoreOne: "Nog 1 plek nodig om verder te gaan (minimaal 6).",
-          needMoreMany: "Nog {n} plekken nodig om verder te gaan (minimaal 6).",
+          needMoreOne: "Nog 1 plek nodig om verder te gaan (minimaal 4).",
+          needMoreMany: "Nog {n} plekken nodig om verder te gaan (minimaal 4).",
           maxReached: "Maximum van 10 plekken bereikt.",
           placePh: "Adres of gebouw",
           placeAria: "Adres of gebouw",
@@ -348,8 +349,8 @@
         step0: {
           h2: "Put your Line together",
           addBtn: "+ Add a place",
-          needMoreOne: "1 more place needed to continue (minimum 6).",
-          needMoreMany: "{n} more places needed to continue (minimum 6).",
+          needMoreOne: "1 more place needed to continue (minimum 4).",
+          needMoreMany: "{n} more places needed to continue (minimum 4).",
           maxReached: "Maximum of 10 places reached.",
           placePh: "Address or building",
           placeAria: "Address or building",
@@ -697,13 +698,19 @@
     });
   });
 
-  var heroBanner = document.querySelector(".hero-banner");
+  var heroCtaButtons = document.querySelectorAll(".hero-card .js-open-config, .hero-actions-mobile .js-open-config");
   var floatingCta = document.getElementById("floatingCta");
-  if (heroBanner && floatingCta && "IntersectionObserver" in window) {
+  if (heroCtaButtons.length && floatingCta && "IntersectionObserver" in window) {
     var heroObserver = new IntersectionObserver(function (entries) {
-      floatingCta.classList.toggle("visible", !entries[0].isIntersecting);
+      entries.forEach(function (entry) {
+        // only the breakpoint-active button (desktop hero-card vs mobile hero-actions) has real size
+        if (entry.target.getBoundingClientRect().width === 0) return;
+        floatingCta.classList.toggle("visible", !entry.isIntersecting);
+      });
     });
-    heroObserver.observe(heroBanner);
+    heroCtaButtons.forEach(function (btn) {
+      heroObserver.observe(btn);
+    });
   }
 
   /* ---------- lightbox ---------- */
@@ -1174,7 +1181,7 @@
     var hasPhone = isValidPhone(state.contact.phone);
     var hasAddress = !!(state.contact.street.trim() && state.contact.city.trim() && state.contact.postalCode.trim() && state.contact.country.trim());
     var hasDate = !!state.contact.desiredDate;
-    return filledPlacesCount() >= MIN_PLACES && hasNameEmail && hasPhone && hasAddress && hasDate;
+    return filledPlacesCount() >= MIN_REQUIRED_PLACES && hasNameEmail && hasPhone && hasAddress && hasDate;
   }
 
   /* ---------- timeline step ---------- */
@@ -1759,7 +1766,7 @@
   /* ---------- footer state ---------- */
   function timelineHintText() {
     var d = t().config.step0;
-    var remaining = MIN_PLACES - filledPlacesCount();
+    var remaining = MIN_REQUIRED_PLACES - filledPlacesCount();
     if (remaining > 0) {
       return remaining === 1 ? d.needMoreOne : d.needMoreMany.replace("{n}", remaining);
     }
@@ -1769,7 +1776,7 @@
 
   function renderTimelineProgress() {
     var d = t().config.step0;
-    tlProgress.textContent = d.progressLabel.replace("{done}", filledPlacesCount()).replace("{min}", MIN_PLACES);
+    tlProgress.textContent = d.progressLabel.replace("{done}", filledPlacesCount()).replace("{min}", MIN_REQUIRED_PLACES);
   }
 
   function updateSubmitState() {
