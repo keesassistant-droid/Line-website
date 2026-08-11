@@ -4,11 +4,15 @@
   var STORAGE_KEY = "line-order-draft";
   var LANG_KEY = "line-lang";
   var MIN_PLACES = 6;
+  var DEFAULT_PLACES = 4;
   var MAX_PLACES = 10;
   var PRICE = 299;
   var EXTRA_PLACE_COST = 25;
+  var NO_FRAME_DISCOUNT = 50;
   var SHIPPING_COST = 7.95;
   var SHIPPING_CARRIER = "PostNL";
+  var FRAME_TURNAROUND_DAYS = 10;
+  var NO_FRAME_TURNAROUND_DAYS = 5;
   var WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxDMQ3Wachosogg1YbnwtQm663nN-qsmiC_QYolDcv_z5HoMRsJsC3RtBXdxcH6TLaV/exec";
   var STUDIO_EMAIL = "kees.assistant@gmail.com";
 
@@ -16,6 +20,7 @@
   var I18N = {
     nl: {
       title: "Line",
+      brand: { since: "Sinds 2021" },
       nav: { examples: "Voorbeelden", how: "Hoe het werkt", about: "Over", contact: "Contact", menuToggle: "Menu" },
       cta: { start: "Geef een Line" },
       hero: {
@@ -39,7 +44,7 @@
           { title: "Wij tekenen hem", body: "De tekenaar gaat aan de slag. Voordat we afdrukken ontvang je het design ter beoordeling via WhatsApp." },
           { title: "Line wordt bezorgd", body: "PostNL bezorgt de Line." }
         ],
-        turnaroundNote: "Doorlooptijd is gemiddeld zo'n 2 tot 3 weken. Deze start vanaf het moment van betalen."
+        turnaroundNote: "Doorlooptijd is 5 werkdagen zonder lijst, 10 werkdagen met lijst — vanaf het moment van betalen."
       },
       dims: {
         eyebrow: "Afmetingen",
@@ -81,14 +86,15 @@
         eyebrow: "Vragen",
         heading: "Veelgestelde vragen",
         items: [
-          { q: "Hoe lang duurt het voordat ik mijn Line ontvang?", a: "De doorlooptijd is zo'n 2 tot 3 weken. Die start vanaf het moment dat de betaling is voldaan. Wil je op tijd je Line binnen hebben, wacht dan niet te lang met het plaatsen van je bestelling." },
+          { q: "Hoe lang duurt het voordat ik mijn Line ontvang?", a: "De doorlooptijd is 5 werkdagen zonder lijst, of 10 werkdagen met lijst — vanaf het moment dat de betaling is voldaan. Wil je op tijd je Line binnen hebben, wacht dan niet te lang met het plaatsen van je bestelling." },
           { q: "Kan ik een Line voor iemand anders bestellen?", a: "Zeker — de meeste Lines worden besteld als cadeau. Jij bouwt de tijdlijn, wij tekenen 'm, en jij geeft 'm door." },
           { q: "Moet ik referentiefoto's toevoegen?", a: "Ja — voeg per plek een foto van het gebouw toe, zo weten we zeker dat we het juiste pand tekenen." },
           { q: "Kan ik later nog iets wijzigen aan mijn bestelling?", a: "Neem contact op via e-mail zodra je je bestelling hebt verstuurd — we passen het waar mogelijk nog aan." },
           { q: "Welke formaten zijn er?", a: "Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. Vanaf €299 voor 6 plekken, alles inbegrepen (incl. BTW en verzending via PostNL)." },
           { q: "Wat kost een Line?", a: "We hanteren een vanaf-prijs van €299 voor de eerste 6 plekken, inclusief BTW en verzendkosten. Elke plek daarna kost €25 extra." },
           { q: "Kan ik meer dan 6 plekken toevoegen aan mijn tijdlijn?", a: "Ja, tot een maximum van 10. De prijs van €299 is inclusief de eerste 6 plekken; elke plek daarna kost €25 extra. Je ziet de prijs live meebewegen in de configurator." },
-          { q: "Kan ik zelf het lijstmateriaal kiezen?", a: "Ja, je kiest tussen grafiet en eikenhout — beide kosten hetzelfde. Bij elke optie in de configurator vind je een infoknopje met de volledige productspecificaties." },
+          { q: "Kan ik zelf het lijstmateriaal kiezen?", a: "Ja, je kiest tussen grafiet en eikenhout — beide kosten hetzelfde. Je kunt er ook voor kiezen om je Line zonder lijst te ontvangen, voor €50 korting. Bij elke lijstoptie in de configurator vind je een infoknopje met de volledige productspecificaties." },
+          { q: "Waarom is de levertijd zo lang?", a: "Het kost 1 tot 2 werkdagen om het design af te ronden, printen duurt 2 tot 3 werkdagen, en inlijsten en verzenden nog eens 1 tot 2 werkdagen. Dit is sterk afhankelijk van de drukte, waardoor het soms iets langer kan duren." },
           { q: "Kan ik mijn bestelling annuleren of retourneren als ik van gedachten verander?", a: "Elke Line wordt speciaal voor jou op maat getekend. Voor op maat gemaakte producten geldt geen wettelijk herroepingsrecht, dus een geplaatste en bevestigde bestelling kun je niet kosteloos annuleren of retourneren. Zit er een fout in je Line die aan ons ligt, dan lossen we dat uiteraard wel kosteloos op." },
           { q: "Er zit een fout in mijn Line, wat nu?", a: "Bevat je Line een fout die aan ons te wijten is, bijvoorbeeld een verkeerd getekend gebouw of een productiefout in de print, dan herstellen of vervangen we deze kosteloos. Mail ons via de contactpagina." },
           { q: "Is mijn Line uniek?", a: "Ja. Elke Line wordt met de hand getekend op basis van de plekken die jij aanlevert, en de compositie wordt door de kunstenaar bepaald. Geen twee Lines zijn ooit helemaal hetzelfde." },
@@ -137,6 +143,8 @@
           hint: "Kies het materiaal van de lijst rondom je Line.",
           grafietLabel: "Grafiet",
           eikenhoutLabel: "Eikenhout",
+          geenlijstLabel: "Geen lijst (-€50)",
+          noFrameNote: "Bij deze keuze sturen we de print zonder lijst naar je bezorgadres. Levertijd is daardoor 5 werkdagen.",
           infoAria: "Meer info over dit lijstmateriaal",
           grafietSpecs: [
             ["Afbeeldingsgrootte", "20x60 cm"],
@@ -212,8 +220,7 @@
           countryPh: "Nederland",
           dateLabel: "Gewenste ontvangstdatum",
           dateAria: "Gewenste ontvangstdatum",
-          dateHint: "We doen ons best, standaard doorlooptijd is 2 tot 3 weken.",
-          dateEarlyWarning: "Deze datum is minder dan 2 weken vanaf nu. Door de tijd die tekenen, printen en verzenden kosten, kunnen we deze datum waarschijnlijk niet halen.",
+          dateHint: "Doorlooptijd is 5 werkdagen zonder lijst, 10 werkdagen met lijst.",
           detailsHint: "Vul je naam, telefoonnummer, een geldig e-mailadres, je bezorgadres en gewenste ontvangstdatum in om verder te gaan."
         },
         step3: {
@@ -248,6 +255,7 @@
     },
     en: {
       title: "Line",
+      brand: { since: "Since 2021" },
       nav: { examples: "Examples", how: "How it works", about: "About", contact: "Contact", menuToggle: "Menu" },
       cta: { start: "Give a Line" },
       hero: {
@@ -271,7 +279,7 @@
           { title: "We draw it", body: "The artist gets to work. Before we print, you'll receive the design for review via WhatsApp." },
           { title: "The Line gets delivered", body: "PostNL delivers the Line." }
         ],
-        turnaroundNote: "Turnaround is usually about 2 to 3 weeks. It starts from the moment of payment."
+        turnaroundNote: "Turnaround is 5 working days without a frame, 10 working days with a frame — starting from the moment of payment."
       },
       dims: {
         eyebrow: "Dimensions",
@@ -313,14 +321,15 @@
         eyebrow: "Questions",
         heading: "Frequently asked questions",
         items: [
-          { q: "How long until I receive my Line?", a: "Turnaround is usually 2 to 3 weeks. It starts once payment has been received. If you want your Line in time, don't leave it too late to order." },
+          { q: "How long until I receive my Line?", a: "Turnaround is 5 working days without a frame, or 10 working days with a frame — starting once payment has been received. If you want your Line in time, don't leave it too late to order." },
           { q: "Can I order a Line for someone else?", a: "Absolutely — most Lines are ordered as a gift. You build the timeline, we draw it, you give it." },
           { q: "Do I need to add reference photos?", a: "Yes — add a photo of the building for each place, that way we're sure we draw the right one." },
           { q: "Can I still change something after ordering?", a: "Get in touch by email as soon as you've submitted your order — we'll adjust where we still can." },
           { q: "What formats are available?", a: "Currently just a framed 20 × 60 cm print, shipped to your door. From €299 for 6 places, all-in (incl. VAT and shipping via PostNL)." },
           { q: "What does a Line cost?", a: "We charge from €299 for the first 6 places, including VAT and shipping. Every place after that is an extra €25." },
           { q: "Can I add more than 6 places to my timeline?", a: "Yes, up to a maximum of 10. The €299 price includes the first 6 places; every place after that is an extra €25. You'll see the price update live in the configurator." },
-          { q: "Can I choose the frame material myself?", a: "Yes, choose between graphite and oak — both cost the same. Each option in the configurator has an info button with the full product specifications." },
+          { q: "Can I choose the frame material myself?", a: "Yes, choose between graphite and oak — both cost the same. You can also choose to receive your Line without a frame for a €50 discount. Each frame option in the configurator has an info button with the full product specifications." },
+          { q: "Why does delivery take so long?", a: "Finishing the design takes 1 to 2 working days, printing takes 2 to 3 working days, and framing plus shipping takes another 1 to 2 working days. This depends heavily on how busy we are, so it can sometimes take a bit longer." },
           { q: "Can I cancel or return my order if I change my mind?", a: "Every Line is drawn specifically for you. Custom-made products aren't covered by the legal right of withdrawal, so a placed and confirmed order can't be cancelled or returned free of charge. If there's a mistake on our end, we'll fix it at no cost." },
           { q: "There's a mistake in my Line, what now?", a: "If your Line has a mistake on our end — a wrongly drawn building or a print production issue — we'll fix or replace it free of charge. Email us via the contact page." },
           { q: "Is my Line unique?", a: "Yes. Every Line is hand-drawn based on the places you provide, and the composition is determined by the artist. No two Lines are ever quite the same." },
@@ -369,6 +378,8 @@
           hint: "Pick the material for the frame around your Line.",
           grafietLabel: "Graphite",
           eikenhoutLabel: "Oak",
+          geenlijstLabel: "No frame (-€50)",
+          noFrameNote: "With this choice we send the print to your delivery address without a frame. Turnaround is therefore 5 working days.",
           infoAria: "More info about this frame material",
           grafietSpecs: [
             ["Image size", "20x60 cm"],
@@ -444,8 +455,7 @@
           countryPh: "Netherlands",
           dateLabel: "Preferred delivery date",
           dateAria: "Preferred delivery date",
-          dateHint: "We'll do our best, standard turnaround is 2 to 3 weeks.",
-          dateEarlyWarning: "This date is less than 2 weeks from now. Given the time drawing, printing, and shipping take, we likely can't meet it.",
+          dateHint: "Turnaround is 5 working days without a frame, 10 working days with a frame.",
           detailsHint: "Add your name, phone number, a valid email, your delivery address, and preferred delivery date to continue."
         },
         step3: {
@@ -480,6 +490,47 @@
     }
   };
 
+  /* ---------- countries ---------- */
+  var COUNTRIES = [
+    ["Nederland", "Netherlands"], ["België", "Belgium"], ["Duitsland", "Germany"],
+    ["Frankrijk", "France"], ["Verenigd Koninkrijk", "United Kingdom"], ["Ierland", "Ireland"],
+    ["Luxemburg", "Luxembourg"], ["Zwitserland", "Switzerland"], ["Oostenrijk", "Austria"],
+    ["Spanje", "Spain"], ["Portugal", "Portugal"], ["Italië", "Italy"],
+    ["Denemarken", "Denmark"], ["Zweden", "Sweden"], ["Noorwegen", "Norway"],
+    ["Finland", "Finland"], ["IJsland", "Iceland"], ["Polen", "Poland"],
+    ["Tsjechië", "Czechia"], ["Slowakije", "Slovakia"], ["Hongarije", "Hungary"],
+    ["Roemenië", "Romania"], ["Bulgarije", "Bulgaria"], ["Griekenland", "Greece"],
+    ["Kroatië", "Croatia"], ["Slovenië", "Slovenia"], ["Estland", "Estonia"],
+    ["Letland", "Latvia"], ["Litouwen", "Lithuania"], ["Malta", "Malta"],
+    ["Cyprus", "Cyprus"], ["Monaco", "Monaco"], ["Liechtenstein", "Liechtenstein"],
+    ["Andorra", "Andorra"], ["San Marino", "San Marino"],
+    ["Verenigde Staten", "United States"], ["Canada", "Canada"], ["Mexico", "Mexico"],
+    ["Brazilië", "Brazil"], ["Argentinië", "Argentina"], ["Chili", "Chile"],
+    ["Colombia", "Colombia"], ["Peru", "Peru"],
+    ["Australië", "Australia"], ["Nieuw-Zeeland", "New Zealand"],
+    ["Japan", "Japan"], ["China", "China"], ["Zuid-Korea", "South Korea"],
+    ["India", "India"], ["Indonesië", "Indonesia"], ["Thailand", "Thailand"],
+    ["Vietnam", "Vietnam"], ["Filipijnen", "Philippines"], ["Maleisië", "Malaysia"],
+    ["Singapore", "Singapore"], ["Taiwan", "Taiwan"], ["Hongkong", "Hong Kong"],
+    ["Verenigde Arabische Emiraten", "United Arab Emirates"], ["Saoedi-Arabië", "Saudi Arabia"],
+    ["Qatar", "Qatar"], ["Koeweit", "Kuwait"], ["Israël", "Israel"],
+    ["Turkije", "Turkey"], ["Egypte", "Egypt"], ["Marokko", "Morocco"],
+    ["Zuid-Afrika", "South Africa"], ["Nigeria", "Nigeria"], ["Kenia", "Kenya"],
+    ["Rusland", "Russia"], ["Oekraïne", "Ukraine"], ["Servië", "Serbia"],
+    ["Bosnië en Herzegovina", "Bosnia and Herzegovina"], ["Montenegro", "Montenegro"],
+    ["Noord-Macedonië", "North Macedonia"], ["Albanië", "Albania"], ["Moldavië", "Moldova"],
+    ["Wit-Rusland", "Belarus"], ["Georgië", "Georgia"], ["Armenië", "Armenia"],
+    ["Pakistan", "Pakistan"], ["Bangladesh", "Bangladesh"], ["Sri Lanka", "Sri Lanka"]
+  ];
+  function countryLabel(entry) {
+    return lang === "nl" ? entry[0] : entry[1];
+  }
+  function countryOptions() {
+    return COUNTRIES.slice().sort(function (a, b) {
+      return countryLabel(a).localeCompare(countryLabel(b), lang);
+    });
+  }
+
   var lang = localStorage.getItem(LANG_KEY) || "nl";
   function t() {
     return I18N[lang];
@@ -492,7 +543,7 @@
 
   function defaultState() {
     var timeline = [];
-    for (var i = 0; i < MIN_PLACES; i++) {
+    for (var i = 0; i < DEFAULT_PLACES; i++) {
       timeline.push({ id: uid(), place: "", note: "", photo: null });
     }
     return {
@@ -530,7 +581,7 @@
       parsed.contact.notes = parsed.contact.notes || "";
       parsed.contact.desiredDate = parsed.contact.desiredDate || "";
       parsed.format = "shipped"; // only format currently offered — collapses any old draft (digital/framed/pickup)
-      parsed.frame = parsed.frame === "eikenhout" ? "eikenhout" : "grafiet";
+      parsed.frame = (parsed.frame === "eikenhout" || parsed.frame === "geenlijst") ? parsed.frame : "grafiet";
       delete parsed.contact.address;
       delete parsed.agreeTerms;
       delete parsed.touches;
@@ -592,6 +643,7 @@
   var htmlEl = document.documentElement;
   var configurator = document.getElementById("configurator");
   var configClose = document.getElementById("configClose");
+  var configScroll = document.querySelector(".config-scroll");
   var configForm = document.getElementById("configForm");
   var configSuccess = document.getElementById("configSuccess");
   var successOrderNumber = document.getElementById("successOrderNumber");
@@ -614,6 +666,7 @@
   var frameGrid = document.getElementById("frameGrid");
   var frameSpecs = document.getElementById("frameSpecs");
   var frameSpecsList = document.getElementById("frameSpecsList");
+  var noFrameNote = document.getElementById("noFrameNote");
   var openFrameSpecsFor = null; // ephemeral UI state: which material's info panel is open, or null
 
   var contactName = document.getElementById("contactName");
@@ -625,7 +678,6 @@
   var contactPostal = document.getElementById("contactPostal");
   var contactCountry = document.getElementById("contactCountry");
   var contactDate = document.getElementById("contactDate");
-  var dateEarlyWarning = document.getElementById("dateEarlyWarning");
   var contactNotes = document.getElementById("contactNotes");
 
   var summaryList = document.getElementById("summaryList");
@@ -644,6 +696,15 @@
       menuToggle.setAttribute("aria-expanded", "false");
     });
   });
+
+  var heroBanner = document.querySelector(".hero-banner");
+  var floatingCta = document.getElementById("floatingCta");
+  if (heroBanner && floatingCta && "IntersectionObserver" in window) {
+    var heroObserver = new IntersectionObserver(function (entries) {
+      floatingCta.classList.toggle("visible", !entries[0].isIntersecting);
+    });
+    heroObserver.observe(heroBanner);
+  }
 
   /* ---------- lightbox ---------- */
   var lightbox = document.getElementById("lightbox");
@@ -936,6 +997,7 @@
     state = defaultState();
     save();
     closeConfigurator();
+    window.scrollTo(0, 0);
   });
 
   function composeAddress(c) {
@@ -976,7 +1038,7 @@
       lines.push("");
     }
     lines.push("Formaat: Ingelijste print, 20 x 60 cm");
-    lines.push("Lijst: " + (payload.frame === "eikenhout" ? "Eikenhout" : "Grafiet"));
+    lines.push("Lijst: " + (payload.frame === "eikenhout" ? "Eikenhout" : payload.frame === "geenlijst" ? "Geen lijst" : "Grafiet"));
     lines.push("Prijs: EUR " + payload.price);
     lines.push("Akkoord voorwaarden: " + (payload.agreeTerms ? "Ja" : "Nee"));
     return lines.join("\n");
@@ -1443,7 +1505,11 @@
     addTlBtn.disabled = state.timeline.length >= MAX_PLACES;
     var d = t().config.step0;
     var nextIsExtra = state.timeline.length >= MIN_PLACES;
-    addTlBtn.textContent = nextIsExtra ? d.addBtn + " (+€" + EXTRA_PLACE_COST + ")" : d.addBtn;
+    if (nextIsExtra) {
+      addTlBtn.innerHTML = escapeHtml(d.addBtn) + ' <span class="extra-badge">+€' + EXTRA_PLACE_COST + "</span>";
+    } else {
+      addTlBtn.textContent = d.addBtn;
+    }
     addTlBtn.title = nextIsExtra ? d.extraPlaceHint : "";
   }
 
@@ -1451,7 +1517,8 @@
 
   /* ---------- format step ---------- */
   function currentPrice() {
-    return PRICE + extraPlacesCount() * EXTRA_PLACE_COST;
+    var discount = state.frame === "geenlijst" ? NO_FRAME_DISCOUNT : 0;
+    return PRICE + extraPlacesCount() * EXTRA_PLACE_COST - discount;
   }
   function renderFormat() {
     submitPriceAmount.textContent = "€" + currentPrice();
@@ -1463,6 +1530,7 @@
     save();
     renderFrame();
     renderFormat();
+    refreshDateMin();
   }
   function renderFrameSpecs() {
     if (!openFrameSpecsFor) {
@@ -1512,6 +1580,7 @@
       card.setAttribute("aria-pressed", String(card.dataset.frame === state.frame));
     });
     renderFrameSpecs();
+    if (noFrameNote) noFrameNote.hidden = state.frame !== "geenlijst";
   }
 
   /* ---------- details step ---------- */
@@ -1550,20 +1619,50 @@
     save();
     updateSubmitState();
   });
-  contactCountry.addEventListener("input", function () {
+  contactCountry.addEventListener("change", function () {
     state.contact.country = contactCountry.value;
     save();
     updateSubmitState();
   });
-  function refreshDateWarning() {
-    if (!contactDate.value) {
-      dateEarlyWarning.hidden = true;
-      return;
+  function populateCountryOptions() {
+    var selected = contactCountry.value || state.contact.country;
+    contactCountry.innerHTML = "";
+    countryOptions().forEach(function (entry) {
+      var label = countryLabel(entry);
+      var opt = document.createElement("option");
+      opt.value = label;
+      opt.textContent = label;
+      contactCountry.appendChild(opt);
+    });
+    contactCountry.value = selected;
+  }
+  // Walks forward day-by-day skipping Sat/Sun — used to compute the earliest
+  // selectable delivery date, which depends on whether a frame was chosen.
+  function addWorkingDays(date, n) {
+    var result = new Date(date);
+    var added = 0;
+    while (added < n) {
+      result.setDate(result.getDate() + 1);
+      var day = result.getDay();
+      if (day !== 0 && day !== 6) added++;
     }
-    var earliest = new Date();
-    earliest.setDate(earliest.getDate() + 14);
-    var chosen = new Date(contactDate.value + "T00:00:00");
-    dateEarlyWarning.hidden = chosen >= earliest;
+    return result;
+  }
+  function toDateInputValue(d) {
+    var m = ("0" + (d.getMonth() + 1)).slice(-2);
+    var day = ("0" + d.getDate()).slice(-2);
+    return d.getFullYear() + "-" + m + "-" + day;
+  }
+  function refreshDateMin() {
+    var days = state.frame === "geenlijst" ? NO_FRAME_TURNAROUND_DAYS : FRAME_TURNAROUND_DAYS;
+    var min = toDateInputValue(addWorkingDays(new Date(), days));
+    contactDate.min = min;
+    if (contactDate.value && contactDate.value < min) {
+      contactDate.value = "";
+      state.contact.desiredDate = "";
+      save();
+      updateSubmitState();
+    }
   }
   contactDate.addEventListener("focus", function () {
     if (contactDate.showPicker) {
@@ -1581,7 +1680,6 @@
     state.contact.desiredDate = contactDate.value;
     save();
     updateSubmitState();
-    refreshDateWarning();
   });
   contactNotes.addEventListener("input", function () {
     state.contact.notes = contactNotes.value;
@@ -1595,9 +1693,9 @@
     contactStreet.value = state.contact.street;
     contactCity.value = state.contact.city;
     contactPostal.value = state.contact.postalCode;
-    contactCountry.value = state.contact.country;
+    populateCountryOptions();
     contactDate.value = state.contact.desiredDate;
-    refreshDateWarning();
+    refreshDateMin();
     contactNotes.value = state.contact.notes;
   }
 
@@ -1623,7 +1721,7 @@
     rows.push([d.labels.format, d.shippedPrint]);
     rows.push([
       d.labels.frame,
-      state.frame === "eikenhout" ? t().config.stepFrame.eikenhoutLabel : t().config.stepFrame.grafietLabel
+      state.frame === "eikenhout" ? t().config.stepFrame.eikenhoutLabel : state.frame === "geenlijst" ? t().config.stepFrame.geenlijstLabel : t().config.stepFrame.grafietLabel
     ]);
     rows.push([
       d.labels.shipping,
@@ -1689,6 +1787,10 @@
     configForm.hidden = state.submitted;
     configSuccess.hidden = !state.submitted;
     configSubmitBar.hidden = state.submitted;
+    // configForm and configSuccess share one scrolling container (.config-scroll) — on submit
+    // the tall form collapses to the short success message, but the scroll position doesn't
+    // reset on its own, so without this the customer stays scrolled past it into blank space.
+    if (state.submitted && configScroll) configScroll.scrollTop = 0;
     renderTimeline();
     renderFormat();
     renderFrame();

@@ -28,7 +28,10 @@
 <header class="site">
   <div class="bar">
     <a class="brand" href="#top">
-      <span class="wordmark">Line<span class="dot">.</span></span>
+      <span class="brand-text">
+        <span class="wordmark">Line<span class="dot">.</span></span>
+        <span class="brand-since" data-i18n="brand.since">Sinds 2021</span>
+      </span>
     </a>
     <nav class="site-nav">
       <span class="nav-links">
@@ -41,7 +44,6 @@
         <button type="button" class="lang-btn" data-lang="nl" aria-pressed="true">NL</button>
         <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <button type="button" class="btn small js-open-config" data-i18n="cta.start">Geef een Line</button>
       <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" data-i18n-aria="nav.menuToggle" aria-label="Menu">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -54,6 +56,10 @@
     <a href="contact.html" data-i18n="nav.contact">Contact</a>
   </div>
 </header>
+
+<div class="floating-cta" id="floatingCta">
+  <button type="button" class="btn js-open-config" data-i18n="cta.start">Geef een Line</button>
+</div>
 
 <main>
   <!-- ---------- Hero ---------- -->
@@ -109,6 +115,7 @@
         <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_1027%202%20copy.jpg" alt="Ingelijste Line met bedrijfsloodsen, een molen en bedrijfsbusjes" width="4032" height="3024" loading="lazy"></button></div>
         <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_9323%202%20copy.jpg" alt="Ingelijste Line met de Groningse skyline: Martinitoren, ziekenhuis en historische panden" width="4032" height="2268" loading="lazy"></button></div>
         <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/PHOTO-2021-10-13-15-58-35.jpg" alt="Ingelijste Line met een dorpsgezicht, kerktoren en een vliegtuigje met banier" width="1024" height="768" loading="lazy"></button></div>
+        <div class="example-card"><button type="button" class="example-thumb" data-i18n-aria="examples.open"><img src="images/examples/IMG_5422.jpg" alt="Ingelijste Line met een stadsgezicht: kerktoren, grachtenpand-achtige gevels en een kabelbrug, getoond op een schildersezel" width="4032" height="2268" loading="lazy"></button></div>
       </div>
       <div class="examples-dots" id="examplesDots" aria-hidden="true"></div>
     </div>
@@ -139,7 +146,7 @@
           <p>PostNL bezorgt de Line.</p>
         </div>
       </div>
-      <p class="section-note" data-i18n="how.turnaroundNote">Doorlooptijd is gemiddeld zo'n 2 tot 3 weken. Deze start vanaf het moment van betalen.</p>
+      <p class="section-note" data-i18n="how.turnaroundNote">Doorlooptijd is 5 werkdagen zonder lijst, 10 werkdagen met lijst — vanaf het moment van betalen.</p>
     </div>
   </section>
 
@@ -311,7 +318,7 @@
       <div class="faq-list">
         <details class="faq-item">
           <summary><span class="q" data-i18n="faq.items.0.q">Hoe lang duurt het voordat ik mijn Line ontvang?</span><span class="chevron" aria-hidden="true"></span></summary>
-          <p class="a" data-i18n="faq.items.0.a">De doorlooptijd is zo'n 2 tot 3 weken. Die start vanaf het moment dat de betaling is voldaan. Wil je op tijd je Line binnen hebben, wacht dan niet te lang met het plaatsen van je bestelling.</p>
+          <p class="a" data-i18n="faq.items.0.a">De doorlooptijd is 5 werkdagen zonder lijst, of 10 werkdagen met lijst — vanaf het moment dat de betaling is voldaan. Wil je op tijd je Line binnen hebben, wacht dan niet te lang met het plaatsen van je bestelling.</p>
         </details>
         <details class="faq-item">
           <summary><span class="q" data-i18n="faq.items.1.q">Kan ik een Line voor iemand anders bestellen?</span><span class="chevron" aria-hidden="true"></span></summary>
@@ -339,27 +346,31 @@
         </details>
         <details class="faq-item">
           <summary><span class="q" data-i18n="faq.items.7.q">Kan ik zelf het lijstmateriaal kiezen?</span><span class="chevron" aria-hidden="true"></span></summary>
-          <p class="a" data-i18n="faq.items.7.a">Ja, je kiest tussen grafiet en eikenhout — beide kosten hetzelfde. Bij elke optie in de configurator vind je een infoknopje met de volledige productspecificaties.</p>
+          <p class="a" data-i18n="faq.items.7.a">Ja, je kiest tussen grafiet en eikenhout — beide kosten hetzelfde. Je kunt er ook voor kiezen om je Line zonder lijst te ontvangen, voor €50 korting. Bij elke lijstoptie in de configurator vind je een infoknopje met de volledige productspecificaties.</p>
         </details>
         <details class="faq-item">
-          <summary><span class="q" data-i18n="faq.items.8.q">Kan ik mijn bestelling annuleren of retourneren als ik van gedachten verander?</span><span class="chevron" aria-hidden="true"></span></summary>
-          <p class="a" data-i18n="faq.items.8.a">Elke Line wordt speciaal voor jou op maat getekend. Voor op maat gemaakte producten geldt geen wettelijk herroepingsrecht, dus een geplaatste en bevestigde bestelling kun je niet kosteloos annuleren of retourneren. Zit er een fout in je Line die aan ons ligt, dan lossen we dat uiteraard wel kosteloos op.</p>
+          <summary><span class="q" data-i18n="faq.items.8.q">Waarom is de levertijd zo lang?</span><span class="chevron" aria-hidden="true"></span></summary>
+          <p class="a" data-i18n="faq.items.8.a">Het kost 1 tot 2 werkdagen om het design af te ronden, printen duurt 2 tot 3 werkdagen, en inlijsten en verzenden nog eens 1 tot 2 werkdagen. Dit is sterk afhankelijk van de drukte, waardoor het soms iets langer kan duren.</p>
         </details>
         <details class="faq-item">
-          <summary><span class="q" data-i18n="faq.items.9.q">Er zit een fout in mijn Line, wat nu?</span><span class="chevron" aria-hidden="true"></span></summary>
-          <p class="a" data-i18n="faq.items.9.a">Bevat je Line een fout die aan ons te wijten is, bijvoorbeeld een verkeerd getekend gebouw of een productiefout in de print, dan herstellen of vervangen we deze kosteloos. Mail ons via de contactpagina.</p>
+          <summary><span class="q" data-i18n="faq.items.9.q">Kan ik mijn bestelling annuleren of retourneren als ik van gedachten verander?</span><span class="chevron" aria-hidden="true"></span></summary>
+          <p class="a" data-i18n="faq.items.9.a">Elke Line wordt speciaal voor jou op maat getekend. Voor op maat gemaakte producten geldt geen wettelijk herroepingsrecht, dus een geplaatste en bevestigde bestelling kun je niet kosteloos annuleren of retourneren. Zit er een fout in je Line die aan ons ligt, dan lossen we dat uiteraard wel kosteloos op.</p>
         </details>
         <details class="faq-item">
-          <summary><span class="q" data-i18n="faq.items.10.q">Is mijn Line uniek?</span><span class="chevron" aria-hidden="true"></span></summary>
-          <p class="a" data-i18n="faq.items.10.a">Ja. Elke Line wordt met de hand getekend op basis van de plekken die jij aanlevert, en de compositie wordt door de kunstenaar bepaald. Geen twee Lines zijn ooit helemaal hetzelfde.</p>
+          <summary><span class="q" data-i18n="faq.items.10.q">Er zit een fout in mijn Line, wat nu?</span><span class="chevron" aria-hidden="true"></span></summary>
+          <p class="a" data-i18n="faq.items.10.a">Bevat je Line een fout die aan ons te wijten is, bijvoorbeeld een verkeerd getekend gebouw of een productiefout in de print, dan herstellen of vervangen we deze kosteloos. Mail ons via de contactpagina.</p>
         </details>
         <details class="faq-item">
-          <summary><span class="q" data-i18n="faq.items.11.q">Wat gebeurt er met de foto's en gegevens die ik upload?</span><span class="chevron" aria-hidden="true"></span></summary>
-          <p class="a" data-i18n="faq.items.11.a">Je gegevens en foto's worden alleen gebruikt om jouw Line te tekenen en te bezorgen, niet gedeeld met derden buiten wat nodig is voor de levering. Het volledige privacybeleid staat op de privacybeleid-pagina.</p>
+          <summary><span class="q" data-i18n="faq.items.11.q">Is mijn Line uniek?</span><span class="chevron" aria-hidden="true"></span></summary>
+          <p class="a" data-i18n="faq.items.11.a">Ja. Elke Line wordt met de hand getekend op basis van de plekken die jij aanlevert, en de compositie wordt door de kunstenaar bepaald. Geen twee Lines zijn ooit helemaal hetzelfde.</p>
         </details>
         <details class="faq-item">
-          <summary><span class="q" data-i18n="faq.items.12.q">Wanneer en hoe betaal ik precies?</span><span class="chevron" aria-hidden="true"></span></summary>
-          <p class="a" data-i18n="faq.items.12.a">Na het plaatsen van je bestelling ontvang je een Tikkie-betaalverzoek. Zodra de betaling binnen is, start de doorlooptijd van je Line.</p>
+          <summary><span class="q" data-i18n="faq.items.12.q">Wat gebeurt er met de foto's en gegevens die ik upload?</span><span class="chevron" aria-hidden="true"></span></summary>
+          <p class="a" data-i18n="faq.items.12.a">Je gegevens en foto's worden alleen gebruikt om jouw Line te tekenen en te bezorgen, niet gedeeld met derden buiten wat nodig is voor de levering. Het volledige privacybeleid staat op de privacybeleid-pagina.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span class="q" data-i18n="faq.items.13.q">Wanneer en hoe betaal ik precies?</span><span class="chevron" aria-hidden="true"></span></summary>
+          <p class="a" data-i18n="faq.items.13.a">Na het plaatsen van je bestelling ontvang je een Tikkie-betaalverzoek. Zodra de betaling binnen is, start de doorlooptijd van je Line.</p>
         </details>
       </div>
     </div>
@@ -379,7 +390,7 @@
     </p>
     <p>
       <a href="contact.html" data-i18n="nav.contact">Contact</a> ·
-      <a href="voorwaarden.html" data-i18n="footer.terms">Algemene voorwaarden</a> ·
+      <a href="voorwaarden.html" target="_blank" rel="noopener" data-i18n="footer.terms">Algemene voorwaarden</a> ·
       <a href="privacybeleid.html" data-i18n="footer.privacy">Privacybeleid</a> ·
       <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener" data-i18n="footer.odr">Geschillencommissie (ODR)</a>
     </p>
@@ -460,7 +471,11 @@
               <span class="frame-label" data-i18n="config.stepFrame.eikenhoutLabel">Eikenhout</span>
               <button type="button" class="frame-info-btn" data-frame-info="eikenhout" data-i18n-aria="config.stepFrame.infoAria" aria-label="Meer info">i</button>
             </div>
+            <div class="format-card frame-card frame-card-noframe" data-frame="geenlijst" role="button" tabindex="0" aria-pressed="false">
+              <span class="frame-label" data-i18n="config.stepFrame.geenlijstLabel">Geen lijst (-€50)</span>
+            </div>
           </div>
+          <p class="field-note" id="noFrameNote" data-i18n="config.stepFrame.noFrameNote" hidden>Bij deze keuze sturen we de print zonder lijst naar je bezorgadres. Levertijd is daardoor 5 werkdagen.</p>
           <div class="frame-specs" id="frameSpecs" hidden>
             <dl class="frame-specs-list" id="frameSpecsList"></dl>
           </div>
@@ -510,13 +525,12 @@
           </div>
           <div class="field">
             <label for="contactCountry"><span data-i18n="config.step2.countryLabel">Land</span><span class="req-mark" aria-hidden="true">*</span></label>
-            <input type="text" id="contactCountry" placeholder="Nederland" data-i18n-ph="config.step2.countryPh" maxlength="60">
+            <select id="contactCountry"></select>
           </div>
           <div class="field">
             <label for="contactDate"><span data-i18n="config.step2.dateLabel">Gewenste ontvangstdatum</span><span class="req-mark" aria-hidden="true">*</span></label>
             <input type="date" id="contactDate" data-i18n-aria="config.step2.dateAria">
-            <p class="field-note" data-i18n="config.step2.dateHint">We doen ons best, standaard doorlooptijd is 2 tot 3 weken.</p>
-            <p class="field-note field-note-warning" id="dateEarlyWarning" data-i18n="config.step2.dateEarlyWarning" hidden>Deze datum is minder dan 2 weken vanaf nu. Door de tijd die tekenen, printen en verzenden kosten, kunnen we deze datum waarschijnlijk niet halen.</p>
+            <p class="field-note" data-i18n="config.step2.dateHint">Doorlooptijd is 5 werkdagen zonder lijst, 10 werkdagen met lijst.</p>
           </div>
         </section>
 
@@ -614,7 +628,7 @@
         "name": "Hoe lang duurt het voordat ik mijn Line ontvang?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "De doorlooptijd is zo'n 2 tot 3 weken. Die start vanaf het moment dat de betaling is voldaan. Wil je op tijd je Line binnen hebben, wacht dan niet te lang met het plaatsen van je bestelling."
+          "text": "De doorlooptijd is 5 werkdagen zonder lijst, of 10 werkdagen met lijst — vanaf het moment dat de betaling is voldaan. Wil je op tijd je Line binnen hebben, wacht dan niet te lang met het plaatsen van je bestelling."
         }
       },
       {
@@ -670,7 +684,15 @@
         "name": "Kan ik zelf het lijstmateriaal kiezen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ja, je kiest tussen grafiet en eikenhout — beide kosten hetzelfde. Bij elke optie in de configurator vind je een infoknopje met de volledige productspecificaties."
+          "text": "Ja, je kiest tussen grafiet en eikenhout — beide kosten hetzelfde. Je kunt er ook voor kiezen om je Line zonder lijst te ontvangen, voor €50 korting. Bij elke lijstoptie in de configurator vind je een infoknopje met de volledige productspecificaties."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Waarom is de levertijd zo lang?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Het kost 1 tot 2 werkdagen om het design af te ronden, printen duurt 2 tot 3 werkdagen, en inlijsten en verzenden nog eens 1 tot 2 werkdagen. Dit is sterk afhankelijk van de drukte, waardoor het soms iets langer kan duren."
         }
       },
       {
