@@ -28,7 +28,8 @@
         headlinePre: "Een cadeau voor een ",
         headlineEm: "groot moment",
         headlinePost: "",
-        lede: "Line tekent elke plek die iemands leven vormde: van eerste woonhuis tot laatste adres. Een persoonlijk kunstwerk voor een verhuizing, afstuderen, huwelijk of afscheid."
+        lede: "Line tekent elke plek die iemands leven vormde: van eerste woonhuis tot laatste adres. Een persoonlijk kunstwerk voor een verhuizing, afstuderen, huwelijk of afscheid.",
+        priceFrom: "Vanaf"
       },
       examples: {
         eyebrow: "Cadeaus die al gegeven zijn",
@@ -212,7 +213,8 @@
         headlinePre: "A gift for a ",
         headlineEm: "big moment",
         headlinePost: "",
-        lede: "Line draws every place that shaped someone's life: from their first home to their most recent address. A personal work of art for a move, a graduation, a wedding, or a loss."
+        lede: "Line draws every place that shaped someone's life: from their first home to their most recent address. A personal work of art for a move, a graduation, a wedding, or a loss.",
+        priceFrom: "From"
       },
       examples: {
         eyebrow: "Gifts already given",
