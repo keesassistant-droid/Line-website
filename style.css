@@ -448,6 +448,14 @@ section{padding:24px 0;}
 .price-lbl-name{font-size:8.5px;font-weight:600;}
 .price-lbl-name.compact{font-size:7.5px;}
 .price-lbl-amount{font-size:11.5px;font-weight:700;font-variant-numeric:tabular-nums;}
+/* The diagram's viewBox is fixed (400 units) but its rendered width shrinks a lot on
+   narrow phones, taking the SVG text down to unreadable sizes with it — bump the
+   font sizes specifically on mobile so the real on-screen text stays legible. */
+@media (max-width:640px){
+  .price-lbl-name{font-size:13px;}
+  .price-lbl-name.compact{font-size:11px;}
+  .price-lbl-amount{font-size:15px;}
+}
 
 /* ---------- About ---------- */
 .about{display:grid;grid-template-columns:180px 1fr;gap:36px;align-items:center;}
