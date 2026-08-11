@@ -139,20 +139,18 @@ nav.site-nav a:hover{color:var(--ink);}
 }
 
 /* Floating "Geef een Line" button — appears once the real hero button scrolls out of view.
-   Width mirrors that hero button: 284px (hero-card's inner content width) on desktop,
-   viewport minus the .wrap side padding (24px each) on mobile. */
+   Full width of the page's content column (same .wrap max-width as the static button),
+   sitting just below the sticky header rather than overlapping it. */
 .floating-cta{
-  position:fixed;top:14px;left:50%;z-index:25;
-  width:calc(100% - 48px);max-width:284px;
-  transform:translate(-50%,-140%);
-  transition:transform .35s cubic-bezier(.2,.8,.2,1);
+  position:fixed;top:84px;left:0;right:0;z-index:19;
+  max-width:var(--container);margin:0 auto;padding:0 24px;
+  transform:translateY(-260%);
+  opacity:0;
+  transition:transform .55s cubic-bezier(.34,1.56,.64,1),opacity .3s ease;
   pointer-events:none;
 }
-.floating-cta.visible{transform:translate(-50%,0);pointer-events:auto;}
+.floating-cta.visible{transform:translateY(0);opacity:1;pointer-events:auto;}
 .floating-cta .btn{width:100%;justify-content:center;box-shadow:0 12px 28px -10px rgba(0,0,0,.35);}
-@media (max-width:640px){
-  .floating-cta{max-width:none;}
-}
 
 .btn{
   display:inline-flex;align-items:center;gap:8px;
@@ -182,7 +180,9 @@ nav.site-nav a:hover{color:var(--ink);}
 .hero-banner{width:100%;aspect-ratio:3/1;overflow:hidden;background:var(--ink);position:relative;}
 .hero-banner img{width:100%;height:100%;object-fit:cover;object-position:35% 45%;display:block;}
 
-/* Desktop: a solid card floats on the photo with headline + CTAs. */
+/* Desktop: a solid card floats on the photo with just the headline — the buttons live
+   in the full-width static block below (.hero-actions-mobile, shared with mobile) so
+   they can be genuinely page-width instead of squeezed into the small card. */
 .hero-card{
   position:absolute;top:50%;right:6%;transform:translateY(-50%);
   background:var(--bg);border-radius:var(--radius);
@@ -190,11 +190,9 @@ nav.site-nav a:hover{color:var(--ink);}
   padding:34px 38px;max-width:360px;text-align:left;
 }
 .hero-card .hero-headline{
-  font-size:clamp(24px,2.7vw,34px);max-width:none;margin:0 0 22px;text-align:left;
+  font-size:clamp(24px,2.7vw,34px);max-width:none;margin:0;text-align:left;
 }
-.hero-card .hero-actions{justify-content:flex-start;flex-direction:column;}
-.hero-card .hero-actions .btn{width:100%;justify-content:center;}
-.hero-headline-mobile,.hero-actions-mobile{display:none;}
+.hero-headline-mobile{display:none;}
 
 .hero h1{font-size:clamp(34px,5.5vw,58px);max-width:16ch;margin:0 auto .3em;}
 .hero h1 em{color:var(--coral);font-style:italic;}
@@ -204,14 +202,16 @@ nav.site-nav a:hover{color:var(--ink);}
   color:var(--ink-muted);font-size:18px;
 }
 .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+/* The one real button block, static in flow, full width, at every breakpoint — used
+   to be mobile-only and duplicated (narrower) inside .hero-card on desktop. */
+.hero-actions-mobile{display:flex;flex-direction:column;gap:14px;}
+.hero-actions-mobile .btn{width:100%;justify-content:center;}
 
 /* Mobile: no overlay card — shorter cropped photo, everything stacked below it. */
 @media (max-width:640px){
   .hero-banner{aspect-ratio:12/5;}
   .hero-card{display:none;}
   .hero-headline-mobile{display:block;}
-  .hero-actions-mobile{display:flex;flex-direction:column;}
-  .hero-actions-mobile .btn{width:100%;justify-content:center;}
   .hero .wrap{padding-top:32px;}
 }
 
@@ -424,7 +424,7 @@ section{padding:24px 0;}
 
 /* ---------- Dimensions ---------- */
 .dims-diagram{display:flex;justify-content:center;margin-top:8px;}
-.dims-diagram svg{width:100%;max-width:420px;height:auto;}
+.dims-diagram svg{width:100%;max-width:460px;height:auto;}
 .dims-rect{fill:var(--bg-soft);stroke:var(--ink);stroke-width:2;vector-effect:non-scaling-stroke;}
 .dims-line{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;vector-effect:non-scaling-stroke;opacity:.45;}
 .dims-dim{stroke-width:1.5;vector-effect:non-scaling-stroke;}
@@ -436,33 +436,45 @@ section{padding:24px 0;}
 
 /* ---------- Pricing ---------- */
 /* viewBox is 400x200 (vs. dims' 320x200) to leave room for the left-side callout
-   labels, but the box itself is the same 240x80 units — matched to the same
-   max-width scale factor as .dims-diagram (420/320) so the two rectangles render
-   at an identical physical size on screen. */
-.price-diagram{max-width:525px;margin:8px auto 0;}
+   labels, but the box itself is the same 240x80 units, offset from its own viewBox
+   center by the same amount (15 units) as .dims-rect is from its viewBox center —
+   combined with the matching max-width scale factor as .dims-diagram (460/320),
+   the two rectangles render at the same physical size AND the same position on screen. */
+.price-diagram{max-width:575px;margin:8px auto 0;}
 .price-diagram svg{display:block;width:100%;height:auto;}
-.price-outline{fill:none;stroke:var(--ink);stroke-width:2;}
+.price-outline{fill:none;stroke:var(--ink);stroke-width:2;pointer-events:none;}
 .price-block-vat{fill:var(--coral-600);}
 .price-block-frame{fill:var(--coral);}
 .price-block-print{fill:var(--coral-500);}
 .price-block-shipping{fill:var(--coral-200);}
 .price-block-packaging{fill:var(--coral-100);}
 .price-block-labor{fill:var(--coral-700);}
-.price-block-margin{fill:var(--coral-300);}
-.price-sep{stroke:var(--bg);stroke-width:2.5;}
+.price-sep{stroke:var(--bg);stroke-width:2.5;pointer-events:none;}
 
 .price-callout-line{stroke:var(--ink);stroke-width:1.2;stroke-linecap:round;opacity:.4;vector-effect:non-scaling-stroke;}
-.price-callout-dot{stroke:var(--bg);stroke-width:1;}
+.price-callout-dot{stroke:var(--bg);stroke-width:1;transition:r .15s ease;}
 .price-callout-label{font-family:var(--font-body);font-size:10.5px;}
 .price-callout-name{fill:var(--ink-muted);font-weight:600;}
 .price-callout-amount{fill:var(--ink);font-weight:700;}
 
-.price-total-row{
-  margin-top:22px;padding-top:18px;border-top:1.5px dashed var(--line-strong);
-  text-align:center;font-family:var(--font-display);font-weight:600;font-size:19px;color:var(--ink);
-}
-.price-caption{
-  max-width:440px;margin:18px auto 0;text-align:center;
+/* Every segment (the colored bar AND its callout label) is a hover/tap/focus target —
+   interacting with either half highlights both, inviting exploration of what's in the price. */
+.price-diagram [data-segment]{cursor:pointer;}
+.price-diagram rect[data-segment]{transition:opacity .15s ease;}
+.price-diagram rect[data-segment].price-hover{opacity:.72;}
+.price-callout-hit{outline:none;}
+.price-callout-hit .price-callout-label{transition:opacity .15s ease;opacity:.85;}
+.price-callout-hit.price-hover .price-callout-label,
+.price-callout-hit:focus-visible .price-callout-label{opacity:1;}
+.price-callout-hit.price-hover .price-callout-dot,
+.price-callout-hit:focus-visible .price-callout-dot{r:4;}
+.price-callout-hit.price-hover .price-callout-line,
+.price-callout-hit:focus-visible .price-callout-line{opacity:.8;}
+.price-callout-hit.price-hover .price-callout-name,
+.price-callout-hit:focus-visible .price-callout-name{fill:var(--ink);}
+
+.price-invite{
+  max-width:360px;margin:16px auto 0;text-align:center;
   font-size:12.5px;color:var(--ink-muted);
 }
 
@@ -551,7 +563,6 @@ footer.site a{color:var(--ink);text-decoration:none;font-weight:600;}
   padding:16px 24px;border-bottom:1px solid var(--line);
   flex:none;
 }
-.config-head .wordmark{font-size:19px;}
 .config-close{
   width:40px;height:40px;border-radius:50%;
   border:1.5px solid var(--line-strong);background:transparent;
@@ -564,9 +575,14 @@ footer.site a{color:var(--ink);text-decoration:none;font-weight:600;}
 .config-scroll{
   flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;
   -webkit-overflow-scrolling:touch;
-  padding:36px 40px 40px;
+  padding:36px 40px 0;
 }
-.config-panel{max-width:640px;margin:0 auto;}
+/* .config-submit-bar is a sticky sibling of .config-panel (not nested inside it) so its
+   background can bleed to the true edges of .config-scroll — that means .config-scroll
+   can't carry the bottom breathing-room itself (a sticky element ignores its scroll
+   ancestor's own padding), so .config-panel supplies it instead, and the submit bar gets
+   its own bottom padding (+ safe-area-inset for notched phones) to reach the real edge. */
+.config-panel{max-width:640px;margin:0 auto;padding-bottom:40px;}
 .config-panel h2{font-size:24px;margin-bottom:18px;}
 .config-panel > p.hint{color:var(--ink-muted);font-size:14.5px;margin-bottom:26px;max-width:56ch;}
 .config-section{
@@ -579,7 +595,8 @@ footer.site a{color:var(--ink);text-decoration:none;font-weight:600;}
 @media (max-width:860px){
   .configurator{flex-direction:column;}
   .config-stage{flex:0 0 200px;}
-  .config-scroll{padding:28px 20px 30px;}
+  .config-scroll{padding:28px 20px 0;}
+  .config-panel{padding-bottom:30px;}
 }
 @media (max-width:640px){
   .config-stage{display:none;}
@@ -770,12 +787,12 @@ footer.site a{color:var(--ink);text-decoration:none;font-weight:600;}
   position:sticky;bottom:0;
   border-top:1px solid var(--line);
   background:var(--bg);
-  padding:20px 40px 4px;
+  padding:20px 40px calc(16px + env(safe-area-inset-bottom));
   margin:8px -40px 0;
   box-shadow:0 -8px 20px -12px rgba(0,0,0,.15);
 }
 @media (max-width:860px){
-  .config-submit-bar{padding:20px 20px 4px;margin:8px -20px 0;}
+  .config-submit-bar{padding:20px 20px calc(16px + env(safe-area-inset-bottom));margin:8px -20px 0;}
 }
 .submit-terms-note{
   font-size:12.5px;color:var(--ink-muted);text-align:center;margin:0 0 14px;
@@ -852,15 +869,6 @@ footer.site a{color:var(--ink);text-decoration:none;font-weight:600;}
     width:auto;max-width:none;
   }
 }
-
-.cookie-reopen-tab{
-  position:fixed;left:16px;bottom:16px;z-index:500;
-  background:var(--bg);color:var(--ink-muted);
-  border:1px solid var(--line-strong);border-radius:999px;
-  padding:8px 14px;font-family:var(--font-body);font-size:12px;font-weight:600;
-  cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.08);
-}
-.cookie-reopen-tab:hover{color:var(--ink);border-color:var(--ink);}
 
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto;}

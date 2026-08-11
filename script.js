@@ -61,11 +61,9 @@
           print: { name: "Print", amount: "€35" },
           shipping: { name: "Verzending", amount: "€8" },
           packaging: { name: "Verpakking", amount: "€3" },
-          labor: { name: "Teken-uren", amount: "€150" },
-          margin: { name: "Marge", amount: "€21,11" },
-          total: "Vanaf €299 · alles inbegrepen"
+          labor: { name: "Teken-uren", amount: "€171,11" }
         },
-        caption: "Deze uitsplitsing geldt voor de eerste 6 plekken. Alle kosten inbegrepen, inclusief de tijd die in het tekenen gaat zitten — wat overblijft is de marge voor het bedrijf. Elke plek boven de 6 kost €25 extra."
+        invite: "Tik of klik op een kleur voor de prijs erachter"
       },
       about: {
         eyebrow: "Over",
@@ -296,11 +294,9 @@
           print: { name: "Printing", amount: "€35" },
           shipping: { name: "Shipping", amount: "€8" },
           packaging: { name: "Packaging", amount: "€3" },
-          labor: { name: "Drawing hours", amount: "€150" },
-          margin: { name: "Margin", amount: "€21.11" },
-          total: "From €299 · all-in"
+          labor: { name: "Drawing hours", amount: "€171.11" }
         },
-        caption: "This breakdown is for the first 6 places. Every cost is included, including the time that goes into the drawing itself — what's left over is the business's margin. Every place beyond 6 is an extra €25."
+        invite: "Tap or click a color to see its price"
       },
       about: {
         eyebrow: "About",
@@ -698,20 +694,50 @@
     });
   });
 
-  var heroCtaButtons = document.querySelectorAll(".hero-card .js-open-config, .hero-actions-mobile .js-open-config");
+  var heroCtaButton = document.querySelector(".hero-actions-mobile .js-open-config");
   var floatingCta = document.getElementById("floatingCta");
-  if (heroCtaButtons.length && floatingCta && "IntersectionObserver" in window) {
+  if (heroCtaButton && floatingCta && "IntersectionObserver" in window) {
     var heroObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        // only the breakpoint-active button (desktop hero-card vs mobile hero-actions) has real size
-        if (entry.target.getBoundingClientRect().width === 0) return;
-        floatingCta.classList.toggle("visible", !entry.isIntersecting);
+      floatingCta.classList.toggle("visible", !entries[0].isIntersecting);
+    });
+    heroObserver.observe(heroCtaButton);
+  }
+
+  /* ---------- pricing diagram: hover/tap a color to highlight its price ---------- */
+  (function () {
+    var segments = document.querySelectorAll(".price-diagram [data-segment]");
+    if (!segments.length) return;
+    var activeSegment = null;
+    function setSegmentHover(name, on) {
+      document.querySelectorAll('.price-diagram [data-segment="' + name + '"]').forEach(function (el) {
+        el.classList.toggle("price-hover", on);
+      });
+    }
+    segments.forEach(function (el) {
+      var seg = el.dataset.segment;
+      el.addEventListener("mouseenter", function () { setSegmentHover(seg, true); });
+      el.addEventListener("mouseleave", function () { if (activeSegment !== seg) setSegmentHover(seg, false); });
+      el.addEventListener("focus", function () { setSegmentHover(seg, true); });
+      el.addEventListener("blur", function () { if (activeSegment !== seg) setSegmentHover(seg, false); });
+      el.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (activeSegment === seg) {
+          setSegmentHover(seg, false);
+          activeSegment = null;
+        } else {
+          if (activeSegment) setSegmentHover(activeSegment, false);
+          activeSegment = seg;
+          setSegmentHover(seg, true);
+        }
+      });
+      el.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          el.click();
+        }
       });
     });
-    heroCtaButtons.forEach(function (btn) {
-      heroObserver.observe(btn);
-    });
-  }
+  })();
 
   /* ---------- lightbox ---------- */
   var lightbox = document.getElementById("lightbox");

@@ -86,28 +86,11 @@
     });
   }
 
-  function buildReopenTab() {
-    var t = TEXT[lang()];
-    var tab = document.createElement("button");
-    tab.type = "button";
-    tab.className = "cookie-reopen-tab";
-    tab.textContent = t.settings;
-    tab.addEventListener("click", function () {
-      tab.remove();
-      localStorage.removeItem(CONSENT_KEY);
-      buildBanner();
-    });
-    document.body.appendChild(tab);
-  }
-
   document.addEventListener("DOMContentLoaded", function () {
     var consent = localStorage.getItem(CONSENT_KEY);
     if (consent === "accepted") {
       loadAnalytics();
-      buildReopenTab();
-    } else if (consent === "declined") {
-      buildReopenTab();
-    } else {
+    } else if (consent !== "declined") {
       buildBanner();
     }
   });
