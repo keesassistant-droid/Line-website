@@ -28,7 +28,7 @@
         headlinePre: "Een cadeau voor een ",
         headlineEm: "groot moment",
         headlinePost: "",
-        lede: "Line tekent elk bouwwerk dat iemands leven vormde: van eerste woonhuis tot laatste adres. Een persoonlijk kunstwerk voor een verhuizing, afstuderen, huwelijk of afscheid.",
+        lede: "Line tekent elke plek die iemands leven vormde: van eerste woonhuis tot laatste adres. Een persoonlijk kunstwerk voor een verhuizing, afstuderen, huwelijk of afscheid.",
         priceFrom: "Vanaf"
       },
       examples: {
@@ -209,7 +209,7 @@
         headlinePre: "A gift for a ",
         headlineEm: "big moment",
         headlinePost: "",
-        lede: "Line draws every structure that shaped someone's life: from their first home to their most recent address. A personal work of art for a move, a graduation, a wedding, or a loss.",
+        lede: "Line draws every place that shaped someone's life: from their first home to their most recent address. A personal work of art for a move, a graduation, a wedding, or a loss.",
         priceFrom: "From"
       },
       examples: {
@@ -288,26 +288,26 @@
         closeAria: "Close configurator",
         step0: {
           h2: "Put your Line together",
-          addBtn: "+ Add a place",
-          needMoreOne: "1 more place needed to continue (minimum 4).",
-          needMoreMany: "{n} more places needed to continue (minimum 4).",
-          maxReached: "Maximum of 10 places reached.",
+          addBtn: "+ Add a structure",
+          needMoreOne: "1 more structure needed to continue (minimum 4).",
+          needMoreMany: "{n} more structures needed to continue (minimum 4).",
+          maxReached: "Maximum of 10 structures reached.",
           placePh: "Address or building",
           placeAria: "Address or building",
           notePh: "Comments, specific wishes",
-          noteAria: "Comments for this place",
+          noteAria: "Comments for this structure",
           photoAdd: "Add photo",
           photoChange: "Change photo",
           needPhoto: "Add a photo so we draw the right building.",
           photoMissingLabel: "Photo missing — tap to add",
           dragHandleAria: "Drag to reorder",
-          removePlace: "Remove this place",
+          removePlace: "Remove this structure",
           progressLabel: "{done} of {min} complete",
           toggleAria: "Show or hide details",
           moveUpAria: "Move up",
           moveDownAria: "Move down",
-          extraPlaceHint: "The first 6 places are included. Every place after that is an extra €25.",
-          storageWarning: "Your browser can no longer save your progress (probably too many photos). Finish your order in one go, or clear a few places."
+          extraPlaceHint: "The first 6 structures are included. Every structure after that is an extra €25.",
+          storageWarning: "Your browser can no longer save your progress (probably too many photos). Finish your order in one go, or clear a few structures."
         },
         step1: {
           h2: "Your format",
@@ -324,7 +324,7 @@
         },
         stepNotes: {
           h2: "Anything else?",
-          hint: "General comments or specific wishes for your Line — separate from the individual places above.",
+          hint: "General comments or specific wishes for your Line, separate from the individual structures above.",
           notesPh: "Any extra context that helps us draw your Line",
           notesAria: "General comments"
         },
@@ -355,7 +355,7 @@
           h2: "Review your order",
           hint: "Take a last look — you can jump back to any step to make changes.",
           labels: { timeline: "Your timeline", format: "Format", frame: "Frame", contact: "Contact", address: "Delivery address", desiredDate: "Preferred delivery date", notes: "Notes", shipping: "Shipping", payment: "Payment method" },
-          noPlaces: "No places added yet",
+          noPlaces: "No structures added yet",
           shippedPrint: "Framed print, 20 × 60 cm",
           shippingIncluded: "included in the price"
         },
