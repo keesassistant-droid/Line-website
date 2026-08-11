@@ -431,61 +431,23 @@ section{padding:24px 0;}
 .faq-item[open] .chevron::after{transform:translate(-50%,-50%) rotate(90deg);}
 .faq-item .a{margin:0 2px 20px;color:var(--ink-muted);font-size:14.5px;line-height:1.6;max-width:62ch;}
 
-/* ---------- Dimensions ---------- */
-.dims-diagram{display:flex;justify-content:center;margin-top:8px;}
-.dims-diagram svg{width:100%;max-width:460px;height:auto;}
-.dims-rect{fill:var(--bg-soft);stroke:var(--ink);stroke-width:2;vector-effect:non-scaling-stroke;}
-.dims-line{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;vector-effect:non-scaling-stroke;opacity:.45;}
-.dims-dim{stroke-width:1.5;vector-effect:non-scaling-stroke;}
-.dims-dim-w{stroke:var(--coral);}
-.dims-dim-h{stroke:var(--gold);}
-.dims-label{font-size:12px;font-weight:700;letter-spacing:.02em;}
-.dims-label-w{fill:var(--coral);}
-.dims-label-h{fill:var(--gold);}
-
 /* ---------- Pricing ---------- */
-/* viewBox is 400x200 (vs. dims' 320x200) to leave room for the left-side callout
-   labels, but the box itself is the same 240x80 units, offset from its own viewBox
-   center by the same amount (15 units) as .dims-rect is from its viewBox center —
-   combined with the matching max-width scale factor as .dims-diagram (460/320),
-   the two rectangles render at the same physical size AND the same position on screen. */
 .price-diagram{max-width:575px;margin:8px auto 0;}
 .price-diagram svg{display:block;width:100%;height:auto;}
-.price-outline{fill:none;stroke:var(--ink);stroke-width:2;pointer-events:none;}
-.price-block-vat{fill:var(--coral-600);}
-.price-block-frame{fill:var(--coral);}
-.price-block-print{fill:var(--coral-500);}
-.price-block-shipping{fill:var(--coral-200);}
-.price-block-packaging{fill:var(--coral-100);}
-.price-block-labor{fill:var(--coral-700);}
-.price-sep{stroke:var(--bg);stroke-width:2.5;pointer-events:none;}
+.price-outline{fill:none;stroke:var(--ink);stroke-width:3;}
+.price-divider{stroke:var(--ink);stroke-opacity:.24;stroke-width:1;}
 
-.price-callout-line{stroke:var(--ink);stroke-width:1.2;stroke-linecap:round;opacity:.4;vector-effect:non-scaling-stroke;}
-.price-callout-dot{stroke:var(--bg);stroke-width:1;transition:r .15s ease;}
-.price-callout-label{font-family:var(--font-body);font-size:10.5px;}
-.price-callout-name{fill:var(--ink-muted);font-weight:600;}
-.price-callout-amount{fill:var(--ink);font-weight:700;}
+/* fill intensity ranked by price, low -> high: Logistiek 11, Lijst/Print 40, BTW 52, Teken-uren 156 */
+.price-block-logistics{fill:var(--coral-100);}
+.price-block-frame{fill:var(--coral-200);}
+.price-block-print{fill:var(--coral-200);}
+.price-block-vat{fill:var(--coral-300);}
+.price-block-labor{fill:var(--coral);}
 
-/* Every segment (the colored bar AND its callout label) is a hover/tap/focus target —
-   interacting with either half highlights both, inviting exploration of what's in the price. */
-.price-diagram [data-segment]{cursor:pointer;}
-.price-diagram rect[data-segment]{transition:opacity .15s ease;}
-.price-diagram rect[data-segment].price-hover{opacity:.72;}
-.price-callout-hit{outline:none;}
-.price-callout-hit .price-callout-label{transition:opacity .15s ease;opacity:.85;}
-.price-callout-hit.price-hover .price-callout-label,
-.price-callout-hit:focus-visible .price-callout-label{opacity:1;}
-.price-callout-hit.price-hover .price-callout-dot,
-.price-callout-hit:focus-visible .price-callout-dot{r:4;}
-.price-callout-hit.price-hover .price-callout-line,
-.price-callout-hit:focus-visible .price-callout-line{opacity:.8;}
-.price-callout-hit.price-hover .price-callout-name,
-.price-callout-hit:focus-visible .price-callout-name{fill:var(--ink);}
-
-.price-invite{
-  max-width:360px;margin:16px auto 0;text-align:center;
-  font-size:12.5px;color:var(--ink-muted);
-}
+.price-diagram text{font-family:var(--font-body);text-anchor:middle;fill:var(--ink);}
+.price-lbl-name{font-size:8.5px;font-weight:600;}
+.price-lbl-name.compact{font-size:7.5px;}
+.price-lbl-amount{font-size:11.5px;font-weight:700;font-variant-numeric:tabular-nums;}
 
 /* ---------- About ---------- */
 .about{display:grid;grid-template-columns:180px 1fr;gap:36px;align-items:center;}

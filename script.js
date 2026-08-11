@@ -28,7 +28,7 @@
         headlinePre: "Een cadeau voor een ",
         headlineEm: "groot moment",
         headlinePost: "",
-        lede: "Line tekent elke plek die iemands leven vormde: van eerste woonhuis tot laatste adres. Een persoonlijk kunstwerk voor een verhuizing, afstuderen, huwelijk of afscheid.",
+        lede: "Line tekent elk bouwwerk dat iemands leven vormde: van eerste woonhuis tot laatste adres. Een persoonlijk kunstwerk voor een verhuizing, afstuderen, huwelijk of afscheid.",
         priceFrom: "Vanaf"
       },
       examples: {
@@ -41,29 +41,24 @@
       how: {
         eyebrow: "Hoe het werkt",
         steps: [
-          { title: "Stel de Line samen", body: "Voeg alle plekken toe en upload foto's." },
+          { title: "Stel de Line samen", body: "Voeg alle bouwwerken toe en upload foto's." },
           { title: "Wij tekenen hem", body: "De tekenaar gaat aan de slag. Voordat we afdrukken ontvang je het design ter beoordeling via WhatsApp." },
           { title: "Line wordt bezorgd", body: "PostNL bezorgt de Line." }
         ],
         turnaroundNote: "Doorlooptijd is 5 werkdagen zonder lijst, 10 werkdagen met lijst — vanaf het moment van betalen."
       },
-      dims: {
-        eyebrow: "Afmetingen",
-        heading: "Standaard 20 × 60 cm"
-      },
       pricing: {
         eyebrow: "Prijs",
         heading: "Vanaf €299",
-        lede: "Vanaf €299 voor een ingelijste Line van 20 × 60 cm met 6 plekken — inclusief lijst, verpakking en verzending. Elke plek daarna kost €25 extra.",
+        lede: "€299 voor een Line met 6 bouwwerken* (inclusief lijst en verzendkosten). Elk bouwwerk daarna kost €25 extra.",
+        ledeNote: "*Een bouwwerk kan bijvoorbeeld een gebouw, brug of (kerk)toren zijn.",
         diagram: {
-          vat: { name: "BTW (21%)", amount: "€51,89" },
-          frame: { name: "Lijst", amount: "€30" },
-          print: { name: "Print", amount: "€35" },
-          shipping: { name: "Verzending", amount: "€8" },
-          packaging: { name: "Verpakking", amount: "€3" },
-          labor: { name: "Teken-uren", amount: "€171,11" }
-        },
-        invite: "Tik of klik op een kleur voor de prijs erachter"
+          vat: { name: "BTW", amount: "€52" },
+          frame: { name: "Lijst", amount: "€40" },
+          print: { name: "Print", amount: "€40" },
+          logistics: { name1: "Logi-", name2: "stiek", amount: "€11" },
+          labor: { name: "Teken-uren", amount: "€156" }
+        }
       },
       about: {
         eyebrow: "Over",
@@ -73,12 +68,13 @@
       testimonials: {
         eyebrow: "Reacties na het uitpakken",
         items: [
-          { quote: "Ik zag eerst niet goed wat het was — tot ik ons oude studentenhuis zag staan, met zelfs de hangende fietsen aan het balkon." },
-          { quote: "Ik moest huilen toen ik het huis van mijn oma zag. Precies zoals ik het me herinner." },
-          { quote: "Ze hebben zelfs onze hond erin verwerkt — inclusief zijn eeuwige ruzie met de postbode." },
-          { quote: "Drie huizen, twee landen, één leven. Hing binnen tien minuten aan de muur." },
-          { quote: "Mijn man snapte niet waarom ik moest lachen — tot hij het bordje \"geen idee waar we heen gaan\" bij ons eerste huis zag." },
-          { quote: "Het mooiste cadeau dat we ooit hebben gekregen bij de geboorte van onze zoon." }
+          { quote: "Hoi Kees, wat een verrassing! Ons oude studentenhuis, zelfs de fietsen aan het balkon staan erop. Hangt al boven de bank!" },
+          { quote: "He Kees, ik moest gelijk huilen, het huis van mijn oma, precies zoals ik het me herinner. Dank je wel!" },
+          { quote: "Hoi Kees, dat je zelfs onze hond erin hebt verwerkt, ik lag dubbel! Zo'n leuk cadeau geworden." },
+          { quote: "He Kees, drie huizen in één tekening samengevat, echt heel gaaf! Binnen tien minuten opgehangen." },
+          { quote: "Hoi Kees, het bordje \"geen idee waar we heen gaan\" erbij, zo grappig! Dank je wel." },
+          { quote: "He Kees, het mooiste cadeau ooit, en dan ook nog bij de geboorte van onze zoon. Heel erg bedankt!" },
+          { quote: "He Kees, dank voor het super vette cadeau! Echt heel blij mee, krijgt een mooi plekje in het nieuwe huis!" }
         ]
       },
       faq: {
@@ -87,16 +83,16 @@
         items: [
           { q: "Hoe lang duurt het voordat ik mijn Line ontvang?", a: "De doorlooptijd is 5 werkdagen zonder lijst, of 10 werkdagen met lijst — vanaf het moment dat de betaling is voldaan. Wil je op tijd je Line binnen hebben, wacht dan niet te lang met het plaatsen van je bestelling." },
           { q: "Kan ik een Line voor iemand anders bestellen?", a: "Zeker — de meeste Lines worden besteld als cadeau. Jij bouwt de tijdlijn, wij tekenen 'm, en jij geeft 'm door." },
-          { q: "Moet ik referentiefoto's toevoegen?", a: "Ja — voeg per plek een foto van het gebouw toe, zo weten we zeker dat we het juiste pand tekenen." },
+          { q: "Moet ik referentiefoto's toevoegen?", a: "Ja, voeg per bouwwerk een foto toe, zo weten we zeker dat we het juiste bouwwerk tekenen." },
           { q: "Kan ik later nog iets wijzigen aan mijn bestelling?", a: "Neem contact op via e-mail zodra je je bestelling hebt verstuurd — we passen het waar mogelijk nog aan." },
-          { q: "Welke formaten zijn er?", a: "Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. Vanaf €299 voor 6 plekken, alles inbegrepen (incl. BTW en verzending via PostNL)." },
-          { q: "Wat kost een Line?", a: "We hanteren een vanaf-prijs van €299 voor de eerste 6 plekken, inclusief BTW en verzendkosten. Elke plek daarna kost €25 extra." },
-          { q: "Kan ik meer dan 6 plekken toevoegen aan mijn tijdlijn?", a: "Ja, tot een maximum van 10. De prijs van €299 is inclusief de eerste 6 plekken; elke plek daarna kost €25 extra. Je ziet de prijs live meebewegen in de configurator." },
+          { q: "Welke formaten zijn er?", a: "Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. Vanaf €299 voor 6 bouwwerken, alles inbegrepen (incl. BTW en verzending via PostNL)." },
+          { q: "Wat kost een Line?", a: "We hanteren een vanaf-prijs van €299 voor de eerste 6 bouwwerken, inclusief BTW en verzendkosten. Elk bouwwerk daarna kost €25 extra." },
+          { q: "Kan ik meer dan 6 bouwwerken toevoegen aan mijn tijdlijn?", a: "Ja, tot een maximum van 10. De prijs van €299 is inclusief de eerste 6 bouwwerken; elk bouwwerk daarna kost €25 extra. Je ziet de prijs live meebewegen in de configurator." },
           { q: "Kan ik zelf het lijstmateriaal kiezen?", a: "Ja, je kiest tussen grafiet en eikenhout — beide kosten hetzelfde. Je kunt er ook voor kiezen om je Line zonder lijst te ontvangen, voor €50 korting." },
           { q: "Waarom is de levertijd zo lang?", a: "Het kost 1 tot 2 werkdagen om het design af te ronden, printen duurt 2 tot 3 werkdagen, en inlijsten en verzenden nog eens 1 tot 2 werkdagen. Dit is sterk afhankelijk van de drukte, waardoor het soms iets langer kan duren." },
           { q: "Kan ik mijn bestelling annuleren of retourneren als ik van gedachten verander?", a: "Elke Line wordt speciaal voor jou op maat getekend. Voor op maat gemaakte producten geldt geen wettelijk herroepingsrecht, dus een geplaatste en bevestigde bestelling kun je niet kosteloos annuleren of retourneren. Zit er een fout in je Line die aan ons ligt, dan lossen we dat uiteraard wel kosteloos op." },
           { q: "Er zit een fout in mijn Line, wat nu?", a: "Bevat je Line een fout die aan ons te wijten is, bijvoorbeeld een verkeerd getekend gebouw of een productiefout in de print, dan herstellen of vervangen we deze kosteloos. Mail ons via de contactpagina." },
-          { q: "Is mijn Line uniek?", a: "Ja. Elke Line wordt met de hand getekend op basis van de plekken die jij aanlevert, en de compositie wordt door de kunstenaar bepaald. Geen twee Lines zijn ooit helemaal hetzelfde." },
+          { q: "Is mijn Line uniek?", a: "Ja. Elke Line wordt met de hand getekend op basis van de bouwwerken die jij aanlevert, en de compositie wordt door de kunstenaar bepaald. Geen twee Lines zijn ooit helemaal hetzelfde." },
           { q: "Wat gebeurt er met de foto's en gegevens die ik upload?", a: "Je gegevens en foto's worden alleen gebruikt om jouw Line te tekenen en te bezorgen, niet gedeeld met derden buiten wat nodig is voor de levering. Het volledige privacybeleid staat op de privacybeleid-pagina." },
           { q: "Wanneer en hoe betaal ik precies?", a: "Na het plaatsen van je bestelling ontvang je een Tikkie-betaalverzoek. Zodra de betaling binnen is, start de doorlooptijd van je Line." }
         ]
@@ -111,26 +107,26 @@
         closeAria: "Configurator sluiten",
         step0: {
           h2: "Stel je Line samen",
-          addBtn: "+ Plek toevoegen",
-          needMoreOne: "Nog 1 plek nodig om verder te gaan (minimaal 4).",
-          needMoreMany: "Nog {n} plekken nodig om verder te gaan (minimaal 4).",
-          maxReached: "Maximum van 10 plekken bereikt.",
+          addBtn: "+ Bouwwerk toevoegen",
+          needMoreOne: "Nog 1 bouwwerk nodig om verder te gaan (minimaal 4).",
+          needMoreMany: "Nog {n} bouwwerken nodig om verder te gaan (minimaal 4).",
+          maxReached: "Maximum van 10 bouwwerken bereikt.",
           placePh: "Adres of gebouw",
           placeAria: "Adres of gebouw",
           notePh: "Opmerkingen, specifieke wensen",
-          noteAria: "Opmerkingen voor deze plek",
+          noteAria: "Opmerkingen voor dit bouwwerk",
           photoAdd: "Foto toevoegen",
           photoChange: "Foto wijzigen",
           needPhoto: "Voeg een foto toe, zodat we het juiste gebouw tekenen.",
           photoMissingLabel: "Foto ontbreekt — tik om toe te voegen",
           dragHandleAria: "Sleep om te herordenen",
-          removePlace: "Deze plek verwijderen",
+          removePlace: "Dit bouwwerk verwijderen",
           progressLabel: "{done} van de {min} compleet",
           toggleAria: "Details tonen of verbergen",
           moveUpAria: "Naar boven verplaatsen",
           moveDownAria: "Naar beneden verplaatsen",
-          extraPlaceHint: "De eerste 6 plekken zijn inbegrepen. Elke plek daarna kost €25 extra.",
-          storageWarning: "Je browser kan je voortgang niet meer opslaan (waarschijnlijk te veel foto's). Rond je bestelling in één keer af, of maak wat plekken leger."
+          extraPlaceHint: "De eerste 6 bouwwerken zijn inbegrepen. Elk bouwwerk daarna kost €25 extra.",
+          storageWarning: "Je browser kan je voortgang niet meer opslaan (waarschijnlijk te veel foto's). Rond je bestelling in één keer af, of maak wat bouwwerken leger."
         },
         step1: {
           h2: "Jouw formaat",
@@ -147,7 +143,7 @@
         },
         stepNotes: {
           h2: "Nog iets kwijt?",
-          hint: "Algemene opmerkingen of specifieke wensen voor je Line — los van de losse plekken hierboven.",
+          hint: "Algemene opmerkingen of specifieke wensen voor je Line, los van de losse bouwwerken hierboven.",
           notesPh: "Extra context die helpt bij het tekenen van je Line",
           notesAria: "Algemene opmerkingen"
         },
@@ -178,7 +174,7 @@
           h2: "Bekijk je bestelling",
           hint: "Nog even checken — je kunt terug naar elke stap om iets aan te passen.",
           labels: { timeline: "Jouw tijdlijn", format: "Formaat", frame: "Lijst", contact: "Contact", address: "Bezorgadres", desiredDate: "Gewenste ontvangstdatum", notes: "Notities", shipping: "Verzending", payment: "Betaalwijze" },
-          noPlaces: "Nog geen plekken toegevoegd",
+          noPlaces: "Nog geen bouwwerken toegevoegd",
           shippedPrint: "Ingelijste print, 20 × 60 cm",
           shippingIncluded: "inbegrepen in de prijs"
         },
@@ -213,7 +209,7 @@
         headlinePre: "A gift for a ",
         headlineEm: "big moment",
         headlinePost: "",
-        lede: "Line draws every place that shaped someone's life: from their first home to their most recent address. A personal work of art for a move, a graduation, a wedding, or a loss.",
+        lede: "Line draws every structure that shaped someone's life: from their first home to their most recent address. A personal work of art for a move, a graduation, a wedding, or a loss.",
         priceFrom: "From"
       },
       examples: {
@@ -226,29 +222,24 @@
       how: {
         eyebrow: "How it works",
         steps: [
-          { title: "Put the Line together", body: "Add every place and upload photos." },
+          { title: "Put the Line together", body: "Add every structure and upload photos." },
           { title: "We draw it", body: "The artist gets to work. Before we print, you'll receive the design for review via WhatsApp." },
           { title: "The Line gets delivered", body: "PostNL delivers the Line." }
         ],
         turnaroundNote: "Turnaround is 5 working days without a frame, 10 working days with a frame — starting from the moment of payment."
       },
-      dims: {
-        eyebrow: "Dimensions",
-        heading: "20 × 60 cm as standard"
-      },
       pricing: {
         eyebrow: "Pricing",
         heading: "From €299",
-        lede: "From €299 for a framed 20 × 60 cm Line with 6 places — including the frame, packaging, and shipping. Every place after that is an extra €25.",
+        lede: "€299 for a Line with 6 structures* (including the frame and shipping). Every structure after that is an extra €25.",
+        ledeNote: "*A structure can be a building, bridge, or (church) tower, for example.",
         diagram: {
-          vat: { name: "VAT (21%)", amount: "€51.89" },
-          frame: { name: "Frame", amount: "€30" },
-          print: { name: "Printing", amount: "€35" },
-          shipping: { name: "Shipping", amount: "€8" },
-          packaging: { name: "Packaging", amount: "€3" },
-          labor: { name: "Drawing hours", amount: "€171.11" }
-        },
-        invite: "Tap or click a color to see its price"
+          vat: { name: "VAT", amount: "€52" },
+          frame: { name: "Frame", amount: "€40" },
+          print: { name: "Print", amount: "€40" },
+          logistics: { name1: "Logi-", name2: "stics", amount: "€11" },
+          labor: { name: "Drawing hours", amount: "€156" }
+        }
       },
       about: {
         eyebrow: "About",
@@ -258,12 +249,13 @@
       testimonials: {
         eyebrow: "Reactions after unwrapping",
         items: [
-          { quote: "I didn't recognize it at first — until I saw our old student house, right down to the bikes hanging off the balcony." },
-          { quote: "I cried when I saw my grandma's house. Exactly how I remember it." },
-          { quote: "They even worked our dog into it — eternal feud with the mailman included." },
-          { quote: "Three houses, two countries, one life. Was on the wall within ten minutes." },
-          { quote: "My husband didn't get why I was laughing — until he saw the sign that says \"no idea where we're headed\" by our first house." },
-          { quote: "The most beautiful gift we've ever received for our son's birth." }
+          { quote: "Hi Kees, what a surprise! Our old student house, even the bikes on the balcony. Already hanging above the couch!" },
+          { quote: "Hey Kees, I cried straight away, my grandma's house, exactly how I remember it. Thank you so much!" },
+          { quote: "Hi Kees, you even worked our dog into it, I was in stitches! Such a lovely gift." },
+          { quote: "Hey Kees, three houses summed up in one drawing, so cool! Up on the wall within ten minutes." },
+          { quote: "Hi Kees, the sign that says \"no idea where we're headed\", so funny! Thank you so much." },
+          { quote: "Hey Kees, the most beautiful gift ever, and for our son's birth too. Thank you so much!" },
+          { quote: "Hey Kees, thanks for the super cool gift! Really happy with it, it'll get a great spot in the new house!" }
         ]
       },
       faq: {
@@ -272,16 +264,16 @@
         items: [
           { q: "How long until I receive my Line?", a: "Turnaround is 5 working days without a frame, or 10 working days with a frame — starting once payment has been received. If you want your Line in time, don't leave it too late to order." },
           { q: "Can I order a Line for someone else?", a: "Absolutely — most Lines are ordered as a gift. You build the timeline, we draw it, you give it." },
-          { q: "Do I need to add reference photos?", a: "Yes — add a photo of the building for each place, that way we're sure we draw the right one." },
+          { q: "Do I need to add reference photos?", a: "Yes, add a photo for each structure, that way we're sure we draw the right one." },
           { q: "Can I still change something after ordering?", a: "Get in touch by email as soon as you've submitted your order — we'll adjust where we still can." },
-          { q: "What formats are available?", a: "Currently just a framed 20 × 60 cm print, shipped to your door. From €299 for 6 places, all-in (incl. VAT and shipping via PostNL)." },
-          { q: "What does a Line cost?", a: "We charge from €299 for the first 6 places, including VAT and shipping. Every place after that is an extra €25." },
-          { q: "Can I add more than 6 places to my timeline?", a: "Yes, up to a maximum of 10. The €299 price includes the first 6 places; every place after that is an extra €25. You'll see the price update live in the configurator." },
+          { q: "What formats are available?", a: "Currently just a framed 20 × 60 cm print, shipped to your door. From €299 for 6 structures, all-in (incl. VAT and shipping via PostNL)." },
+          { q: "What does a Line cost?", a: "We charge from €299 for the first 6 structures, including VAT and shipping. Every structure after that is an extra €25." },
+          { q: "Can I add more than 6 structures to my timeline?", a: "Yes, up to a maximum of 10. The €299 price includes the first 6 structures; every structure after that is an extra €25. You'll see the price update live in the configurator." },
           { q: "Can I choose the frame material myself?", a: "Yes, choose between graphite and oak — both cost the same. You can also choose to receive your Line without a frame for a €50 discount." },
           { q: "Why does delivery take so long?", a: "Finishing the design takes 1 to 2 working days, printing takes 2 to 3 working days, and framing plus shipping takes another 1 to 2 working days. This depends heavily on how busy we are, so it can sometimes take a bit longer." },
           { q: "Can I cancel or return my order if I change my mind?", a: "Every Line is drawn specifically for you. Custom-made products aren't covered by the legal right of withdrawal, so a placed and confirmed order can't be cancelled or returned free of charge. If there's a mistake on our end, we'll fix it at no cost." },
           { q: "There's a mistake in my Line, what now?", a: "If your Line has a mistake on our end — a wrongly drawn building or a print production issue — we'll fix or replace it free of charge. Email us via the contact page." },
-          { q: "Is my Line unique?", a: "Yes. Every Line is hand-drawn based on the places you provide, and the composition is determined by the artist. No two Lines are ever quite the same." },
+          { q: "Is my Line unique?", a: "Yes. Every Line is hand-drawn based on the structures you provide, and the composition is determined by the artist. No two Lines are ever quite the same." },
           { q: "What happens to the photos and details I upload?", a: "Your details and photos are only used to draw and deliver your Line, and aren't shared with third parties beyond what's needed for delivery. See the privacy policy page for the full details." },
           { q: "When and how do I pay exactly?", a: "After placing your order you'll receive a Tikkie payment request. Once payment is received, the turnaround time for your Line begins." }
         ]
@@ -594,42 +586,6 @@
       menuToggle.setAttribute("aria-expanded", "false");
     });
   });
-
-  /* ---------- pricing diagram: hover/tap a color to highlight its price ---------- */
-  (function () {
-    var segments = document.querySelectorAll(".price-diagram [data-segment]");
-    if (!segments.length) return;
-    var activeSegment = null;
-    function setSegmentHover(name, on) {
-      document.querySelectorAll('.price-diagram [data-segment="' + name + '"]').forEach(function (el) {
-        el.classList.toggle("price-hover", on);
-      });
-    }
-    segments.forEach(function (el) {
-      var seg = el.dataset.segment;
-      el.addEventListener("mouseenter", function () { setSegmentHover(seg, true); });
-      el.addEventListener("mouseleave", function () { if (activeSegment !== seg) setSegmentHover(seg, false); });
-      el.addEventListener("focus", function () { setSegmentHover(seg, true); });
-      el.addEventListener("blur", function () { if (activeSegment !== seg) setSegmentHover(seg, false); });
-      el.addEventListener("click", function (e) {
-        e.preventDefault();
-        if (activeSegment === seg) {
-          setSegmentHover(seg, false);
-          activeSegment = null;
-        } else {
-          if (activeSegment) setSegmentHover(activeSegment, false);
-          activeSegment = seg;
-          setSegmentHover(seg, true);
-        }
-      });
-      el.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          el.click();
-        }
-      });
-    });
-  })();
 
   /* ---------- lightbox ---------- */
   var lightbox = document.getElementById("lightbox");
