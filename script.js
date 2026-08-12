@@ -47,7 +47,7 @@
       },
       pricing: {
         eyebrow: "Prijs",
-        heading: "Vanaf €299",
+        heading: "Vanaf €249",
         lede: "€299 voor een Line met 6 bouwwerken* (inclusief lijst en verzendkosten). Elk bouwwerk daarna kost €25 extra.",
         ledeNote: "*Een bouwwerk kan bijvoorbeeld een gebouw, brug of (kerk)toren zijn.",
         diagram: {
@@ -84,7 +84,7 @@
           { q: "Moet ik referentiefoto's toevoegen?", a: "Ja, voeg per bouwwerk een foto toe, zo weten we zeker dat we het juiste bouwwerk tekenen." },
           { q: "Kan ik later nog iets wijzigen aan mijn bestelling?", a: "Neem contact op via e-mail zodra je je bestelling hebt verstuurd — we passen het waar mogelijk nog aan." },
           { q: "Welke formaten zijn er?", a: "Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. Vanaf €299 voor 6 bouwwerken, alles inbegrepen (incl. BTW en verzending via PostNL)." },
-          { q: "Wat kost een Line?", a: "We hanteren een vanaf-prijs van €299 voor de eerste 6 bouwwerken, inclusief BTW en verzendkosten. Elk bouwwerk daarna kost €25 extra." },
+          { q: "Wat kost een Line?", a: "We hanteren een vanaf-prijs van €249 (zonder lijst) voor de eerste 6 bouwwerken, inclusief BTW en verzendkosten. Elk bouwwerk daarna kost €25 extra." },
           { q: "Kan ik meer dan 6 bouwwerken toevoegen aan mijn tijdlijn?", a: "Ja, tot een maximum van 10. De prijs van €299 is inclusief de eerste 6 bouwwerken; elk bouwwerk daarna kost €25 extra. Je ziet de prijs live meebewegen in de configurator." },
           { q: "Kan ik zelf het lijstmateriaal kiezen?", a: "Ja, je kiest tussen grafiet en eikenhout — beide kosten hetzelfde. Je kunt er ook voor kiezen om je Line zonder lijst te ontvangen, voor €50 korting." },
           { q: "Waarom is de levertijd zo lang?", a: "Het kost 1 tot 2 werkdagen om het design af te ronden, printen duurt 2 tot 3 werkdagen, en inlijsten en verzenden nog eens 1 tot 2 werkdagen. Dit is sterk afhankelijk van de drukte, waardoor het soms iets langer kan duren." },
@@ -228,7 +228,7 @@
       },
       pricing: {
         eyebrow: "Pricing",
-        heading: "From €299",
+        heading: "From €249",
         lede: "€299 for a Line with 6 structures* (including the frame and shipping). Every structure after that is an extra €25.",
         ledeNote: "*A structure can be a building, bridge, or (church) tower, for example.",
         diagram: {
@@ -265,7 +265,7 @@
           { q: "Do I need to add reference photos?", a: "Yes, add a photo for each structure, that way we're sure we draw the right one." },
           { q: "Can I still change something after ordering?", a: "Get in touch by email as soon as you've submitted your order — we'll adjust where we still can." },
           { q: "What formats are available?", a: "Currently just a framed 20 × 60 cm print, shipped to your door. From €299 for 6 structures, all-in (incl. VAT and shipping via PostNL)." },
-          { q: "What does a Line cost?", a: "We charge from €299 for the first 6 structures, including VAT and shipping. Every structure after that is an extra €25." },
+          { q: "What does a Line cost?", a: "We charge from €249 (without a frame) for the first 6 structures, including VAT and shipping. Every structure after that is an extra €25." },
           { q: "Can I add more than 6 structures to my timeline?", a: "Yes, up to a maximum of 10. The €299 price includes the first 6 structures; every structure after that is an extra €25. You'll see the price update live in the configurator." },
           { q: "Can I choose the frame material myself?", a: "Yes, choose between graphite and oak — both cost the same. You can also choose to receive your Line without a frame for a €50 discount." },
           { q: "Why does delivery take so long?", a: "Finishing the design takes 1 to 2 working days, printing takes 2 to 3 working days, and framing plus shipping takes another 1 to 2 working days. This depends heavily on how busy we are, so it can sometimes take a bit longer." },
