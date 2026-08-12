@@ -152,6 +152,7 @@
           namePh: "Je volledige naam",
           emailLabel: "E-mail",
           emailPh: "jij@voorbeeld.nl",
+          emailInvalid: "Dit e-mailadres lijkt niet te kloppen. Controleer of je het goed hebt ingevuld.",
           phoneLabel: "Telefoonnummer",
           phonePh: "+31 6 12345678",
           phoneInvalid: "Dit lijkt geen geldig telefoonnummer. Vul je echte nummer in.",
@@ -333,6 +334,7 @@
           namePh: "Your full name",
           emailLabel: "Email",
           emailPh: "you@example.com",
+          emailInvalid: "That email address doesn't look right. Please check it.",
           phoneLabel: "Phone number",
           phonePh: "+1 555 0123",
           phoneInvalid: "That doesn't look like a valid phone number. Please enter your real number.",
@@ -559,6 +561,7 @@
 
   var contactName = document.getElementById("contactName");
   var contactEmail = document.getElementById("contactEmail");
+  var emailError = document.getElementById("emailError");
   var contactPhone = document.getElementById("contactPhone");
   var phoneError = document.getElementById("phoneError");
   var contactStreet = document.getElementById("contactStreet");
@@ -978,7 +981,8 @@
       price: currentPrice(),
       shippingCost: SHIPPING_COST,
       shippingCarrier: SHIPPING_CARRIER,
-      agreeTerms: true
+      agreeTerms: true,
+      lang: lang
     };
 
     function handleSuccess(orderNumber) {
@@ -1054,9 +1058,12 @@
     var digits = value.replace(/[^\d]/g, "");
     return digits.length >= 9 && digits.length <= 15 && !isLikelyFakePhone(digits);
   }
+  function isValidEmail(value) {
+    return /\S+@\S+\.\S+/.test(value);
+  }
 
   function canSubmit() {
-    var hasNameEmail = state.contact.name.trim() && /\S+@\S+\.\S+/.test(state.contact.email);
+    var hasNameEmail = state.contact.name.trim() && isValidEmail(state.contact.email);
     var hasPhone = isValidPhone(state.contact.phone);
     var hasAddress = !!(state.contact.street.trim() && state.contact.city.trim() && state.contact.postalCode.trim() && state.contact.country.trim());
     var hasDate = !!state.contact.desiredDate;
@@ -1295,7 +1302,7 @@
       input.addEventListener("change", function () {
         var file = input.files[0];
         if (file) {
-          compressImage(file, 1600, 0.8, function (dataUrl) {
+          compressImage(file, 1200, 0.72, function (dataUrl) {
             item.photo = dataUrl;
             thumb.style.backgroundImage = "url(" + item.photo + ")";
             thumb.hidden = false;
@@ -1466,7 +1473,13 @@
     state.contact.email = contactEmail.value;
     save();
     updateSubmitState();
+    refreshEmailError();
   });
+  contactEmail.addEventListener("blur", refreshEmailError);
+  function refreshEmailError() {
+    var value = state.contact.email.trim();
+    emailError.hidden = !value || isValidEmail(value);
+  }
   contactPhone.addEventListener("input", function () {
     state.contact.phone = contactPhone.value;
     save();
@@ -1509,7 +1522,15 @@
     });
     contactCountry.value = selected;
   }
+  function refreshDateMin() {
+    var now = new Date();
+    var m = String(now.getMonth() + 1).padStart(2, "0");
+    var d = String(now.getDate()).padStart(2, "0");
+    contactDate.min = now.getFullYear() + "-" + m + "-" + d;
+  }
+  refreshDateMin();
   contactDate.addEventListener("focus", function () {
+    refreshDateMin();
     if (contactDate.showPicker) {
       try {
         contactDate.showPicker();
@@ -1533,6 +1554,7 @@
   function renderDetails() {
     contactName.value = state.contact.name;
     contactEmail.value = state.contact.email;
+    refreshEmailError();
     contactPhone.value = state.contact.phone;
     refreshPhoneError();
     contactStreet.value = state.contact.street;
