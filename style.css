@@ -141,7 +141,14 @@ nav.site-nav a:hover{color:var(--ink);}
   nav.site-nav{gap:10px;}
   nav.site-nav .nav-links{display:none;}
   .mobile-menu{
-    left:-24px;right:-24px;min-width:0;
+    /* Stay position:absolute (top:100% auto-tracks the header's real height, however tall
+       the logo/tagline make it) but escape .bar's own horizontal padding with a viewport-
+       relative full-bleed instead of the old left:-24px/right:-24px trick, which only
+       worked as long as .bar's padding stayed exactly 24px. top:100% (no +8px) keeps it
+       flush against the header instead of floating below it with a visible gap. */
+    top:100%;right:auto;
+    left:50%;width:100vw;transform:translateX(-50%);
+    min-width:0;
     border-radius:0;border:none;border-top:1px solid var(--line);box-shadow:none;
   }
 }
@@ -564,7 +571,7 @@ footer.site a{color:var(--ink);text-decoration:none;font-weight:600;}
 .config-panel h2{font-size:24px;margin-bottom:18px;}
 .config-panel > p.hint{color:var(--ink-muted);font-size:14.5px;margin-bottom:26px;max-width:56ch;}
 .config-section{
-  padding-bottom:40px;margin-bottom:40px;
+  padding-bottom:24px;margin-bottom:24px;
   border-bottom:1px dashed var(--line);
 }
 .config-section:last-of-type{border-bottom:none;margin-bottom:0;padding-bottom:0;}
@@ -807,7 +814,7 @@ footer.site a{color:var(--ink);text-decoration:none;font-weight:600;}
 .v-inline{display:inline-flex;align-items:center;gap:8px;}
 
 .config-submit-bar{
-  position:sticky;bottom:0;
+  position:sticky;bottom:0;z-index:10;
   border-top:1px solid var(--line);
   background:var(--bg);
   padding:20px 40px calc(16px + env(safe-area-inset-bottom));

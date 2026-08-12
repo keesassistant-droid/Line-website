@@ -1512,11 +1512,11 @@
       piece.classList.toggle("framed", isFramed);
       if (i < state.qty) {
         piece.style.opacity = "1";
-        piece.style.zIndex = String(20 - i);
+        piece.style.zIndex = String(6 - i);
         piece.style.transform = "translate(" + offset + "px," + offset + "px) rotate(" + ((i - 1) * 1.4) + "deg) scale(1)";
       } else {
         piece.style.opacity = "0";
-        piece.style.zIndex = String(20 - i);
+        piece.style.zIndex = String(6 - i);
         piece.style.transform = "translate(" + (offset + 21) + "px," + (offset + 21) + "px) rotate(" + ((i - 1) * 1.4) + "deg) scale(.5)";
       }
     });
