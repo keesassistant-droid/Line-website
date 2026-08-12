@@ -990,6 +990,13 @@
       localStorage.removeItem(STORAGE_KEY);
       renderAll();
       renderSuccessOrderNumber();
+      if (typeof window.lineTrackEvent === "function") {
+        window.lineTrackEvent("generate_lead", {
+          value: currentPrice(),
+          currency: "EUR",
+          format: state.format
+        });
+      }
     }
 
     if (!WEBHOOK_URL) {
