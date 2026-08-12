@@ -434,8 +434,8 @@ section{padding:24px 0;}
 /* ---------- Pricing ---------- */
 .price-diagram{max-width:575px;margin:8px auto 0;}
 .price-diagram svg{display:block;width:100%;height:auto;}
-.price-outline{fill:none;stroke:var(--ink);stroke-width:3;}
-.price-divider{stroke:var(--ink);stroke-opacity:.24;stroke-width:1;}
+.price-outline{fill:none;stroke:var(--ink);stroke-width:1.9;}
+.price-divider{stroke:var(--ink);stroke-opacity:.24;stroke-width:.62;}
 
 /* fill intensity ranked by price, low -> high: Logistiek 11, Lijst/Print 40, BTW 52, Teken-uren 156 */
 .price-block-logistics{fill:var(--coral-100);}
@@ -445,16 +445,16 @@ section{padding:24px 0;}
 .price-block-labor{fill:var(--coral);}
 
 .price-diagram text{font-family:var(--font-body);text-anchor:middle;fill:var(--ink);}
-.price-lbl-name{font-size:8.5px;font-weight:600;}
-.price-lbl-name.compact{font-size:7.5px;}
-.price-lbl-amount{font-size:11.5px;font-weight:700;font-variant-numeric:tabular-nums;}
-/* The diagram's viewBox is fixed (400 units) but its rendered width shrinks a lot on
+.price-lbl-name{font-size:5.3px;font-weight:600;}
+.price-lbl-name.compact{font-size:4.7px;}
+.price-lbl-amount{font-size:7.1px;font-weight:700;font-variant-numeric:tabular-nums;}
+/* The diagram's viewBox is fixed (248 units) but its rendered width shrinks a lot on
    narrow phones, taking the SVG text down to unreadable sizes with it — bump the
    font sizes specifically on mobile so the real on-screen text stays legible. */
 @media (max-width:640px){
-  .price-lbl-name{font-size:13px;}
-  .price-lbl-name.compact{font-size:11px;}
-  .price-lbl-amount{font-size:15px;}
+  .price-lbl-name{font-size:8.1px;}
+  .price-lbl-name.compact{font-size:6.8px;}
+  .price-lbl-amount{font-size:9.3px;}
 }
 
 /* ---------- About ---------- */
