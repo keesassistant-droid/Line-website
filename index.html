@@ -149,7 +149,7 @@
       <div class="section-head">
         <p class="eyebrow" data-i18n="pricing.eyebrow">Prijs</p>
         <h2 data-i18n="pricing.heading">Vanaf €249</h2>
-        <p data-i18n="pricing.lede">€299 voor een Line met 6 bouwwerken* (inclusief lijst en verzendkosten). Elk bouwwerk daarna kost €25 extra.</p>
+        <p data-i18n="pricing.lede">Vanaf €249 zonder lijst, of €299 inclusief lijst, voor een Line met 6 bouwwerken* (verzendkosten inbegrepen). Elk bouwwerk daarna kost €25 extra.</p>
         <p class="section-note" data-i18n="pricing.ledeNote">*Een bouwwerk kan bijvoorbeeld een gebouw, brug of (kerk)toren zijn.</p>
       </div>
       <div class="price-diagram">
@@ -282,7 +282,7 @@
         </details>
         <details class="faq-item">
           <summary><span class="q" data-i18n="faq.items.4.q">Welke formaten zijn er?</span><span class="chevron" aria-hidden="true"></span></summary>
-          <p class="a" data-i18n="faq.items.4.a">Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. Vanaf €299 voor 6 bouwwerken, alles inbegrepen (incl. BTW en verzending via PostNL).</p>
+          <p class="a" data-i18n="faq.items.4.a">Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd (of zonder lijst voor €50 korting). Vanaf €249 voor 6 bouwwerken, alles inbegrepen (incl. BTW en verzending via PostNL).</p>
         </details>
         <details class="faq-item">
           <summary><span class="q" data-i18n="faq.items.5.q">Wat kost een Line?</span><span class="chevron" aria-hidden="true"></span></summary>
@@ -290,7 +290,7 @@
         </details>
         <details class="faq-item">
           <summary><span class="q" data-i18n="faq.items.6.q">Kan ik meer dan 6 bouwwerken toevoegen aan mijn tijdlijn?</span><span class="chevron" aria-hidden="true"></span></summary>
-          <p class="a" data-i18n="faq.items.6.a">Ja, tot een maximum van 10. De prijs van €299 is inclusief de eerste 6 bouwwerken; elk bouwwerk daarna kost €25 extra. Je ziet de prijs live meebewegen in de configurator.</p>
+          <p class="a" data-i18n="faq.items.6.a">Ja, tot een maximum van 10. De prijs van €299 (of €249 zonder lijst) is inclusief de eerste 6 bouwwerken; elk bouwwerk daarna kost €25 extra. Je ziet de prijs live meebewegen in de configurator.</p>
         </details>
         <details class="faq-item">
           <summary><span class="q" data-i18n="faq.items.7.q">Kan ik zelf het lijstmateriaal kiezen?</span><span class="chevron" aria-hidden="true"></span></summary>
@@ -426,6 +426,41 @@
             </div>
           </div>
           <p class="field-note" id="noFrameNote" data-i18n="config.stepFrame.noFrameNote" hidden>Bij deze keuze sturen we de print zonder lijst naar je bezorgadres. Levertijd is daardoor 5 werkdagen.</p>
+        </section>
+
+        <!-- Quantity -->
+        <section class="config-section">
+          <h2 data-i18n="config.stepQty.h2">Aantal exemplaren</h2>
+
+          <div class="qty-row">
+            <div class="stepper">
+              <button type="button" id="qtyMinus" data-i18n-aria="config.stepQty.minusAria" aria-label="Minder exemplaren">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg>
+              </button>
+              <span class="qty-value" id="qtyValue">1</span>
+              <button type="button" id="qtyPlus" data-i18n-aria="config.stepQty.plusAria" aria-label="Meer exemplaren">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </div>
+          <p class="qty-extra-note" id="qtyExtraNote">
+            <span id="qtyExtraCount"></span> <span data-i18n="config.stepQty.extraLabel">extra exemplaren</span> &times; <span class="extra-badge" id="qtyExtraBadge">+&euro;100</span>
+          </p>
+
+          <div class="stack-outer">
+            <div class="stack-wrap" id="stackWrap">
+              <div class="stack-piece" data-i="0">
+                <span class="stack-piece-label">
+                  <span class="l1" id="stackLabelL1">print + lijst</span>
+                </span>
+              </div>
+              <div class="stack-piece" data-i="1"></div>
+              <div class="stack-piece" data-i="2"></div>
+              <div class="stack-piece" data-i="3"></div>
+              <div class="stack-piece" data-i="4"></div>
+              <div class="stack-piece" data-i="5"></div>
+            </div>
+          </div>
         </section>
 
         <!-- General notes -->
@@ -608,7 +643,7 @@
         "name": "Welke formaten zijn er?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd. Vanaf €299 voor 6 bouwwerken, alles inbegrepen (incl. BTW en verzending via PostNL)."
+          "text": "Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd (of zonder lijst voor €50 korting). Vanaf €249 voor 6 bouwwerken, alles inbegrepen (incl. BTW en verzending via PostNL)."
         }
       },
       {
@@ -624,7 +659,7 @@
         "name": "Kan ik meer dan 6 bouwwerken toevoegen aan mijn tijdlijn?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ja, tot een maximum van 10. De prijs van €299 is inclusief de eerste 6 bouwwerken; elk bouwwerk daarna kost €25 extra. Je ziet de prijs live meebewegen in de configurator."
+          "text": "Ja, tot een maximum van 10. De prijs van €299 (of €249 zonder lijst) is inclusief de eerste 6 bouwwerken; elk bouwwerk daarna kost €25 extra. Je ziet de prijs live meebewegen in de configurator."
         }
       },
       {
@@ -687,7 +722,7 @@
   }
 ]
 </script>
-<script src="script.js?v=20260812"></script>
+<script src="script.js?v=20260812b"></script>
 <script src="consent.js"></script>
 </body>
 </html>

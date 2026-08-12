@@ -739,6 +739,64 @@ footer.site a{color:var(--ink);text-decoration:none;font-weight:600;}
 .frame-card-noframe{grid-column:1/-1;justify-content:center;text-align:center;}
 .frame-card-noframe .frame-label{flex:none;}
 
+/* quantity step */
+.qty-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.stepper{
+  display:inline-flex;align-items:center;gap:14px;
+  border:1.5px solid var(--line);border-radius:14px;padding:8px 14px;background:var(--bg-soft);
+}
+.stepper button{
+  width:32px;height:32px;border-radius:9px;border:1px solid var(--line);
+  background:var(--bg);color:var(--ink);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;flex:none;
+  touch-action:manipulation;
+  transition:border-color .15s ease,color .15s ease;
+}
+.stepper button:hover:not(:disabled){border-color:var(--ink);}
+.stepper button:disabled{opacity:.3;cursor:default;}
+.stepper button svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;}
+.stepper .qty-value{
+  font-family:var(--font-display);font-size:20px;font-weight:600;
+  min-width:1.4ch;text-align:center;font-variant-numeric:tabular-nums;
+}
+.qty-extra-note{
+  font-size:13.5px;color:var(--ink-muted);
+  display:flex;align-items:center;flex-wrap:wrap;gap:6px;
+  margin:12px 0 0;
+  opacity:0;transform:translateY(-5px);
+  transition:opacity .3s ease,transform .3s ease;
+  pointer-events:none;
+}
+.qty-extra-note.visible{opacity:1;transform:translateY(0);pointer-events:auto;}
+.qty-extra-note .extra-badge{transition:transform .3s cubic-bezier(.34,1.56,.64,1);}
+.qty-extra-note.visible .extra-badge{animation:qty-badge-pop .3s cubic-bezier(.34,1.56,.64,1);}
+@keyframes qty-badge-pop{
+  0%{transform:scale(.6);}
+  100%{transform:scale(1);}
+}
+
+/* stack of physical copies — 20×60 cm prints are the wide/landscape format */
+.stack-outer{display:flex;justify-content:center;margin-top:20px;}
+.stack-wrap{position:relative;width:224px;height:120px;}
+.stack-piece{
+  position:absolute;top:0;left:0;
+  width:153px;height:51px;border-radius:3px;
+  background:#f7f3ea;border:1.5px solid var(--line);
+  box-shadow:0 4px 11px rgba(43,42,40,.1);
+  transition:transform .42s cubic-bezier(.22,1,.36,1),opacity .28s ease,border-width .2s ease;
+  transform-origin:top left;
+  opacity:0;
+}
+.stack-piece.framed{border-width:4px;border-color:var(--ink);}
+.stack-piece-label{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;line-height:1.3;
+  font-family:var(--font-body);
+  transition:opacity .2s ease;
+}
+.stack-piece-label .l1{font-size:14px;font-weight:700;color:var(--ink);}
+
 /* review */
 .summary-list{list-style:none;margin:0 0 20px;padding:0;display:flex;flex-direction:column;gap:10px;}
 .summary-list li{border-bottom:1px dashed var(--line);padding-bottom:10px;}
