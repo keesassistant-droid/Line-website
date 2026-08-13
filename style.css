@@ -765,8 +765,8 @@ footer.site a{color:var(--ink);text-decoration:none;font-weight:600;}
 @media (max-width:480px){ .size-grid{grid-template-columns:1fr;} }
 .size-card{display:flex;align-items:center;gap:14px;}
 .format-card .size-swatch{
-  display:flex;align-items:flex-end;justify-content:center;
-  width:36px;height:68px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  width:68px;height:36px;flex:none;
 }
 .format-card .size-swatch-rect{display:block;border:1.5px solid var(--ink);border-radius:2px;background:var(--bg);}
 .format-card .size-info{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:4px;}
