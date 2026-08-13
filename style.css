@@ -325,19 +325,6 @@ section{padding:24px 0;}
   .example-thumb{cursor:default;}
 }
 
-/* ---------- Toast ---------- */
-.toast{
-  position:fixed;left:50%;bottom:28px;z-index:300;
-  transform:translate(-50%,12px);
-  background:var(--ink);color:var(--bg);
-  font-size:14px;font-weight:600;
-  padding:12px 22px;border-radius:14px;
-  box-shadow:0 14px 30px -14px rgba(0,0,0,.4);
-  opacity:0;pointer-events:none;
-  transition:opacity .2s ease,transform .2s ease;
-}
-.toast.show{opacity:1;transform:translate(-50%,0);}
-
 /* ---------- Lightbox ---------- */
 .lightbox{
   position:fixed;inset:0;z-index:200;
@@ -451,16 +438,6 @@ section{padding:24px 0;}
 .testimonial-card .name{
   margin:0;font-family:var(--font-display);font-weight:600;
   font-size:13.5px;color:var(--ink-muted);
-}
-
-.share-gift{
-  margin:44px auto 0;max-width:420px;text-align:center;
-  display:flex;flex-direction:column;align-items:center;gap:18px;
-}
-.share-gift-text{
-  font-family:var(--font-display);font-style:italic;font-weight:600;
-  font-size:clamp(19px,2.4vw,23px);color:var(--coral);
-  transform:rotate(-1.6deg);margin:0;
 }
 
 /* ---------- FAQ ---------- */
