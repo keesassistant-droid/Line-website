@@ -11,6 +11,7 @@
   var EXTRA_PLACE_COST = 25;
   var NO_FRAME_DISCOUNT = 50;
   var EXTRA_COPY_PRICE = 100;
+  var SIZE_UPGRADE_COST = 50;
   var MAX_QTY = 6;
   var SHIPPING_COST = 7.95;
   var SHIPPING_CARRIER = "PostNL";
@@ -82,7 +83,7 @@
           { q: "Kan ik een Line voor iemand anders bestellen?", a: "Zeker — de meeste Lines worden besteld als cadeau. Jij bouwt de tijdlijn, wij tekenen 'm, en jij geeft 'm door." },
           { q: "Moet ik referentiefoto's toevoegen?", a: "Ja, voeg per bouwwerk een foto toe, zo weten we zeker dat we het juiste bouwwerk tekenen." },
           { q: "Kan ik later nog iets wijzigen aan mijn bestelling?", a: "Neem contact op via e-mail zodra je je bestelling hebt verstuurd — we passen het waar mogelijk nog aan." },
-          { q: "Welke formaten zijn er?", a: "Op dit moment alleen een ingelijste print van 20 × 60 cm, thuisbezorgd (of zonder lijst voor €50 korting). Vanaf €249 voor 6 bouwwerken, alles inbegrepen (incl. BTW en verzending via PostNL)." },
+          { q: "Welke formaten zijn er?", a: "Een ingelijste print van 20 × 60 cm, of 30 × 80 cm voor €50 extra (of zonder lijst voor €50 korting). Vanaf €249 voor 6 bouwwerken, thuisbezorgd, alles inbegrepen (incl. BTW en verzending via PostNL)." },
           { q: "Wat kost een Line?", a: "We hanteren een vanaf-prijs van €249 (zonder lijst) voor de eerste 6 bouwwerken, inclusief BTW en verzendkosten. Elk bouwwerk daarna kost €25 extra." },
           { q: "Kan ik meer dan 6 bouwwerken toevoegen aan mijn tijdlijn?", a: "Ja, tot een maximum van 10. De prijs van €299 (of €249 zonder lijst) is inclusief de eerste 6 bouwwerken; elk bouwwerk daarna kost €25 extra. Je ziet de prijs live meebewegen in de configurator." },
           { q: "Kan ik zelf het lijstmateriaal kiezen?", a: "Ja, je kiest tussen grafiet en eikenhout — beide kosten hetzelfde. Je kunt er ook voor kiezen om je Line zonder lijst te ontvangen, voor €50 korting." },
@@ -127,8 +128,9 @@
         },
         step1: {
           h2: "Jouw formaat",
-          hint: "Elke Line wordt op dit moment op één manier geleverd.",
-          sizeLabel: "20 × 60 cm"
+          hint: "Kies het formaat van je Line.",
+          sizeLabel: "20 × 60 cm",
+          sizeLabelLarge: "30 × 80 cm"
         },
         stepFrame: {
           h2: "Kies je lijst",
@@ -183,6 +185,7 @@
           labels: { timeline: "Jouw tijdlijn", format: "Formaat", frame: "Lijst", qty: "Aantal exemplaren", contact: "Contact", address: "Bezorgadres", desiredDate: "Gewenste ontvangstdatum", notes: "Notities", shipping: "Verzending", payment: "Betaalwijze" },
           noPlaces: "Nog geen bouwwerken toegevoegd",
           shippedPrint: "Ingelijste print, 20 × 60 cm",
+          shippedPrintLarge: "Ingelijste print, 30 × 80 cm",
           shippingIncluded: "inbegrepen in de prijs"
         },
         step4: {
@@ -270,7 +273,7 @@
           { q: "Can I order a Line for someone else?", a: "Absolutely — most Lines are ordered as a gift. You build the timeline, we draw it, you give it." },
           { q: "Do I need to add reference photos?", a: "Yes, add a photo for each structure, that way we're sure we draw the right one." },
           { q: "Can I still change something after ordering?", a: "Get in touch by email as soon as you've submitted your order — we'll adjust where we still can." },
-          { q: "What formats are available?", a: "Currently just a framed 20 × 60 cm print, shipped to your door (or without the frame for €50 off). From €249 for 6 structures, all-in (incl. VAT and shipping via PostNL)." },
+          { q: "What formats are available?", a: "A framed 20 × 60 cm print, or 30 × 80 cm for €50 extra (or without the frame for €50 off). From €249 for 6 structures, shipped to your door, all-in (incl. VAT and shipping via PostNL)." },
           { q: "What does a Line cost?", a: "We charge from €249 (without a frame) for the first 6 structures, including VAT and shipping. Every structure after that is an extra €25." },
           { q: "Can I add more than 6 structures to my timeline?", a: "Yes, up to a maximum of 10. The €299 price (or €249 without a frame) includes the first 6 structures; every structure after that is an extra €25. You'll see the price update live in the configurator." },
           { q: "Can I choose the frame material myself?", a: "Yes, choose between graphite and oak — both cost the same. You can also choose to receive your Line without a frame for a €50 discount." },
@@ -315,8 +318,9 @@
         },
         step1: {
           h2: "Your format",
-          hint: "Every Line currently ships one way.",
-          sizeLabel: "20 × 60 cm"
+          hint: "Choose the size of your Line.",
+          sizeLabel: "20 × 60 cm",
+          sizeLabelLarge: "30 × 80 cm"
         },
         stepFrame: {
           h2: "Choose your frame",
@@ -371,6 +375,7 @@
           labels: { timeline: "Your timeline", format: "Format", frame: "Frame", qty: "Copies", contact: "Contact", address: "Delivery address", desiredDate: "Preferred delivery date", notes: "Notes", shipping: "Shipping", payment: "Payment method" },
           noPlaces: "No structures added yet",
           shippedPrint: "Framed print, 20 × 60 cm",
+          shippedPrintLarge: "Framed print, 30 × 80 cm",
           shippingIncluded: "included in the price"
         },
         step4: {
@@ -945,7 +950,7 @@
       lines.push("Algemene notities: " + payload.contact.notes);
       lines.push("");
     }
-    lines.push("Formaat: Ingelijste print, 20 x 60 cm");
+    lines.push("Formaat: " + (payload.format === "large" ? "Ingelijste print, 30 x 80 cm" : "Ingelijste print, 20 x 60 cm"));
     lines.push("Lijst: " + (payload.frame === "eikenhout" ? "Eikenhout" : payload.frame === "geenlijst" ? "Geen lijst" : "Grafiet"));
     if (payload.qty > 1) {
       lines.push("Aantal exemplaren: " + payload.qty);
@@ -1439,16 +1444,35 @@
   addTlBtn.addEventListener("click", addTimelineEntry);
 
   /* ---------- format step ---------- */
+  function sizeSurcharge() {
+    return state.format === "large" ? SIZE_UPGRADE_COST : 0;
+  }
   function extraCopyPrice() {
-    return EXTRA_COPY_PRICE - (state.frame === "geenlijst" ? NO_FRAME_DISCOUNT : 0);
+    return EXTRA_COPY_PRICE - (state.frame === "geenlijst" ? NO_FRAME_DISCOUNT : 0) + sizeSurcharge();
   }
   function currentPrice() {
     var discount = state.frame === "geenlijst" ? NO_FRAME_DISCOUNT : 0;
-    var perUnit = PRICE + extraPlacesCount() * EXTRA_PLACE_COST - discount;
+    var perUnit = PRICE + extraPlacesCount() * EXTRA_PLACE_COST - discount + sizeSurcharge();
     return perUnit + (state.qty - 1) * extraCopyPrice();
   }
   function renderFormat() {
     submitPriceAmount.textContent = "€" + currentPrice();
+  }
+  function selectFormat(size) {
+    state.format = size;
+    save();
+    renderFormatCards();
+    renderFormat();
+  }
+  formatGrid.addEventListener("click", function (e) {
+    var card = e.target.closest(".format-card");
+    if (!card) return;
+    selectFormat(card.dataset.format);
+  });
+  function renderFormatCards() {
+    formatGrid.querySelectorAll(".format-card").forEach(function (card) {
+      card.setAttribute("aria-pressed", String(card.dataset.format === state.format));
+    });
   }
 
   /* ---------- frame step ---------- */
@@ -1662,7 +1686,7 @@
       "</ol>";
     rows.push([d.labels.timeline, placesHtml || "<em>" + d.noPlaces + "</em>"]);
 
-    rows.push([d.labels.format, d.shippedPrint]);
+    rows.push([d.labels.format, state.format === "large" ? d.shippedPrintLarge : d.shippedPrint]);
     rows.push([
       d.labels.frame,
       state.frame === "eikenhout" ? t().config.stepFrame.eikenhoutLabel : state.frame === "geenlijst" ? t().config.stepFrame.geenlijstLabel : t().config.stepFrame.grafietLabel
@@ -1740,6 +1764,7 @@
     if (state.submitted && configScroll) configScroll.scrollTop = 0;
     renderTimeline();
     renderFormat();
+    renderFormatCards();
     renderFrame();
     renderQty();
     renderDetails();
