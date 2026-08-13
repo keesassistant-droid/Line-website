@@ -68,12 +68,9 @@
       testimonials: {
         eyebrow: "Reacties na het uitpakken",
         items: [
-          { quote: "Hoi Kees, wat een verrassing! Ons oude studentenhuis, zelfs de fietsen aan het balkon staan erop. Hangt al boven de bank!" },
-          { quote: "He Kees, ik moest gelijk huilen, het huis van mijn oma, precies zoals ik het me herinner. Dank je wel!" },
-          { quote: "Hoi Kees, dat je zelfs onze hond erin hebt verwerkt, ik lag dubbel! Zo'n leuk cadeau geworden." },
-          { quote: "He Kees, drie huizen in één tekening samengevat, echt heel gaaf! Binnen tien minuten opgehangen." },
-          { quote: "Hoi Kees, het bordje \"geen idee waar we heen gaan\" erbij, zo grappig! Dank je wel." },
-          { quote: "He Kees, het mooiste cadeau ooit, en dan ook nog bij de geboorte van onze zoon. Heel erg bedankt!" },
+          { quote: "Hey Kees, wat een vet ding zeg! Al die kleine details, heel cool! Gaat een mooi plekje krijgen." },
+          { quote: "Yooo Kees, wat vet dat jij dit maakt, dat wist ik helemaal niet! Heel dik om al die plekken zo op een rijtje te zien." },
+          { quote: "Hoi Kees, de reactie van m'n moeder was geweldig! Ze is er echt heel erg blij mee en heeft hem meteen opgehangen!" },
           { quote: "He Kees, dank voor het super vette cadeau! Echt heel blij mee, krijgt een mooi plekje in het nieuwe huis!" }
         ]
       },
@@ -174,6 +171,7 @@
           postalPh: "1234 AB",
           countryLabel: "Land",
           countryPh: "Nederland",
+          intlShippingNote: "Verzendkosten buiten Nederland worden apart berekend en toegevoegd aan het betaalverzoek.",
           dateLabel: "Gewenste ontvangstdatum",
           dateAria: "Gewenste ontvangstdatum",
           dateHint: "Doorlooptijd is 5 werkdagen zonder lijst, 10 werkdagen met lijst.",
@@ -258,12 +256,9 @@
       testimonials: {
         eyebrow: "Reactions after unwrapping",
         items: [
-          { quote: "Hi Kees, what a surprise! Our old student house, even the bikes on the balcony. Already hanging above the couch!" },
-          { quote: "Hey Kees, I cried straight away, my grandma's house, exactly how I remember it. Thank you so much!" },
-          { quote: "Hi Kees, you even worked our dog into it, I was in stitches! Such a lovely gift." },
-          { quote: "Hey Kees, three houses summed up in one drawing, so cool! Up on the wall within ten minutes." },
-          { quote: "Hi Kees, the sign that says \"no idea where we're headed\", so funny! Thank you so much." },
-          { quote: "Hey Kees, the most beautiful gift ever, and for our son's birth too. Thank you so much!" },
+          { quote: "Hey Kees, what an awesome thing! All those little details, so cool! Going to get a great spot." },
+          { quote: "Yooo Kees, so cool that you make this yourself, had no idea! Really nice to see all those places lined up like that." },
+          { quote: "Hi Kees, my mom's reaction was amazing! She's so happy with it and hung it up right away!" },
           { quote: "Hey Kees, thanks for the super cool gift! Really happy with it, it'll get a great spot in the new house!" }
         ]
       },
@@ -364,6 +359,7 @@
           postalPh: "1234 AB",
           countryLabel: "Country",
           countryPh: "Netherlands",
+          intlShippingNote: "Shipping costs outside the Netherlands are calculated separately and added to the payment request.",
           dateLabel: "Preferred delivery date",
           dateAria: "Preferred delivery date",
           dateHint: "Turnaround is 5 working days without a frame, 10 working days with a frame.",
@@ -597,6 +593,7 @@
   var contactCity = document.getElementById("contactCity");
   var contactPostal = document.getElementById("contactPostal");
   var contactCountry = document.getElementById("contactCountry");
+  var intlShippingNote = document.getElementById("intlShippingNote");
   var contactDate = document.getElementById("contactDate");
   var contactNotes = document.getElementById("contactNotes");
 
@@ -1584,7 +1581,12 @@
     state.contact.country = contactCountry.value;
     save();
     updateSubmitState();
+    updateIntlShippingNote();
   });
+  function updateIntlShippingNote() {
+    var isNL = state.contact.country === "Nederland" || state.contact.country === "Netherlands";
+    intlShippingNote.hidden = isNL;
+  }
   function populateCountryOptions() {
     var selected = contactCountry.value || state.contact.country;
     contactCountry.innerHTML = "";
@@ -1596,6 +1598,7 @@
       contactCountry.appendChild(opt);
     });
     contactCountry.value = selected;
+    updateIntlShippingNote();
   }
   function refreshDateMin() {
     var now = new Date();

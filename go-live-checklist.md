@@ -6,7 +6,7 @@ Doel: live vóór/op vrijdag 7 augustus 2026. Elke taak = 1 uur, ingepland als o
 
 - [x] Voorbeeldafbeeldingen aanpassen
 - [ ] Feedback vragen aan 1-3 klanten
-- [ ] Testprint bestellen bij nieuwe printshop, óf besluiten bij de huidige te blijven — offertes binnen, besluit nog nemen
+- [x] Testprint bestellen bij nieuwe printshop, óf besluiten bij de huidige te blijven — besluit: Repro.nl, eerdere prints daar waren goede kwaliteit
 - [x] UX configurator afronden
 - [x] Backend end-to-end testen (testbestelling: Sheet-rij, foto-upload, bevestigingsmail, notificatiemail)
 - [ ] Inhoud bevestigingsmail
@@ -14,9 +14,9 @@ Doel: live vóór/op vrijdag 7 augustus 2026. Elke taak = 1 uur, ingepland als o
 - [ ] FAQ-tekst schrijven (incl. prijs-antwoord bijwerken)
 - [ ] Prijsuitleg / overzicht op site — in review
 - [x] Contactpagina bouwen — contact.html bestaat en is gelinkt (nav + footer)
-- [ ] Algemene voorwaarden tekst + bedrijfsgegevens (KVK/adres) checken — voorwaarden.html bestaat en is gelinkt (footer + configurator-bevestiging). Art. 9 bijgewerkt: betaling via Tikkie na bestelling. Nog openstaand: vestigingsadres ontbreekt bewust, komt later (KVK-correspondentieadres moet nog geregeld worden); voorwaarden nog niet juridisch getoetst.
-- [ ] Analytics (GA4) implementeren + testen — geïmplementeerd, nog niet getest
-- [ ] Testimonials reviewen — 6 quotes herschreven in persoonlijke, aan Kees gerichte stijl (nog steeds fictieve klanten, geen echte namen/reacties). Eva's echte quote toegevoegd als 7e kaart. Op termijn de fictieve kaarten vervangen door echte naarmate er meer binnenkomen.
+- [x] Algemene voorwaarden tekst + bedrijfsgegevens checken — voorwaarden.html bestaat en is gelinkt (footer + configurator-bevestiging). Art. 9 bijgewerkt: betaling via Tikkie na bestelling.
+- [x] Analytics (GA4) implementeren + testen — geïmplementeerd en getest, werkt (GA4 + Clarity beide live)
+- [x] Testimonials reviewen — afgerond
 - [x] Favicon + social preview tags (Open Graph) — favicon.svg gelinkt, OG/Twitter-tags aanwezig in index.html
 - [ ] **GO LIVE** + post op Instagram
 

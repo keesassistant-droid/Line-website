@@ -57,14 +57,10 @@ add in small font - doorlooptijd is gemiddeld zo'n 2-3 weken. Doorlooptijd start
 
 ## Testimonials
 - `testimonials.eyebrow`: Reacties na het uitpakken
-- `testimonials.heading`: remove this line 
-- `testimonials.lede`: remove this line 
-- `testimonials.items[0]`: Ik zag eerst niet goed wat het was — tot ik ons oude studentenhuis zag staan, met zelfs de hangende fietsen aan het balkon
-- `testimonials.items[1]`: Ik moest huilen toen ik het huis van mijn oma zag. Precies zoals ik het me herinner.
-- `testimonials.items[2]`: Ze hebben zelfs onze hond erin verwerkt — inclusief zijn eeuwige ruzie met de postbode.
-- `testimonials.items[3]`: Drie huizen, twee landen, één leven. Hing binnen tien minuten aan de muur.
-- `testimonials.items[4]`: Mijn man snapte niet waarom ik moest lachen — tot hij het bordje "geen idee waar we heen gaan" bij ons eerste huis zag.
-- `testimonials.items[5]`: Het mooiste cadeau dat we ooit hebben gekregen bij de geboorte van onze zoon.
+- `testimonials.items[0]` (— Noor): Hey Kees, wat een vet ding zeg! Al die kleine details, heel cool! Gaat een mooi plekje krijgen.
+- `testimonials.items[1]` (— Daan): Yooo Kees, wat vet dat jij dit maakt, dat wist ik helemaal niet! Heel dik om al die plekken zo op een rijtje te zien.
+- `testimonials.items[2]` (— Fenna): Hoi Kees, de reactie van m'n moeder was geweldig! Ze is er echt heel erg blij mee en heeft hem meteen opgehangen!
+- `testimonials.items[3]` (— Eva, echt citaat): He Kees, dank voor het super vette cadeau! Echt heel blij mee, krijgt een mooi plekje in het nieuwe huis!
 
 ## FAQ
 - `faq.eyebrow`: Vragen
