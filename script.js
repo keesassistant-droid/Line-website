@@ -73,7 +73,11 @@
           { quote: "Yooo Kees, wat vet dat jij dit maakt, dat wist ik helemaal niet! Heel dik om al die plekken zo op een rijtje te zien." },
           { quote: "Hoi Kees, de reactie van m'n moeder was geweldig! Ze is er echt heel erg blij mee en heeft hem meteen opgehangen!" },
           { quote: "He Kees, dank voor het super vette cadeau! Echt heel blij mee, krijgt een mooi plekje in het nieuwe huis!" }
-        ]
+        ],
+        shareText: "Deel dit cadeau idee met een vriend!",
+        shareBtn: "Deel Line",
+        shareTitle: "Line",
+        shareCopied: "Link gekopieerd!"
       },
       faq: {
         eyebrow: "Vragen",
@@ -263,7 +267,11 @@
           { quote: "Yooo Kees, so cool that you make this yourself, had no idea! Really nice to see all those places lined up like that." },
           { quote: "Hi Kees, my mom's reaction was amazing! She's so happy with it and hung it up right away!" },
           { quote: "Hey Kees, thanks for the super cool gift! Really happy with it, it'll get a great spot in the new house!" }
-        ]
+        ],
+        shareText: "Share this gift idea with a friend!",
+        shareBtn: "Share Line",
+        shareTitle: "Line",
+        shareCopied: "Link copied!"
       },
       faq: {
         eyebrow: "Questions",
@@ -618,6 +626,36 @@
       menuToggle.setAttribute("aria-expanded", "false");
     });
   });
+
+  /* ---------- toast ---------- */
+  var toastEl = document.getElementById("toast");
+  var toastTimer = null;
+  function showToast(msg) {
+    if (!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      toastEl.classList.remove("show");
+    }, 2400);
+  }
+
+  /* ---------- share ---------- */
+  var shareBtn = document.getElementById("shareBtn");
+  if (shareBtn) {
+    shareBtn.addEventListener("click", function () {
+      var shareData = { title: t().testimonials.shareTitle, text: t().testimonials.shareText, url: location.origin + location.pathname };
+      if (navigator.share) {
+        navigator.share(shareData).catch(function () {});
+        return;
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(shareData.url).then(function () {
+          showToast(t().testimonials.shareCopied);
+        });
+      }
+    });
+  }
 
   /* ---------- lightbox ---------- */
   var lightbox = document.getElementById("lightbox");
