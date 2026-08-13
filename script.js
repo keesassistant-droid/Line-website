@@ -45,7 +45,7 @@
           { title: "Wij tekenen hem", body: "De tekenaar gaat aan de slag. Voordat we afdrukken ontvang je het design ter beoordeling via WhatsApp." },
           { title: "Line wordt bezorgd", body: "PostNL bezorgt de Line." }
         ],
-        turnaroundNote: "Doorlooptijd is 5 werkdagen zonder lijst, 10 werkdagen met lijst — vanaf het moment van betalen."
+        turnaroundNote: "Doorlooptijd is 5-10 werkdagen, vanaf het moment van betalen."
       },
       pricing: {
         eyebrow: "Prijs",
@@ -233,7 +233,7 @@
           { title: "We draw it", body: "The artist gets to work. Before we print, you'll receive the design for review via WhatsApp." },
           { title: "The Line gets delivered", body: "PostNL delivers the Line." }
         ],
-        turnaroundNote: "Turnaround is 5 working days without a frame, 10 working days with a frame — starting from the moment of payment."
+        turnaroundNote: "Turnaround is 5-10 working days, starting from the moment of payment."
       },
       pricing: {
         eyebrow: "Pricing",
